@@ -1,5 +1,6 @@
 # Aqui ira el codigo de R del proceso de analisis de datos para el proyecto de Bellabeat
 # (Hola desde el RStudio)
+# (Hola desde el RStudio en la oficina)
 
 library(tidyverse)
 library(lubridate)
