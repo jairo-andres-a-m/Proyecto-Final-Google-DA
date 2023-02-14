@@ -78,7 +78,60 @@ activityhour <- calorieshour %>%
 
 glimpse(activityhour)
 
-#falta arreglar los formatos de date y datetime para el peso y los latidos
+#Arreglar los formatos de date y datetime para el peso y los latidos
   
-  
+glimpse(weight)
+glimpse(heartratesecond)
 
+weight <- weight %>%
+  mutate(Date = date(mdy_hms(Date))) %>%
+  rename(date = Date)
+
+heartratesecond <- heartratesecond %>%
+  mutate(Time = mdy_hms(Time)) %>%
+  rename(datetime = Time)
+
+#######################################
+##  Entonces tenemos:
+##   - activityday
+##   - activityhour
+##   - weight
+##   - hearratesecond
+##
+#######################################
+
+#Ahora, hacer visualizaciones
+
+glimpse(activityday)
+
+###############################################################################
+#organizar el activityday por semana y dia de la semana
+
+activityday <- mutate(activityday, week=isoweek(date), day=wday(date, label=TRUE, abbr=FALSE, week_start = getOption("lubridate.week.start", 1)))
+
+summary_activityday <- activityday %>%
+  group_by(week, day) %>%
+  summarize(mean(TotalSteps), mean(TotalDistance), mean(Calories)) 
+#porqueeee falta el dia 2 de la semana 15 !!!!!!!!!!!!!
+
+activityday %>%
+  group_by()
+  
+ggplot(activityday) +
+  geom_density(aes(Calories))
+
+ggplot(summary_activityday, aes(day, week)) +
+  geom_tile(aes(fill=`mean(Calories)`))
+
+activityday %>% 
+  filter(Calories > 1500, Calories < 3250) %>%
+  group_by(day) %>%
+  summarize(mean(Calories)) %>%
+  ggplot(aes(x=day, y="")) +
+  geom_tile(aes(fill=`mean(Calories)`)) #por dia
+
+
+ggplot(summary_activityday, aes(day, week)) +
+  geom_tile(aes(fill=`mean(TotalSteps)`))
+
+###############################################################################
