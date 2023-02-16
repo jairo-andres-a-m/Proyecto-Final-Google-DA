@@ -7,9 +7,9 @@ Por **Jairo Andrés Amaya Muñoz**
 
 ### Contexto empresa, productos y estrategia:
 
-Bellabeat es una empresa pequeña y exitosa, es manufacturera de productos de alta tecnologia para la mujer enfocados en el cuidado de su salud. Esta empresa tiene potencial para ser una gran jugadora en el mercado de dispositivos inteligentes. Desde su fundacion en el año 2013 han desarrollado productos y abierto oficinas en distintas partes del mundo.
+Bellabeat es una empresa pequeña y exitosa, es manufacturera de productos de tecnologia para la mujer enfocados en el cuidado de su salud. Esta empresa tiene el potencial para ser una gran jugadora en el mercado de dispositivos teconologicos e inteligentes. Desde su fundacion en el año 2013 han desarrollado productos y abierto oficinas en distintas partes del mundo.
 
-Los productos de Bellabeat en distintas presentaciones recolectan datos de bio-monitoreo de la actividad fisica, pasos dados, distancia recorrida, calorias quemadas, ritmo cardiaco, peso, sueño y salud reproductiva, entre otras, para empoderar a sus usuarias con conocimiento de si mismas y poder incidir en sus habitos.
+Los productos de Bellabeat recolectan datos de bio-monitoreo de la actividad fisica, pasos dados, distancia recorrida, calorias quemadas, ritmo cardiaco, peso, sueño y salud reproductiva, entre otras, para empoderar a las usuarias con conocimiento de si mismas y poder incidir en sus habitos.
 Sus producos son:
 
 | Producto | Descripcion |
@@ -17,9 +17,9 @@ Sus producos son:
 | Leaf | Un brazalete, collar o clip inteligente |
 | Time | Un reloj inteligente |
 | Spring | Una botella inteligente |
-| Bellabeat app | Todos los anteriores se conectan a esta app que permite hacer seguimiento a indicadores |
+| Bellabeat app | Todos los anteriores se conectan a esta app que permite hacer seguimiento y visualizar |
 
-La empresa los comercializa en su tienda virtual en su sitio web. Desde su inicio han optado por el canal virtual y se han apoyado considerablemente en el marketing. Esto es algo que quieren seguir haciendo basando sus decisiones en datos, para ello encomiendan realizar este estudio esperando que les proporcione perspectivas e ideas.
+La empresa comercializa sus productos en su tienda virtual en su sitio web. Desde el inicio han optado por el canal virtual y se han apoyado considerablemente en el marketing. Siendo esto algo que quieren seguir haciendo, basando sus decisiones en datos, para ello encomiendan realizar este estudio esperando que les proporcione perspectivas e ideas.
 
 ### ¿Cual es la tarea empresarial?
 
