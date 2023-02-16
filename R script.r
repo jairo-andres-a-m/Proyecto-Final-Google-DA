@@ -114,11 +114,6 @@ summary_activityday <- activityday %>%
   summarize(mean(TotalSteps), mean(TotalDistance), mean(Calories)) 
 #porqueeee falta el dia 2 de la semana 15 !!!!!!!!!!!!!
 
-activityday %>%
-  group_by()
-  
-ggplot(activityday) +
-  geom_density(aes(Calories))
 
 ggplot(summary_activityday, aes(day, week)) +
   geom_tile(aes(fill=`mean(Calories)`))
@@ -130,8 +125,30 @@ activityday %>%
   ggplot(aes(x=day, y="")) +
   geom_tile(aes(fill=`mean(Calories)`)) #por dia
 
+activityday %>% 
+  filter(Calories > 1500, Calories < 3250) %>%
+  group_by(day) %>%
+  summarize(mean(Calories)) %>%
+  ggplot() +
+    geom_col(aes(x=day, y=`mean(Calories)`))
+
+activityday %>% 
+  filter(Calories > 1500, Calories < 3250) %>%
+  group_by(day) %>%
+  ggplot() +
+  geom_boxplot(aes(x=day, y=Calories), fill="blue", alpha=3/5) #esto es representativo
+
+
+activityday %>% 
+  filter(Calories > 1500, Calories < 3250) %>%
+  group_by(week, day) %>% 
+  unite(week_day, week, day, sep="_", remove=FALSE) %>%
+  ggplot() +
+  geom_col(aes(x=week_day, y=Calories), fill="blue", alpha=3/5) #regostrp de calorias por semana y dia
+
 
 ggplot(summary_activityday, aes(day, week)) +
   geom_tile(aes(fill=`mean(TotalSteps)`))
 
 ###############################################################################
+
