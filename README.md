@@ -5,9 +5,12 @@ Por **Jairo Andrés Amaya Muñoz**
 
 # Caso de estudio: Bellabeat
 
-Bellabeat es una empresa pequeña y exitosa, es manufacturera de productos de alta tecnologia para la mujer enfocados en el cuidado de su salud. Esta empresa tiene potencial para ser una gran jugadora en el mercado de dispositivos inteligentes.
+### Contexto empresa, productos y estrategia:
 
-La empresa ha diseñado productos que recolectan datos de la actividad fisica, sueño, estres y salud reproductiva de sus usuarias para buscar empoderarlas a traves este conocimiento y el control de sus habitos. Sus productos son:
+Bellabeat es una empresa pequeña y exitosa, es manufacturera de productos de alta tecnologia para la mujer enfocados en el cuidado de su salud. Esta empresa tiene potencial para ser una gran jugadora en el mercado de dispositivos inteligentes. Desde su fundacion en el año 2013 han desarrollado productos y abierto oficinas en distintas partes del mundo.
+
+Los productos de Bellabeat recolectan datos de bio-monitoreo de la actividad fisica, pasos dados, distancia recorrida, calorias quemadas, ritmo cardiaco, peso, sueño y salud reproductiva, entre otras, para empoderar a sus usuarias con conocimiento y control sobre sus habitos.
+Sus producos son:
 
 | Producto | Descripcion |
 | :--------------- | :--------------- |
@@ -16,5 +19,6 @@ La empresa ha diseñado productos que recolectan datos de la actividad fisica, s
 | Spring | Una botella inteligente |
 | Bellabeat app | Todos los anteriores se conectan a esta app que permite hacer seguimiento a indicadores |
 
-Desde el año 2013 en que la empresa fue fundada, han desarrollado estos productos y han abierto oficinas en distintas partes del mundo. Sus productos los comercializan en su tienda virtual en su sitio web. Ellos invierten considerablemente en marketing y quieren continuar haciendolo basando sus decisiones en datos, para ello enconmiendan realizar este estudio esperando que les proporcione perspectivas e ideas.
+La empresa comercializa en su tienda virtual en su sitio web. Desde su inicio han optado por el canal virtual y han invertido considerablemente en el marketing, quieren seguir haciendolo basando sus decisiones en datos, para ello encomiendan realizar este estudio esperando que les proporcione perspectivas e ideas.
 
+###
