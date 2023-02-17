@@ -30,9 +30,21 @@ weight <- read_csv(file.path(path_pc_local, "weightLogInfo_merged.csv"))
 heartrate <- read_csv(file.path(path_pc_local, "heartrate_seconds_merged.csv"))
 ```
 
-Chequeamos si hay valores NA o filas duplicadas
+Vemos que tenemos registros de 33 usuarios para activityday, calorieshour, stepshour e intensitieshour. 24 usuarios para sleepday, 8 para weight y 14 para heartrate. Si bien algunos registran datos de menos usuarios, pueden llegar a darnos información útil.
+
+Chequeamos si hay valores NA o filas duplicadas.
+
 
 ```{r}
+
+n_distinct(activityday$Id)
+n_distinct(sleepday$Id)
+n_distinct(calorieshour$Id)
+n_distinct(stepshour$Id)
+n_distinct(intensitieshour$Id)
+n_distinct(weight$Id)
+n_distinct(heartrate$Id)
+
 sum(is.na(activityday))
 sum(is.na(sleepday))
 sum(is.na(calorieshour))
@@ -106,7 +118,7 @@ activityhour <- calorieshour %>%
 
 Un ultimo vistazo:
 Chequeamos que los valores tengan rangos normales.
-Todos tienen rangos de valores que son posibles, no irreales.
+Todos tienen rangos de valores que son posibles y no irreales.
 
 ```{r}
 glimpse(activityday)
@@ -121,4 +133,5 @@ summary(weight)
 glimpse(heartrate)
 summary(heartrate)
 ```
+
 
