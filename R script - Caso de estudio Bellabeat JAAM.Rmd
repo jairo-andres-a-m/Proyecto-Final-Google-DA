@@ -27,7 +27,7 @@ intensitieshour <- read_csv(file.path(path_pc_local, "hourlyIntensities_merged.c
 
 weight <- read_csv(file.path(path_pc_local, "weightLogInfo_merged.csv"))
 
-heartratesecond <- read_csv(file.path(path_pc_local, "heartrate_seconds_merged.csv"))
+heartrate <- read_csv(file.path(path_pc_local, "heartrate_seconds_merged.csv"))
 ```
 
 Chequeamos si hay valores NA o filas duplicadas
@@ -39,7 +39,7 @@ sum(is.na(calorieshour))
 sum(is.na(stepshour))
 sum(is.na(intensitieshour))
 sum(is.na(weight))
-sum(is.na(heartratesecond))
+sum(is.na(heartrate))
 
 sum(duplicated(activityday))
 sum(duplicated(sleepday))
@@ -47,7 +47,7 @@ sum(duplicated(calorieshour))
 sum(duplicated(stepshour))
 sum(duplicated(intensitieshour))
 sum(duplicated(weight))
-sum(duplicated(heartratesecond))
+sum(duplicated(heartrate))
 ```
 
 weight tiene 65 NA y sleepday tiene 3 filas duplicadas.
@@ -58,12 +58,12 @@ glimpse(weight)
 View(weight %>%
       filter(is.na(Fat)))
 
-sleepday <- distinct(sleepday, keep_all=FALSE)
+sleepday <- distinct(sleepday)
 sum(duplicated(sleepday))
 ```
 
-Cambiamos las estampillas de tiempo a formato date o datetime.
-Los diarios y el peso tendran date y el weight tendran date y los por hora y el ritmo cardiaco tendran datetime.
+Cambiamos las estampillas de tiempo en texto a formato date o datetime.
+Los diarios, el peso y el weight tendrán date y los por hora y el ritmo cardíaco tendrán datetime.
 
 ```{r}
 activityday <- activityday %>%
@@ -85,14 +85,40 @@ stepshour <- stepshour %>%
 intensitieshour <- intensitieshour %>%
   mutate(ActivityHour = mdy_hms(ActivityHour)) %>%
   rename(datetime = ActivityHour)
-heartratesecond <- heartratesecond %>%
+heartrate <- heartrate %>%
   mutate(Time = mdy_hms(Time)) %>%
   rename(datetime = Time)
 
+glimpse(calorieshour)
 ```
 
 Ahora uniremos algunos archivos basados en su usuario Id y estampilla de tiempo.
+Entonces quedaremos con activityday, activityhour, weight y heartrate listos y limpios.
 
 ```{r}
+activityday <- activityday %>%
+  left_join(sleepday, by=c("Id", "date"))
 
+activityhour <- calorieshour %>%
+  inner_join(stepshour, by=c("Id", "datetime")) %>%
+  inner_join(intensitieshour, by=c("Id", "datetime"))
 ```
+
+Un ultimo vistazo:
+Chequeamos que los valores tengan rangos normales.
+Todos tienen rangos de valores que son posibles, no irreales.
+
+```{r}
+glimpse(activityday)
+summary(activityday)
+
+glimpse(activityhour)
+summary(activityhour)
+
+glimpse(weight)
+summary(weight)
+
+glimpse(heartrate)
+summary(heartrate)
+```
+
