@@ -8,17 +8,14 @@ output: html_document
 Cargue de librerias
 
 ```{r setup, include=FALSE}
-
 library(tidyverse)
 library(lubridate)
-
 ```
 
 Direccion de los archivos y 4 grupos de archivos: 
 actividad diaria (+ sueño), actividad por hora, peso y ritmo cardiaco.
 
 ```{r}
-
 path_pc_local <- "D:/RStudio/Fitabase Data 4.12.16-5.12.16"
 
 activityday <- read_csv(file.path(path_pc_local, "dailyActivity_merged.csv"))
@@ -31,13 +28,11 @@ intensitieshour <- read_csv(file.path(path_pc_local, "hourlyIntensities_merged.c
 weight <- read_csv(file.path(path_pc_local, "weightLogInfo_merged.csv"))
 
 heartratesecond <- read_csv(file.path(path_pc_local, "heartrate_seconds_merged.csv"))
-
 ```
 
 Chequeamos si hay valores NA o filas duplicadas
 
 ```{r}
-
 sum(is.na(activityday))
 sum(is.na(sleepday))
 sum(is.na(calorieshour))
@@ -46,7 +41,6 @@ sum(is.na(intensitieshour))
 sum(is.na(weight))
 sum(is.na(heartratesecond))
 
-
 sum(duplicated(activityday))
 sum(duplicated(sleepday))
 sum(duplicated(calorieshour))
@@ -54,19 +48,51 @@ sum(duplicated(stepshour))
 sum(duplicated(intensitieshour))
 sum(duplicated(weight))
 sum(duplicated(heartratesecond))
-
 ```
 
 weight tiene 65 NA y sleepday tiene 3 filas duplicadas.
 Dejamos los NA de la columna Fat de weight ya que no afectan, y borramos los 3 duplicados de sleepday.
 
 ```{r}
-
 glimpse(weight)
 View(weight %>%
       filter(is.na(Fat)))
 
 sleepday <- distinct(sleepday, keep_all=FALSE)
 sum(duplicated(sleepday))
+```
+
+Cambiamos las estampillas de tiempo a formato date o datetime.
+Los diarios y el peso tendran date y el weight tendran date y los por hora y el ritmo cardiaco tendran datetime.
+
+```{r}
+activityday <- activityday %>%
+  mutate(ActivityDate = date(mdy(ActivityDate))) %>%
+  rename(date = ActivityDate)
+sleepday <- sleepday %>%
+  mutate(SleepDay = date(mdy_hms(SleepDay))) %>%
+  rename(date = SleepDay)
+weight <- weight %>%
+  mutate(Date = date(mdy_hms(Date))) %>%
+  rename(date = Date)
+
+calorieshour <- calorieshour %>%
+  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%
+  rename(datetime = ActivityHour)
+stepshour <- stepshour %>%
+  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%
+  rename(datetime = ActivityHour)
+intensitieshour <- intensitieshour %>%
+  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%
+  rename(datetime = ActivityHour)
+heartratesecond <- heartratesecond %>%
+  mutate(Time = mdy_hms(Time)) %>%
+  rename(datetime = Time)
+
+```
+
+Ahora uniremos algunos archivos basados en su usuario Id y estampilla de tiempo.
+
+```{r}
 
 ```
