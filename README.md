@@ -86,7 +86,8 @@ sum(is.na(activityday)) ; sum(is.na(sleepday))
 sum(is.na(calorieshour)) ; sum(is.na(stepshour)) ; sum(is.na(intensitieshour))
 sum(is.na(weight)) ; sum(is.na(heartrate))
 
-sum(duplicated(activityday)) ; sum(duplicated(sleepday)) ; sum(duplicated(calorieshour)) ; sum(duplicated(stepshour)) ; sum(duplicated(intensitieshour))
+sum(duplicated(activityday)) ; sum(duplicated(sleepday))
+sum(duplicated(calorieshour)) ; sum(duplicated(stepshour)) ; sum(duplicated(intensitieshour))
 sum(duplicated(weight)) ; sum(duplicated(heartrate))
 ```
 
