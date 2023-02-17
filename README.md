@@ -3,7 +3,7 @@ Basado en el analisis de **Fitbit Fitness Tracker Data**
 Para un caso con la empresa **Bellabeat**  
 Por **Jairo Andrés Amaya Muñoz**  
 
-# FASE DE PREGUNTAS: Caso de estudio Bellabeat
+## FASE DE PREGUNTAS: Caso de estudio Bellabeat
 
 ### Contexto empresa, productos y estrategia:
 
