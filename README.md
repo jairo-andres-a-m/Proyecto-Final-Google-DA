@@ -112,6 +112,6 @@ La estrategia de analisis consistira en utilizar 4 grupos de dataframes:
 * Ademas, usaremos el ritmo cardiaco, pues es una medicion muy importante para la salud y diciente de la actividad fisica, la dificultad con este es que se muchos registros pues son casi en "tiempo real".
 * Y tambien usaremos el peso pues es tambien un dato importante para la salud.
 
-
+...
 
 ## :four:. FASE DE PROCESAMIENTO: de los datos
