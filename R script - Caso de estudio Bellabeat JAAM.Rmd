@@ -1,0 +1,36 @@
+---
+title: "R script - Caso de estudio Bellabeat"
+author: "Jairo Andrés Amaya Muñoz"
+date: "2023-02-17"
+output: html_document
+---
+
+Cargue de librerias
+
+```{r setup, include=FALSE}
+
+library(tidyverse)
+library(lubridate)
+
+```
+
+Direccion de los archivos y 4 grupos de archivos: 
+actividad diaria (+ sueño), actividad por hora, peso y ritmo cardiaco.
+
+```{r}
+
+path_pc_local <- "D:/RStudio/Fitabase Data 4.12.16-5.12.16"
+
+activityday <- read_csv(file.path(path_pc_local, "dailyActivity_merged.csv"))
+sleepday <- read_csv(file.path(path_pc_local, "sleepDay_merged.csv"))
+
+calorieshour <- read_csv(file.path(path_pc_local, "hourlyCalories_merged.csv"))
+stepshour <- read_csv(file.path(path_pc_local, "hourlySteps_merged.csv"))
+intensitieshour <- read_csv(file.path(path_pc_local, "hourlyIntensities_merged.csv"))
+
+weight <- read_csv(file.path(path_pc_local, "weightLogInfo_merged.csv"))
+
+heartratesecond <- read_csv(file.path(path_pc_local, "heartrate_seconds_merged.csv"))
+
+```
+
