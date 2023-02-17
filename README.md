@@ -3,7 +3,7 @@ Basado en el analisis de **Fitbit Fitness Tracker Data**
 Para un caso con la empresa **Bellabeat**  
 Por **Jairo Andrés Amaya Muñoz**  
 
-# Caso de estudio: Bellabeat
+# FASE DE PREGUNTAS: Caso de estudio Bellabeat
 
 ### Contexto empresa, productos y estrategia:
 
@@ -67,5 +67,5 @@ Habiendo explorado preliminalmente los archivos, sabemos que contienen estos reg
 * Ademas, usaremos el ritmo cardiaco, pues es una medicion muy importante para la salud y diciente de la actividad fisica, la dificultad con este es que se muchos registros pues son casi en "tiempo real".
 * Y tambien usaremos el peso pues es tambien un dato importante para la salud.
 
-## Preparacion de los datos
+## FASE DE PREPARACION: de los datos
 
