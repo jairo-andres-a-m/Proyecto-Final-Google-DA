@@ -37,7 +37,7 @@ La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitnes
 
 Sršen nos recomienda usar un dataset de dominio publico (CC0: Public Domain) llamado FitBit Fitness Tracker Data, este fue subido por el usuario Möbius a la plataforma Kaggle en el siguiente link:  https://www.kaggle.com/datasets/arashnic/fitbit
 
-Este dataset contiene datos generados por ~33 usuarios de dispositivos FitBit encuestados via Amazon Mechanical Turk que accedieron a dar su inofrmacion personal registrada en sus dispositivos durante dos meses, del 12 de mayo al 12 de abril del 2016.
+Descargamos este dataset, este contiene datos generados por ~33 usuarios de dispositivos FitBit encuestados via Amazon Mechanical Turk que accedieron a dar su inofrmacion personal registrada en sus dispositivos durante dos meses, del 12 de mayo al 12 de abril del 2016.
 
 ### ¿Como se organiza y que contiene el dataset?
 
@@ -61,16 +61,56 @@ Los datos de 33 usuarios registrados entre el 12 de mayo y el 12 de abril del 20
 | sleepDay_merged.csv | Por usuario(Id) por dia: la cantidad de sueño y el numero de sesiones.  |
 | weightLogInfo_merged.csv | Por usuario(Id): el peso autoreportado.  |
 
+Creemos util emplear datos por dia, hora y adicionalmente el sueño, el peso y el ritmo cardiaco ya que son indicadores importantes acerca de la salud. bio-metricos.dñajsdflgkajsdlgkj
+
+### Credibilidad de los datoss.... ROCC ?
+klhjkh
+
+### Ayuda a responder la pregunta???
 
 ## :three:. FASE DE PROCESAMIENTO: de los datos
 
-En la exploración preliminar de los archivos, ya sabemos que registros contienen cada uno y que estos registros son unicos identificandose por el Id del usuario y una estampilla de tiempo.
+que pasos de limpieza hicimos ????¿¿¿¿¿ fsdiojfopiasjgiopjoi copiar y pegar partes del codigo y resultados de ejecutarlo...
+### ¿Que herramienta elegimos para este estudio y analisis?
+
+Usare el el lenguaje R dado que es una herramienta poderosa que nos permite realizar todos los pasos del analisis de datos, desde limpiar, visualizar, analizar hasta graficar y sacar conclusiones, ademas con esta herramienta podemos tener en un solo lugar el codigo y los pasos tomados. (mirar cuadro del roadmap del curso de google pasoidjasiodgjoasijdgioqjweoijsdaskd ......... sdiasjdogj)
+
+### Revisamos los registros, Ids, valores nulos y filas duplicadas:
+
+```{r}
+n_distinct(activityday$Id) ; n_distinct(sleepday$Id)
+n_distinct(calorieshour$Id) ; n_distinct(stepshour$Id) ; n_distinct(intensitieshour$Id)
+n_distinct(weight$Id) ; n_distinct(heartrate$Id)
+
+sum(is.na(activityday)) ; sum(is.na(sleepday))
+sum(is.na(calorieshour)) ; sum(is.na(stepshour)) ; sum(is.na(intensitieshour))
+sum(is.na(weight)) ; sum(is.na(heartrate))
+
+sum(duplicated(activityday)) ; sum(duplicated(sleepday)) ; sum(duplicated(calorieshour)) ; sum(duplicated(stepshour)) ; sum(duplicated(intensitieshour))
+sum(duplicated(weight)) ; sum(duplicated(heartrate))
+```
+
+Encontramos que con los dataframes que elegimos trabajar, tenemos 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmocardiaco. Si bien algunos registran datos de menos usuarios, pueden llegar a darnos información útil.
+Ademas, encontramos que sleepday tiene 3 filas duplicadas y weight 44 valores nulos, en una sucesiva revision encontramos que estos valores nulos son en una columna de poca importancia, en cambio si eliminamos los 3 duplicados de sleepday:
+
+```{r}
+glimpse(weight)
+weight %>% filter(is.na(Fat))
+
+sleepday <- distinct(sleepday)
+sum(duplicated(sleepday))
+```
+
+
+
+En la exploración preliminar de los archivos, ya sabemos qué registros contienen cada uno y que estos registros son unicos identificandose por el Id del usuario y una estampilla de tiempo.
 
 La estrategia de analisis consistira en utilizar 4 grupos de dataframes:
-* La actividad diaria, registrada en el dailyActivity que sera unida con el sleepDay por facilidad, utiles para estudiar el comportamiento a lo largo de los dias.
-* La actividad por hora, uniendo los 3 archivos de actividad por hora, nos seran utiles para estudiar el comportamiento a lo largo del dia.
+* La actividad diaria, en un dataframe llamado activityday (de 33 usuarios), unido por facilidad con los datos del sueño (de 24 usuarios). Nos sera util para estudiar el comportamiento a lo largo de las semanas.
+* La actividad por hora, en un dataframe llamado activityhour (de 33 usuarios) uniendo los 3 archivos de actividad por hora. Nos sera util para estudiar el comportamiento a lo largo del dia.
 * Ademas, usaremos el ritmo cardiaco, pues es una medicion muy importante para la salud y diciente de la actividad fisica, la dificultad con este es que se muchos registros pues son casi en "tiempo real".
 * Y tambien usaremos el peso pues es tambien un dato importante para la salud.
 
 
 
+## :four:. FASE DE PROCESAMIENTO: de los datos
