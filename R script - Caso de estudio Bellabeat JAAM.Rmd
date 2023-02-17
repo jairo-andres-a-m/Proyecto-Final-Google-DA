@@ -34,3 +34,39 @@ heartratesecond <- read_csv(file.path(path_pc_local, "heartrate_seconds_merged.c
 
 ```
 
+Chequeamos si hay valores NA o filas duplicadas
+
+```{r}
+
+sum(is.na(activityday))
+sum(is.na(sleepday))
+sum(is.na(calorieshour))
+sum(is.na(stepshour))
+sum(is.na(intensitieshour))
+sum(is.na(weight))
+sum(is.na(heartratesecond))
+
+
+sum(duplicated(activityday))
+sum(duplicated(sleepday))
+sum(duplicated(calorieshour))
+sum(duplicated(stepshour))
+sum(duplicated(intensitieshour))
+sum(duplicated(weight))
+sum(duplicated(heartratesecond))
+
+```
+
+weight tiene 65 NA y sleepday tiene 3 filas duplicadas.
+Dejamos los NA de la columna Fat de weight ya que no afectan, y borramos los 3 duplicados de sleepday.
+
+```{r}
+
+glimpse(weight)
+View(weight %>%
+      filter(is.na(Fat)))
+
+sleepday <- distinct(sleepday, keep_all=FALSE)
+sum(duplicated(sleepday))
+
+```
