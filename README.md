@@ -61,11 +61,13 @@ Los datos de 33 usuarios registrados entre el 12 de mayo y el 12 de abril del 20
 | sleepDay_merged.csv | Por usuario(Id) por dia: la cantidad de sueño y el numero de sesiones.  |
 | weightLogInfo_merged.csv | Por usuario(Id): el peso autoreportado.  |
 
-Habiendo explorado preliminalmente los archivos, sabemos que contienen estos registros listados, cada registro es unico y se identifica por un Id del usuario y una estampilla de tiempo. La estrategia de analisis consistira en utilizar 4 grupos de dataframes:
+
+## FASE DE PROCESAMIENTO: de los datos
+
+En la exploración preliminar de los archivos, ya sabemos que registros contienen cada uno y que estos registros son unicos identificandose por el Id del usuario y una estampilla de tiempo.
+
+La estrategia de analisis consistira en utilizar 4 grupos de dataframes:
 * La actividad diaria, registrada en el dailyActivity que sera unida con el sleepDay por facilidad, utiles para estudiar el comportamiento a lo largo de los dias.
 * La actividad por hora, uniendo los 3 archivos de actividad por hora, nos seran utiles para estudiar el comportamiento a lo largo del dia.
 * Ademas, usaremos el ritmo cardiaco, pues es una medicion muy importante para la salud y diciente de la actividad fisica, la dificultad con este es que se muchos registros pues son casi en "tiempo real".
 * Y tambien usaremos el peso pues es tambien un dato importante para la salud.
-
-## FASE DE PROCESAMIENTO: de los datos
-
