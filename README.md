@@ -3,7 +3,7 @@ Basado en el analisis de **Fitbit Fitness Tracker Data**
 Para un caso con la empresa **Bellabeat**  
 Por **Jairo Andrés Amaya Muñoz**  
 
-## FASE DE PREGUNTAS: Caso de estudio Bellabeat
+## :one:. FASE DE PREGUNTAS: Caso de estudio Bellabeat
 
 ### Contexto empresa, productos y estrategia:
 
@@ -31,7 +31,7 @@ La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitnes
 * Sando Mur: Cofundador y parte del Equipo Ejecutivo, además es matemático.
 * Demas miembros del Equipo Ejecutivo.
 
-## FASE DE PREPARACION: Datos de estudio
+## :two:. FASE DE PREPARACION: Datos de estudio
 
 ### ¿Que dataset se utilizará, donde esta almacenados y bajo que licencia?
 
@@ -62,7 +62,7 @@ Los datos de 33 usuarios registrados entre el 12 de mayo y el 12 de abril del 20
 | weightLogInfo_merged.csv | Por usuario(Id): el peso autoreportado.  |
 
 
-## FASE DE PROCESAMIENTO: de los datos
+## :three:. FASE DE PROCESAMIENTO: de los datos
 
 En la exploración preliminar de los archivos, ya sabemos que registros contienen cada uno y que estos registros son unicos identificandose por el Id del usuario y una estampilla de tiempo.
 
@@ -71,3 +71,6 @@ La estrategia de analisis consistira en utilizar 4 grupos de dataframes:
 * La actividad por hora, uniendo los 3 archivos de actividad por hora, nos seran utiles para estudiar el comportamiento a lo largo del dia.
 * Ademas, usaremos el ritmo cardiaco, pues es una medicion muy importante para la salud y diciente de la actividad fisica, la dificultad con este es que se muchos registros pues son casi en "tiempo real".
 * Y tambien usaremos el peso pues es tambien un dato importante para la salud.
+
+
+
