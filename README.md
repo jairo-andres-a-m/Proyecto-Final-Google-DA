@@ -63,8 +63,9 @@ Los datos de 33 usuarios registrados entre el 12 de mayo y el 12 de abril del 20
 
 Creemos util emplear datos por dia, hora y adicionalmente el sueño, el peso y el ritmo cardiaco ya que son indicadores importantes acerca de la salud. bio-metricos.dñajsdflgkajsdlgkj
 
-### Credibilidad de los datoss.... ROCC ?
-klhjkh
+### ROCCC????
+
+dfasdfa
 
 ### Ayuda a responder la pregunta???
 
@@ -92,7 +93,8 @@ sum(duplicated(weight)) ; sum(duplicated(heartrate))
 ```
 
 Encontramos que con los dataframes que elegimos trabajar, tenemos 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmocardiaco. Si bien algunos registran datos de menos usuarios, pueden llegar a darnos información útil.
-Ademas, encontramos que sleepday tiene 3 filas duplicadas y weight 44 valores nulos, en una sucesiva revision encontramos que estos valores nulos son en una columna de poca importancia, en cambio si eliminamos los 3 duplicados de sleepday:
+
+Ademas de esto, encontramos que sleepday tiene 3 filas duplicadas y weight 44 valores nulos. En una sucesiva revision encontramos que estos valores nulos son en una columna de poca importancia, en cambio sí eliminamos los 3 duplicados de sleepday:
 
 ```{r}
 glimpse(weight)
@@ -102,11 +104,48 @@ sleepday <- distinct(sleepday)
 sum(duplicated(sleepday))
 ```
 
+Despues de esto, cambiamos las estampillas de tiempo que tienen cada uno de los archivos que vamos a utilizar ya que se encuentran en formato de texto y no en date o datetime.
 
+```{r}
+activityday <- activityday %>%  mutate(ActivityDate = date(mdy(ActivityDate))) %>%  rename(date = ActivityDate)
+sleepday <- sleepday %>%  mutate(SleepDay = date(mdy_hms(SleepDay))) %>%  rename(date = SleepDay)
+weight <- weight %>%  mutate(Date = date(mdy_hms(Date))) %>%  rename(date = Date)
 
-En la exploración preliminar de los archivos, ya sabemos qué registros contienen cada uno y que estos registros son unicos identificandose por el Id del usuario y una estampilla de tiempo.
+calorieshour <- calorieshour %>%  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%  rename(datetime = ActivityHour)
+stepshour <- stepshour %>%  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%  rename(datetime = ActivityHour)
+intensitieshour <- intensitieshour %>%  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%  rename(datetime = ActivityHour)
+heartrate <- heartrate %>%  mutate(Time = mdy_hms(Time)) %>%  rename(datetime = Time)
+```
+De esta manera ya tenemos a todos los archivos a utilizar en date si tienen informacion diaria, o datetime si tienen a nivel de horas y/o minutos.
 
-La estrategia de analisis consistira en utilizar 4 grupos de dataframes:
+El siguiente paso consiste en unificar algunos archivos
+```{r}
+activityday <- activityday %>%
+  left_join(sleepday, by=c("Id", "date"))
+
+activityhour <- calorieshour %>%
+  inner_join(stepshour, by=c("Id", "datetime")) %>%
+  inner_join(intensitieshour, by=c("Id", "datetime"))
+```
+Y los visualizamos para asegurar que se hayan unido bien, el numero de filas sea el que debe haberse preservado, que los valores no se encuentren fuera de un rango razonable, etc.
+
+```{r}
+glimpse(activityday)
+summary(activityday)
+
+glimpse(activityhour)
+summary(activityhour)
+
+glimpse(weight)
+summary(weight)
+
+glimpse(heartrate)
+summary(heartrate)
+```
+
+Finalizando esta limpieza y exploracion preliminar, ya sabemos qué registros contienen cada uno y que estos registros son razonable y unicos identificandose por el Id del usuario y una estampilla de tiempo en su debido formato.
+
+La estrategia de analisis continuara utilizando 4 grupos de dataframes:
 * La actividad diaria, en un dataframe llamado activityday (de 33 usuarios), unido por facilidad con los datos del sueño (de 24 usuarios). Nos sera util para estudiar el comportamiento a lo largo de las semanas.
 * La actividad por hora, en un dataframe llamado activityhour (de 33 usuarios) uniendo los 3 archivos de actividad por hora. Nos sera util para estudiar el comportamiento a lo largo del dia.
 * Ademas, usaremos el ritmo cardiaco, pues es una medicion muy importante para la salud y diciente de la actividad fisica, la dificultad con este es que se muchos registros pues son casi en "tiempo real".
@@ -114,4 +153,6 @@ La estrategia de analisis consistira en utilizar 4 grupos de dataframes:
 
 ...
 
-## :four:. FASE DE PROCESAMIENTO: de los datos
+## :four:. FASE DE ANALISIS: de los datos
+
+En esta fase empezaremos a "jugar" con los datos que ya estan limpios y preparados. Ahora trataremos de visualizar los datos, descubriendo tendencias y particularidades de los usuarios de los que contamos con sus datos.
