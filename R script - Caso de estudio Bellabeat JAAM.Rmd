@@ -124,5 +124,13 @@ summary(heartrate)
 
 .....
 
+En este punto ya tenemos los datos listos y preparados.
+Empezaremos realizando visualizaciones como:
+ - 
+ - Cuanto porcentaje del dia se hace actividad y de que intensidad (piechart)
+ - Cuales horas del dias se hace mas actividad, puede ser por pasos o por calories o actividad (barras)
+
+
+
 
 
