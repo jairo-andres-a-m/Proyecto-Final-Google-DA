@@ -122,4 +122,40 @@ glimpse(heartrate)
 summary(heartrate)
 ```
 
-.....
+
+En este punto ya tenemos los datos listos y preparados.
+Empezaremos realizando visualizaciones como:
+ - Relación entre distancia y pasos, pasos y calorias y distancia y calorias.
+ - Cuanto porcentaje del día se hace actividad y de que intensidad (piechart)
+ - Cuales horas del días se hace mas actividad, puede ser por pasos o por calories o actividad (barras)
+ - Calidad del sueño vs actividad por intensidades... (un poco difícil)
+ - Días de mayor actividad en la semana
+
+Empezamos:
+
+```{r}
+ggplot(activityday) +
+  geom_point(aes(TotalDistance, TotalSteps)) +
+  geom_smooth(aes(TotalDistance, TotalSteps))
+
+ggplot(activityday) +
+  geom_point(aes(TotalSteps, Calories)) +
+  geom_smooth(aes(TotalSteps, Calories))
+
+ggplot(activityday) +
+  geom_point(aes(TotalDistance, Calories, color=TotalSteps)) +
+  geom_smooth(aes(TotalDistance, Calories))
+```
+Acá encontramos la relación de Calorias y Distancia Recorrida, van completamente correlacionados. (esto podría ir en preparación y revisión...)
+
+```{r}
+minutos_dia <- sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes)
+porcentaje_sedentary <- (sum(activityday$SedentaryMinutes) / minutos_dia) * 100
+porcentaje_lightly <- (sum(activityday$LightlyActiveMinutes) / minutos_dia) * 100
+porcentaje_fairly <- (sum(activityday$FairlyActiveMinutes) / minutos_dia) * 100
+porcentaje_veryactive <- (sum(activityday$VeryActiveMinutes) / minutos_dia) * 100
+```
+
+Asi tenemos calculados los porcentajes de nivel de intensidad de los dias.
+
+
