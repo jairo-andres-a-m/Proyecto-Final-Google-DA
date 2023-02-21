@@ -173,15 +173,25 @@ registro de acuerdo
 ```{r}
 n_distinct(sleepday$Id)
 n_distinct(sleepday$date)
-#410 registros de sleepday
+#410 registros de sleepday (registros de 410 dias)
 
 n_distinct(activityday$Id)
 n_distinct(activityday$date)
-#940 registros de activityday
+#940 registros de activityday (registrso de 940 dias)
 
-minutos_sueño_totales <- sum(sleepday$TotalMinutesAsleep)
-minutos_sueño_diario_promedio <- minutos_sueño_totales / (24*60)
-minutos_totales / (24*60)
+minutlos_sueño_promedio_por_registro <- sum(sleepday$TotalMinutesAsleep) / 410
+
+minutlos_sueño_promedio_por_registro / (60)
+
+mean(sleepday$TotalMinutesAsleep) / 60
+
+minutos_totales2 <- sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes) - (mean(sleepday$TotalMinutesAsleep)*940)
+
+porcentaje_sedentary2 <- ((sum(activityday$SedentaryMinutes)- (mean(sleepday$TotalMinutesAsleep)*940)) / minutos_totales2) * 100
+porcentaje_lightly2 <- (sum(activityday$LightlyActiveMinutes) / minutos_totales2) * 100
+porcentaje_fairly2 <- (sum(activityday$FairlyActiveMinutes) / minutos_totales2) * 100
+porcentaje_veryactive2 <- (sum(activityday$VeryActiveMinutes) / minutos_totales2) * 100
+
 ```
 
 
@@ -194,6 +204,16 @@ porcentajes_pie <- tibble(
 plot_ly(porcentajes_pie, labels = ~Group, values = ~Percentages, type = 'pie',textposition = 'outside',textinfo = 'label+percent') %>% layout(title = 'Nivel de Actividad Promedio por dia',
          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+porcentajes_pie2 <- tibble(
+  Group=factor(c("Sedentary2","Lightly active2","Fairly active2", "Very active2")),
+  Percentages=c(porcentaje_sedentary2, porcentaje_lightly2, porcentaje_fairly2, porcentaje_veryactive2))
+
+plot_ly(porcentajes_pie2, labels = ~Group, values = ~Percentages, type = 'pie',textposition = 'outside',textinfo = 'label+percent') %>% layout(title = 'Nivel de Actividad Promedio por dia2',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+#con esto le habremos restado al tiempo sedentario el tiempo de sueño
 ```
 Esta grafica es diciente, muestra el porcentaje de tiempo que se dedica a distintos niveles de actividad.
 Para mejorar el grafico, podemos restar el tiempo dormido por las personas... debo hacerlo...
