@@ -10,6 +10,7 @@ Cargue de librerias
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(lubridate)
+library(plotly)
 ```
 
 Direccion de los archivos y 4 grupos de archivos: 
@@ -149,13 +150,52 @@ ggplot(activityday) +
 Acá encontramos la relación de Calorias y Distancia Recorrida, van completamente correlacionados. (esto podría ir en preparación y revisión...)
 
 ```{r}
-minutos_dia <- sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes)
-porcentaje_sedentary <- (sum(activityday$SedentaryMinutes) / minutos_dia) * 100
-porcentaje_lightly <- (sum(activityday$LightlyActiveMinutes) / minutos_dia) * 100
-porcentaje_fairly <- (sum(activityday$FairlyActiveMinutes) / minutos_dia) * 100
-porcentaje_veryactive <- (sum(activityday$VeryActiveMinutes) / minutos_dia) * 100
+minutos_totales <- sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes)
+
+porcentaje_sedentary <- (sum(activityday$SedentaryMinutes) / minutos_totales) * 100
+porcentaje_lightly <- (sum(activityday$LightlyActiveMinutes) / minutos_totales) * 100
+porcentaje_fairly <- (sum(activityday$FairlyActiveMinutes) / minutos_totales) * 100
+porcentaje_veryactive <- (sum(activityday$VeryActiveMinutes) / minutos_totales) * 100
 ```
 
-Asi tenemos calculados los porcentajes de nivel de intensidad de los dias.
+Así tenemos calculados los porcentajes de nivel de intensidad de los días.
+
+Como no contamos con el registro de sueño de todos los días de todos los participantes del estudio, haremos esto:
+Hallaremos el promedio de tiempo de sueño diario promedio.
+En base a los minutos totales de registro de actividad, calcularemos cuantos días totales tenemos de registro de actividad.
+
+asi hallaremos 
+
+Restaremos el tiempo en que los participantes del estudio durmieron, para esto, como no tenemos registro de todos los días de sueño
+de todos los usuarios, determinaremos le tiempo de sueño promedio diario y estimaremos el porcentaje de este en el promedio de dias de los que tenemos
+registro de acuerdo 
+
+```{r}
+n_distinct(sleepday$Id)
+n_distinct(sleepday$date)
+#410 registros de sleepday
+
+n_distinct(activityday$Id)
+n_distinct(activityday$date)
+#940 registros de activityday
+
+minutos_sueño_totales <- sum(sleepday$TotalMinutesAsleep)
+minutos_sueño_diario_promedio <- minutos_sueño_totales / (24*60)
+minutos_totales / (24*60)
+```
+
+
+
+```{r}
+porcentajes_pie <- tibble(
+  Group=factor(c("Sedentary","Lightly active","Fairly active", "Very active")),
+  Percentages=c(porcentaje_sedentary, porcentaje_lightly, porcentaje_fairly, porcentaje_veryactive))
+
+plot_ly(porcentajes_pie, labels = ~Group, values = ~Percentages, type = 'pie',textposition = 'outside',textinfo = 'label+percent') %>% layout(title = 'Nivel de Actividad Promedio por dia',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+```
+Esta grafica es diciente, muestra el porcentaje de tiempo que se dedica a distintos niveles de actividad.
+Para mejorar el grafico, podemos restar el tiempo dormido por las personas... debo hacerlo...
 
 
