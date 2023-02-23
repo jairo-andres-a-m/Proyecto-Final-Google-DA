@@ -193,6 +193,21 @@ porcentaje_fairly2 <- (sum(activityday$FairlyActiveMinutes) / minutos_totales2) 
 porcentaje_veryactive2 <- (sum(activityday$VeryActiveMinutes) / minutos_totales2) * 100
 
 ```
+Hacemos una comprobación para ver que los registros de minutos de actividad son de todo el dia. Efectivamente, la mayoria de ellos por dia e Id son de 24 horas o un poco menos, si el dispositivo inteligente esta apagado, pero esto nos da a entender que en el tiempo sedentary, se incluye el tiempo de sueño. Por esta razon restaremos el tiempo dormido a la actividad diaria en sedentario.
+```{r}
+
+activityday %>%
+  mutate(semana = isoweek(date), dia = wday(date, abbr = FALSE,
+  week_start = getOption("lubridate.week.start", 1),
+  )) %>%
+  group_by(semana, dia, Id) %>%
+  arrange(semana, dia) %>%
+  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60) %>% 
+  summarize(n_horas_dia_24 = sum(horas_dia > 23.5))
+
+
+
+```
 
 
 
@@ -209,7 +224,7 @@ porcentajes_pie2 <- tibble(
   Group=factor(c("Sedentary2","Lightly active2","Fairly active2", "Very active2")),
   Percentages=c(porcentaje_sedentary2, porcentaje_lightly2, porcentaje_fairly2, porcentaje_veryactive2))
 
-plot_ly(porcentajes_pie2, labels = ~Group, values = ~Percentages, type = 'pie',textposition = 'outside',textinfo = 'label+percent') %>% layout(title = 'Nivel de Actividad Promedio por dia2',
+plot_ly(porcentajes_pie2, labels = ~Group, values = ~Percentages, type = 'pie',textposition = 'outside',textinfo = 'label+percent') %>% layout(title = '<b>Porcentaje de dia dedicado a Nivel de Actividad <b>',
          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 
@@ -217,5 +232,68 @@ plot_ly(porcentajes_pie2, labels = ~Group, values = ~Percentages, type = 'pie',t
 ```
 Esta grafica es diciente, muestra el porcentaje de tiempo que se dedica a distintos niveles de actividad.
 Para mejorar el grafico, podemos restar el tiempo dormido por las personas... debo hacerlo...
+
+Ahora veremos la actividad a lo largo del dia
+
+```{r}
+activityhour %>%
+    mutate(hora = hour(datetime)) %>%
+    group_by(hora) %>%
+    summarize(Intensidad_de_actividad = mean(TotalIntensity)) %>%
+    ggplot(aes(x=hora, y=Intensidad_de_actividad, fill=Intensidad_de_actividad)) +
+        geom_col() +
+        scale_fill_gradient(low = "black", high = "darkolivegreen2") +
+        labs(x = "Hora del día", y = "Intensidad de Actividad", title="Intensidad de Actividad por hora del día")
+```
+
+Ahora miraremos como varia la actividad de acuerdo al día de la semana
+
+
+[ PODRIA SER BUENO GUIARSE POR LAS CALORIAS, YA QUE AYUDAN A CALCULAR CUANTO SE DEBE COMER ]
+
+```{r}
+activityhour %>% 
+    mutate(semana = isoweek(datetime), dia = wday(datetime, label=TRUE, abb=FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
+    group_by(semana, dia) %>%
+    summarize(intensity = mean(TotalIntensity)) %>%
+    ggplot(mapping=aes(x=dia, y=semana, fill=intensity)) +
+    geom_tile() + 
+    geom_text(aes(label=round(intensity, 1)), color="white") +
+    labs(x = "Dia de la semana", y = "Semana", title="Intensidad de Actividad dia a dia")
+
+activityhour %>% 
+    mutate(semana = isoweek(datetime), dia = wday(datetime, label=TRUE, abb=FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
+    group_by(dia) %>%
+    summarize(intensity = mean(TotalIntensity)) %>%
+    ggplot(mapping=aes(x=dia, y="", fill=intensity)) +
+    geom_tile() + 
+    geom_text(aes(label=round(intensity, 1)), color="white") +
+    labs(x = "Dia de la semana", y = "", title="Intensidad de Actividad promedio por dia de la semana")
+```
+
+Ahora analizaremos la relacion entre 
+
+
+```{r}
+active_minutes_vs_calories <- ggplot(data = activityday) + 
+  geom_point(aes(x=Calories, y=SedentaryMinutes), color = "mediumseagreen", alpha = 1/4) +
+  geom_smooth(method = loess,formula =y ~ x,aes(x=Calories, y=SedentaryMinutes), color = "mediumseagreen", se = FALSE) + 
+  
+  geom_point(aes(x=Calories, y=LightlyActiveMinutes), color = "orangered3", alpha = 1/4) +
+  geom_smooth(method = loess,formula =y ~ x,aes(x=Calories, y=LightlyActiveMinutes, color=LightlyActiveMinutes), color = "orangered3", se = FALSE) + 
+  
+  geom_point(aes(x=Calories, y=FairlyActiveMinutes), color = "purple3", alpha = 1/4) +
+  geom_smooth(method = loess,formula =y ~ x, aes(x=Calories, y=FairlyActiveMinutes), color = "purple3", se = FALSE) +
+  
+  geom_point(aes(x=Calories, y=VeryActiveMinutes), color = "turquoise1", alpha = 1/4) +
+  geom_smooth(method = loess,formula =y ~ x,aes(x=Calories, y=VeryActiveMinutes), color = "turquoise1", se = FALSE) +
+  
+  labs(x = "Calorias", y = "Minutos de Actividad", title="Calorias vs Minutos de Actividad") +
+  
+  annotate("text", x=4800, y=160, label="Very Active",     color="black", size=3) +
+  annotate("text", x=4800, y=0,   label="Fairly Active",   color="black", size=3) +
+  annotate("text", x=4800, y=500, label="Sedentary",       color="black", size=3) +
+  annotate("text", x=4800, y=250, label="Lightly  Active", color="black", size=3)
+```
 
 
