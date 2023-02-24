@@ -157,7 +157,30 @@ La estrategia de analisis continuara utilizando 4 grupos de dataframes:
 
 En esta fase empezaremos a "jugar" con los datos que ya estan limpios y preparados. Ahora trataremos de visualizar los datos, descubriendo tendencias y particularidades de los usuarios de los que contamos con sus datos.
 
+### Calorias quemadas, pasos dados y distancia recorrida
+
 En primer lugar dentro de los datos disponibles, exploraremos la relacion entre Las Calorias quemadas, Los Pasos dados y La Distancia recorrida por los participantes del estudio. Es de esperarse que las 3 esten directamente relacionadas, como lo vemos a continuacion:
 
 ![pasos_vs_calorias_vs_distancia](https://user-images.githubusercontent.com/124465699/221270638-59709d94-97b7-4e2c-9383-2bf4d3be1976.png)
 
+### Actividad diaria
+
+Tambien contamos con informacion del nivel de actividad de los usuarios, para saber que porcentaje del dia realizan distintos niveles de actividad, sabemos que es importante mantenernos activos fisicamente para conservar un buen estado de salud.
+
+En este caso, teniamos el tiempo en minutos diarios dedicados a cada nivel de actividad. Los niveles de actividad son Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo). Comprobamos que en el nivel sedentario estuviera incluido el tiempo de sueño.
+```{r}
+activityday %>%
+  mutate(semana = isoweek(date), dia = wday(date, abbr = FALSE,
+  week_start = getOption("lubridate.week.start", 1),
+  )) %>%
+  group_by(semana, dia, Id) %>%
+  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
+```
+Extrayendo este resumen, encontramos que muchos, sino la mayoria de los registros sumando los niveles de actividad, suman 24 horas, por lo que estos incluyen todo el tiempo, incluso el de sueño que entraria en la categoria de sedentario. Pero esto no afecta porque es de esperarse que asi se gasta el tiempo de sueño que ademas es de descanso, por esto restamos el tiempo de sueño y tenemos el porcentaje de nivel de actividad en el tiempo despierto de un dia promedio.
+![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221298050-1af0c699-c3f8-44ad-8e6b-5f63aa4512fa.png)
+Podemos apreciar, (averiguar que se recomienda respecto al nivel de actividad).
+
+### Distribucion de la actividad en el dia
+
+![intensidad_de_actividad_por_hora_del_dia](https://user-images.githubusercontent.com/124465699/221299127-c4ac61ec-1ee2-42b5-908f-ba56fb54ffc1.png)
+Podemos observar que las horas en que mas actividad intensa se realiza son entre las 5 pm y 8 pm.
