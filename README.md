@@ -183,4 +183,5 @@ Podemos apreciar, (averiguar que se recomienda respecto al nivel de actividad).
 ### Distribucion de la actividad en el dia
 
 ![intensidad_de_actividad_por_hora_del_dia](https://user-images.githubusercontent.com/124465699/221299127-c4ac61ec-1ee2-42b5-908f-ba56fb54ffc1.png)
+
 Podemos observar que las horas en que mas actividad intensa se realiza son entre las 5 pm y 8 pm.
