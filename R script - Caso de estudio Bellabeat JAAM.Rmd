@@ -13,8 +13,8 @@ library(lubridate)
 library(plotly)
 ```
 
-Direccion de los archivos y 4 grupos de archivos: 
-actividad diaria (+ sueño), actividad por hora, peso y ritmo cardiaco.
+Dirección de los archivos y 4 grupos de archivos: 
+actividad diaria (+ sueño), actividad por hora, peso y ritmo cardíaco.
 
 ```{r}
 path_pc_local <- "D:/RStudio/Fitabase Data 4.12.16-5.12.16"
@@ -31,13 +31,11 @@ weight <- read_csv(file.path(path_pc_local, "weightLogInfo_merged.csv"))
 heartrate <- read_csv(file.path(path_pc_local, "heartrate_seconds_merged.csv"))
 ```
 
-Vemos que tenemos registros de 33 usuarios para activityday, calorieshour, stepshour e intensitieshour. 24 usuarios para sleepday, 8 para weight y 14 para heartrate. Si bien algunos registran datos de menos usuarios, pueden llegar a darnos información útil.
+Revisamos que los archivos se hayan subido correctamente.
 
-Chequeamos si hay valores NA o filas duplicadas.
-
+Revisamos  la variable de Id para saber registros de cuantos usuarios tenemos, tambien si hay valores NA y si hay registros duplicados.
 
 ```{r}
-
 n_distinct(activityday$Id) ; n_distinct(sleepday$Id)
 n_distinct(calorieshour$Id) ; n_distinct(stepshour$Id) ; n_distinct(intensitieshour$Id)
 n_distinct(weight$Id) ; n_distinct(heartrate$Id)
@@ -50,9 +48,13 @@ sum(duplicated(activityday)) ; sum(duplicated(sleepday))
 sum(duplicated(calorieshour)) ; sum(duplicated(stepshour)) ; sum(duplicated(intensitieshour))
 sum(duplicated(weight)) ; sum(duplicated(heartrate))
 ```
+Vemos que tenemos registros de 33 usuarios para activityday, calorieshour, stepshour e intensitieshour. 
+24 usuarios para sleepday, 8 para weight y 14 para heartrate. 
+Si bien algunos registran datos de menos usuarios, pueden llegar a darnos información útil.
 
-weight tiene 65 NA y sleepday tiene 3 filas duplicadas.
-Dejamos los NA de la columna Fat de weight ya que no afectan, y borramos los 3 duplicados de sleepday.
+Encontramos que weight tiene 65 NA y sleepday tiene 3 filas duplicadas.
+
+Dejamos los NA que pertenecen a la columna Fat de weight ya que no afectan, y borramos los 3 duplicados de sleepday.
 
 ```{r}
 glimpse(weight)
@@ -63,7 +65,8 @@ sleepday <- distinct(sleepday)
 sum(duplicated(sleepday))
 ```
 
-Cambiamos las estampillas de tiempo en texto a formato date o datetime.
+Cambiamos las estampillas de tiempo que estan en texto a formato date o datetime.
+
 Los diarios, el peso y el weight tendrán date y los por hora y el ritmo cardíaco tendrán datetime.
 
 ```{r}
@@ -93,7 +96,8 @@ heartrate <- heartrate %>%
 glimpse(calorieshour)
 ```
 
-Ahora uniremos algunos archivos basados en su usuario Id y estampilla de tiempo.
+Ahora unimos algunos archivos basados en su usuario Id y estampilla de tiempo, lo que sirve como identificacion unica de cada registro.
+
 Entonces quedaremos con activityday, activityhour, weight y heartrate listos y limpios.
 
 ```{r}
@@ -105,9 +109,7 @@ activityhour <- calorieshour %>%
   inner_join(intensitieshour, by=c("Id", "datetime"))
 ```
 
-Un ultimo vistazo:
-Chequeamos que los valores tengan rangos normales.
-Todos tienen rangos de valores que son posibles y no irreales.
+Hacemos un ultimo vistazo para ver que los valores tengan rangos normales.
 
 ```{r}
 glimpse(activityday)
@@ -123,6 +125,7 @@ glimpse(heartrate)
 summary(heartrate)
 ```
 
+Todos tienen rangos de valores que son posibles y no irreales.
 
 En este punto ya tenemos los datos listos y preparados.
 Empezaremos realizando visualizaciones como:
@@ -208,6 +211,17 @@ activityday %>%
 
 
 ```
+En primer lugar, comprobamos la relación existente entre las calorías, los pasos y la distancia.
+
+Vemos que existe una correlacion positiva entre las calorías quemadas y los pasos dados, los que al mismo tiempo se relacionan positivamente con la distancia recorrida con el usuario, como es de esperarse.
+```{r}
+ggplot(data=activityday, aes(x=TotalSteps, y=Calories)) +
+        geom_point(mapping=aes(color=TotalDistance)) +
+        geom_smooth() +
+        labs(x = "Numero de Pasos", y = "Calorias", color="Distancia Recorrida", title="Numero de Pasos vs Calorias vs Distancia Recorrida")
+```
+
+
 
 
 
@@ -242,7 +256,7 @@ activityhour %>%
     summarize(Intensidad_de_actividad = mean(TotalIntensity)) %>%
     ggplot(aes(x=hora, y=Intensidad_de_actividad, fill=Intensidad_de_actividad)) +
         geom_col() +
-        scale_fill_gradient(low = "black", high = "darkolivegreen2") +
+        scale_fill_gradient(low = "steelblue4", high = "darkolivegreen2") +
         labs(x = "Hora del día", y = "Intensidad de Actividad", title="Intensidad de Actividad por hora del día")
 ```
 
@@ -259,6 +273,7 @@ activityhour %>%
     ggplot(mapping=aes(x=dia, y=semana, fill=intensity)) +
     geom_tile() + 
     geom_text(aes(label=round(intensity, 1)), color="white") +
+    scale_fill_gradient(low = "steelblue", high = "mediumseagreen") +
     labs(x = "Dia de la semana", y = "Semana", title="Intensidad de Actividad dia a dia")
 
 activityhour %>% 
@@ -268,6 +283,8 @@ activityhour %>%
     ggplot(mapping=aes(x=dia, y="", fill=intensity)) +
     geom_tile() + 
     geom_text(aes(label=round(intensity, 1)), color="white") +
+    scale_fill_gradient(low = "steelblue", high = "mediumseagreen") +
+    
     labs(x = "Dia de la semana", y = "", title="Intensidad de Actividad promedio por dia de la semana")
 ```
 
@@ -295,5 +312,6 @@ active_minutes_vs_calories <- ggplot(data = activityday) +
   annotate("text", x=4800, y=500, label="Sedentary",       color="black", size=3) +
   annotate("text", x=4800, y=250, label="Lightly  Active", color="black", size=3)
 ```
+Lo siguiente es hacer un análisis del sueño.
 
 
