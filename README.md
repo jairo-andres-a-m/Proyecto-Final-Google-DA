@@ -177,7 +177,9 @@ activityday %>%
   summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
 ```
 Extrayendo este resumen, encontramos que muchos, sino la mayoria de los registros sumando los niveles de actividad, suman 24 horas, por lo que estos incluyen todo el tiempo, incluso el de sueño que entraria en la categoria de sedentario. Pero esto no afecta porque es de esperarse que asi se gasta el tiempo de sueño que ademas es de descanso, por esto restamos el tiempo de sueño y tenemos el porcentaje de nivel de actividad en el tiempo despierto de un dia promedio.
-![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221298050-1af0c699-c3f8-44ad-8e6b-5f63aa4512fa.png)
+
+![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221300359-e564eb64-db6f-4fd5-afc9-3b3d7840333f.png)
+
 Podemos apreciar, (averiguar que se recomienda respecto al nivel de actividad).
 
 ### Distribucion de la actividad en el dia
