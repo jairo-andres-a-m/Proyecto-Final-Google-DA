@@ -13,11 +13,12 @@ library(lubridate)
 library(plotly)
 ```
 
-Dirección de los archivos y 4 grupos de archivos: 
+Dirección de los archivos y cargue de 4 grupos de archivos: 
 actividad diaria (+ sueño), actividad por hora, peso y ritmo cardíaco.
 
 ```{r}
-path_pc_local <- "D:/RStudio/Fitabase Data 4.12.16-5.12.16"
+path_pc_local <- "C:/Users/JairoA/Documents/R_Studio_JAAM_Files/Capstone Project JAAM/Fitabase_Data_04122016-05122016"
+path_pc_oficina <- "D:/RStudio/Fitabase Data 4.12.16-5.12.16"
 
 activityday <- read_csv(file.path(path_pc_local, "dailyActivity_merged.csv"))
 sleepday <- read_csv(file.path(path_pc_local, "sleepDay_merged.csv"))
@@ -33,7 +34,7 @@ heartrate <- read_csv(file.path(path_pc_local, "heartrate_seconds_merged.csv"))
 
 Revisamos que los archivos se hayan subido correctamente.
 
-Revisamos  la variable de Id para saber registros de cuantos usuarios tenemos, tambien si hay valores NA y si hay registros duplicados.
+Revisamos la variable de Id para saber cuantos usuarios tenemos, también si hay valores NA y si hay registros duplicados.
 
 ```{r}
 n_distinct(activityday$Id) ; n_distinct(sleepday$Id)
@@ -48,13 +49,14 @@ sum(duplicated(activityday)) ; sum(duplicated(sleepday))
 sum(duplicated(calorieshour)) ; sum(duplicated(stepshour)) ; sum(duplicated(intensitieshour))
 sum(duplicated(weight)) ; sum(duplicated(heartrate))
 ```
+
 Vemos que tenemos registros de 33 usuarios para activityday, calorieshour, stepshour e intensitieshour. 
 24 usuarios para sleepday, 8 para weight y 14 para heartrate. 
-Si bien algunos registran datos de menos usuarios, pueden llegar a darnos información útil.
+Si bien algunos archivos registran datos de menos usuarios, pueden llegar a darnos información útil.
 
-Encontramos que weight tiene 65 NA y sleepday tiene 3 filas duplicadas.
+Ademas, encontramos que weight tiene 65 NA y sleepday tiene 3 filas duplicadas.
 
-Dejamos los NA que pertenecen a la columna Fat de weight ya que no afectan, y borramos los 3 duplicados de sleepday.
+Dejamos los NA ya que pertenecen a la columna Fat de weight y no afectan, y borramos los 3 duplicados de sleepday.
 
 ```{r}
 glimpse(weight)
@@ -65,8 +67,7 @@ sleepday <- distinct(sleepday)
 sum(duplicated(sleepday))
 ```
 
-Cambiamos las estampillas de tiempo que estan en texto a formato date o datetime.
-
+Ahora, cambiamos las estampillas de tiempo que están en formato de texto a formato date o datetime.
 Los diarios, el peso y el weight tendrán date y los por hora y el ritmo cardíaco tendrán datetime.
 
 ```{r}
@@ -92,13 +93,10 @@ intensitieshour <- intensitieshour %>%
 heartrate <- heartrate %>%
   mutate(Time = mdy_hms(Time)) %>%
   rename(datetime = Time)
-
-glimpse(calorieshour)
 ```
 
-Ahora unimos algunos archivos basados en su usuario Id y estampilla de tiempo, lo que sirve como identificacion unica de cada registro.
-
-Entonces quedaremos con activityday, activityhour, weight y heartrate listos y limpios.
+Las fechas están en un formato correcto para facilitar su uso mas adelante, también aprovechamos el Id en conjunto con la estampilla de tiempo como identificación única de cada registro.
+Con esto podemos unir tablas de datos para facilitar el manejo. Quedaremos con activityday, incluida la información de sleepday, activityhour uniendo las 3 de actividad por hora y weight y heartrate.
 
 ```{r}
 activityday <- activityday %>%
@@ -109,7 +107,7 @@ activityhour <- calorieshour %>%
   inner_join(intensitieshour, by=c("Id", "datetime"))
 ```
 
-Hacemos un ultimo vistazo para ver que los valores tengan rangos normales.
+Echamos un ultimo vistazo para ver que los valores tengan rangos normales.  Deben estar ordenados, limpios y listos.
 
 ```{r}
 glimpse(activityday)
@@ -125,7 +123,7 @@ glimpse(heartrate)
 summary(heartrate)
 ```
 
-Todos tienen rangos de valores que son posibles y no irreales.
+Todos tienen rangos de valores que son posibles y no irreales. Por lo que las tablas a analizar están listas.
 
 En este punto ya tenemos los datos listos y preparados.
 Empezaremos realizando visualizaciones como:
@@ -135,7 +133,8 @@ Empezaremos realizando visualizaciones como:
  - Calidad del sueño vs actividad por intensidades... (un poco difícil)
  - Días de mayor actividad en la semana
 
-Empezamos:
+
+Ahora empezamos a realizar gráficas que nos permitan dilucidar la información que contiene nuestros datos y que con esto podamos caracterizar a los usuarios de los dispositivos FitBit o de cualquier dispositivo de bio-monitoreo inteligente.
 
 ```{r}
 ggplot(activityday) +
@@ -150,7 +149,9 @@ ggplot(activityday) +
   geom_point(aes(TotalDistance, Calories, color=TotalSteps)) +
   geom_smooth(aes(TotalDistance, Calories))
 ```
-Acá encontramos la relación de Calorias y Distancia Recorrida, van completamente correlacionados. (esto podría ir en preparación y revisión...)
+
+Acá encontramos la relación de Calorias y Distancia Recorrida, van completamente correlacionados. 
+(esto podría ir en preparación y revisión...)
 
 ```{r}
 minutos_totales <- sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes)
@@ -163,9 +164,8 @@ porcentaje_veryactive <- (sum(activityday$VeryActiveMinutes) / minutos_totales) 
 
 Así tenemos calculados los porcentajes de nivel de intensidad de los días.
 
-Como no contamos con el registro de sueño de todos los días de todos los participantes del estudio, haremos esto:
-Hallaremos el promedio de tiempo de sueño diario promedio.
-En base a los minutos totales de registro de actividad, calcularemos cuantos días totales tenemos de registro de actividad.
+Como no contamos con el registro de sueño de todos los días de todos los participantes del estudio, hacemos esto:
+Hallaremos el promedio de tiempo de sueño diario promedio, en base a los minutos totales de registro de actividad, calcularemos cuantos días totales tenemos de registro de actividad.
 
 asi hallaremos 
 
