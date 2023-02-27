@@ -208,10 +208,10 @@ plot_ly(porcentajes_pie, labels = ~Group, values = ~Percentages, type = 'pie',te
 
 #con esto le habremos restado al tiempo sedentario el tiempo de sueño
 ```
-Esta grafica es diciente, muestra el porcentaje de tiempo que se dedica a distintos niveles de actividad.
-Para mejorar el grafico, podemos restar el tiempo dormido por las personas... debo hacerlo...
+Esta gráfica es diciente, muestra el porcentaje de tiempo que se dedica a distintos niveles de actividad.
+Para mejorar el gráfico, podemos restar el tiempo dormido por las personas... debo hacerlo...
 
-Ahora veremos la actividad a lo largo del dia
+Ahora veremos la actividad a lo largo del día
 
 ```{r}
 activityhour %>%
@@ -275,6 +275,8 @@ active_minutes_vs_calories <- ggplot(data = activityday) +
   annotate("text", x=4800, y=0,   label="Fairly Active",   color="black", size=3) +
   annotate("text", x=4800, y=500, label="Sedentary",       color="black", size=3) +
   annotate("text", x=4800, y=250, label="Lightly  Active", color="black", size=3)
+
+active_minutes_vs_calories
 ```
 Lo siguiente es hacer un análisis del sueño.
 
