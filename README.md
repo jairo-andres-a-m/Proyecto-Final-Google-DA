@@ -81,9 +81,9 @@ que pasos de limpieza hicimos ????¿¿¿¿¿ fsdiojfopiasjgiopjoi copiar y pegar
 
 La herramienta definitiva elegida para este caso, es el lenguaje R, dado que este es una herramienta poderosa que nos permite realizar todos los pasos del analisis de datos. Complementariamente, usamos RStudio y un repositorio de GitHub para poder avanzar nuestro trabajo, organizarlo, comentarlo y mantenerlo al dia. En el lenguaje R hacemos tareas claves como ver dimensiones, buscar duplicados, buscar valores nulos, adecuar formatos, unir tablas, filtrar, ordenar, calcular, resumir, graficar y documentar como se muestra.
 
-### Revisamos los registros: Ids, valores nulos y filas duplicadas
+### Revision registros: Ids, valores nulos y filas duplicadas
 
-Hechamos un nuevo vistazo a las tablas y a su limpieza mas alla de que parecen ordenadas.
+Hacemos un nuevo vistazo en mas detalle de las tablas y su limpieza aunque parezcan ordenadas a simple vista.
 
 ```{r}
 #valores distintos
@@ -102,7 +102,7 @@ sum(duplicated(calorieshour)) ; sum(duplicated(stepshour)) ; sum(duplicated(inte
 sum(duplicated(weight)) ; sum(duplicated(heartrate))
 ```
 
-Encontramos que con los tablas (o dataframes) que elegimos trabajar, efectivamente contamos con 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmo cardiaco. Ya hemos decidido preservar todos estos.
+Encontramos que con los tablas (o dataframes) en que elegimos trabajar, efectivamente contamos con 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmo cardiaco. Ya hemos decidido preservar todos estos.
 
 Mas alla de lo anterior, encontramos que sleepday tiene 3 filas duplicadas y weight 44 valores nulos. En una sucesiva revision encontramos que estos valores nulos son de la columna Fat en la tabla weight, una columna de poca importancia. En cambio sí eliminamos los 3 duplicados de sleepday.
 
@@ -114,7 +114,9 @@ sleepday <- distinct(sleepday)
 sum(duplicated(sleepday))
 ```
 
-Despues de esto, cambiamos las estampillas de tiempo que tienen cada una de las tablas que vamos a utilizar ya que se encuentran en formato de texto y no en date o datetime.
+### Adecuacion de estampillas de tiempo
+
+Adecuaremos el formato de las estampillas de tiempo que tienen los registros en cada una de las tablas ya que se encuentran en formato de texto y no en date o datetime.
 
 ```{r}
 #dates
@@ -128,9 +130,11 @@ stepshour <- stepshour %>%  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%  re
 intensitieshour <- intensitieshour %>%  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%  rename(datetime = ActivityHour)
 heartrate <- heartrate %>%  mutate(Time = mdy_hms(Time)) %>%  rename(datetime = Time)
 ```
-De esta manera ya tenemos a todos los archivos a utilizar en date si tienen informacion diaria, o datetime si tienen a nivel de horas y/o minutos.
+De esta manera ya tenemos a todos los archivos a utilizar en date si tienen informacion diaria, o datetime si tienen a nivel de horas y/o minutos. 
 
-Con esta columna date o datetime en buen estado, y empleando el Id,  las usamos como identificacion unica de cada registro para unir tablar buscando el orden y la manipulabilidad.
+### Union de tablas
+
+Con la columna date o datetime en buen estado y en conjunto con el Id de los usuarios, podemos usar tranquilamente ambos valores como identificacion unica de cada registro para unir tablas buscando el orden y facilitar la manipulacion.
 
 ```{r}
 activityday <- activityday %>%
@@ -140,7 +144,7 @@ activityhour <- calorieshour %>%
   inner_join(stepshour, by=c("Id", "datetime")) %>%
   inner_join(intensitieshour, by=c("Id", "datetime"))
 ```
-Ahora los visualizamos para asegurar que se hayan unido bien, que el numero de filas sea el que debe haberse preservado y que los valores no se encuentren fuera de un rango razonable.
+Estando unidas, ahora visualizamos de nuevo para asegurarnos que se hayan unido bien, que el numero de filas sea el que debe haberse preservado tras la union y que los valores no se encuentren fuera de un rango razonable.
 
 ```{r}
 glimpse(activityday)
@@ -155,7 +159,9 @@ summary(weight)
 glimpse(heartrate)
 summary(heartrate)
 ```
-Todas las variables (o columnas) tienen rangos de valores posibles y no irreales, por lo que las tablas estan limpias, organizadas y limpias. Quedamos unicamente con:
+Todas las variables (o columnas) tienen rangos de valores razonables, posibles y no irreales, por lo que las tablas estan limpias, organizadas y limpias. 
+
+### Tablas definitivas: organizadas y limpias
 
 * activityday: Por dia: niveles de actividad medidos en minutos y en distancia, pasos, calorias y sueño.
 * activityhour: Por hora: medida de nivel de actividad, pasos y calorias.
