@@ -69,16 +69,17 @@ Creemos util emplear datos por dia, hora, del sueño, el peso y el ritmo cardiac
 
 ✔️ Como pudimos ver al revisar el contenido y la organizacion del dataset, contamos con la informacion integra de estas personas en este periodo de tiempo. La informacion es del 2016 pero sigue siendo relevante pues si bien los dispositivos comerciales de bio-monitoreo han mejorado, esencialmente continuan haciendo lo mismo.
 
-✖️ Por otra parte, contar con 33 participantes, usuarios de dispositivos de bio-monitoreo, es una muestra pequeña de personas para establecer comportamientos universales de la actividad fisica de las personas. En el caso del sueño, el ritmo cardiaco y el peso, apenas contamos con registros de 24, 14 y 8 participantes respectivamente. No excluimos estos datos ya que son indicadores importantes y aunque son pocos podemos intentar ver tendencias en ellos.
+✖️ Por otra parte, contar con 33 participantes, usuarios de dispositivos de bio-monitoreo, es una muestra pequeña de personas para establecer comportamientos universales de la actividad fisica de las personas. En el caso del sueño, el ritmo cardiaco y el peso, apenas contamos con registros de 24, 14 y 8 participantes respectivamente. No excluimos estos ultimos datos ya que son indicadores importantes, y en general aunque sea una muestra pequeña podemos intentar ver tendencias en ellos.
 
-Los datos ayudan a responder preguntas y son relativos a la tarea empresarial.
+Los datos nos ayudan a responder preguntas y son relativos a la tarea empresarial.
 
 ## :three:. FASE DE PROCESAMIENTO: de los datos
 
 que pasos de limpieza hicimos ????¿¿¿¿¿ fsdiojfopiasjgiopjoi copiar y pegar partes del codigo y resultados de ejecutarlo...
-### ¿Que herramienta elegimos para este estudio y analisis?
 
-Usare el el lenguaje R dado que es una herramienta poderosa que nos permite realizar todos los pasos del analisis de datos, desde limpiar, visualizar, analizar hasta graficar y sacar conclusiones, ademas con esta herramienta podemos tener en un solo lugar el codigo y los pasos tomados. (mirar cuadro del roadmap del curso de google pasoidjasiodgjoasijdgioqjweoijsdaskd ......... sdiasjdogj)
+### ¿Que herramienta elegimos para este tarea de analisis?
+
+La herramienta definitiva elegida para este caso, es el lenguaje R, dado que este es una herramienta poderosa que nos permite realizar todos los pasos del analisis de datos, desde visualizar, limpiar, analizar, graficar y comentar las conclusiones. Usando el RStudio y un repositorio de GitHub podemos avanzar nuestro trabajo, organizarlo, comentarlo y mantenerlo al dia. Tareas claves como ver dimensiones, buscar duplicados, valores nulos, adecuar formatos, unir tablas, filtrar, ordenar, resumir, graficar, entre otras, son tareas que se desarrollan en adelante.
 
 ### Revisamos los registros, Ids, valores nulos y filas duplicadas:
 
