@@ -9,7 +9,7 @@ Por **Jairo Andrés Amaya Muñoz**
 
 Bellabeat es una empresa pequeña y exitosa, es manufacturera de productos de tecnologia para la mujer enfocados en el cuidado de su salud. Esta empresa tiene el potencial para ser una gran jugadora en el mercado de dispositivos teconologicos e inteligentes. Desde su fundacion en el año 2013 han desarrollado productos y abierto oficinas en distintas partes del mundo.
 
-Los productos de Bellabeat recolectan datos de bio-monitoreo de la actividad fisica, pasos dados, distancia recorrida, calorias quemadas, ritmo cardiaco, peso, sueño y salud reproductiva, entre otras, para empoderar a las usuarias con conocimiento de si mismas y poder incidir en sus habitos.
+Los productos de Bellabeat recolectan datos de bio-monitoreo de la actividad fisica, pasos dados, distancia recorrida, calorias quemadas, ritmo cardiaco, peso, sueño y salud reproductiva, entre otras, para empoderar a sus usuarias con conocimiento de si mismas y poder incidir en sus habitos.
 Sus productos son:
 
 | Producto | Descripcion |
@@ -19,7 +19,7 @@ Sus productos son:
 | Spring | Una botella inteligente |
 | Bellabeat app | Todos los anteriores se conectan a esta app que permite hacer seguimiento |
 
-La empresa comercializa sus productos en su tienda virtual en su sitio web. Desde el inicio han optado por el canal virtual y se han apoyado considerablemente en el marketing. Siendo esto algo que quieren seguir haciendo basando sus decisiones en datos, para ello encomiendan realizar este estudio para que les proporcione perspectivas e ideas.
+La empresa comercializa sus productos en su tienda virtual en su sitio web. Desde el inicio han optado por el canal virtual y se han apoyado considerablemente en el marketing. Siendo esto algo que quieren seguir haciendo basando sus decisiones en datos, para ello encomiendan realizar este estudio para que les proporcione nuevas perspectivas e ideas.
 
 ### ¿Cual es la tarea empresarial?
 
@@ -37,11 +37,11 @@ La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitnes
 
 Sršen nos recomienda usar un dataset de dominio publico (CC0: Public Domain) llamado FitBit Fitness Tracker Data, este fue subido por el usuario Möbius a la plataforma Kaggle en el siguiente link:  https://www.kaggle.com/datasets/arashnic/fitbit
 
-Descargamos este dataset, este contiene datos generados por ~33 usuarios de dispositivos FitBit encuestados via Amazon Mechanical Turk que accedieron a dar su inofrmacion personal registrada en sus dispositivos durante dos meses, del 12 de mayo al 12 de abril del 2016.
+Descargamos este dataset, segun la descripcion este contiene datos generados por ~30 usuarios de dispositivos FitBit encuestados via Amazon Mechanical Turk que accedieron a dar su inofrmacion personal registrada en sus dispositivos durante dos meses, del 12 de mayo al 12 de abril del 2016.
 
 ### ¿Como se organiza y que contiene el dataset?
 
-Los datos de 33 usuarios registrados entre el 12 de mayo y el 12 de abril del 2016, estan organizados en 18 archivos CSV, excluiremos de una vez 3 de ellos que son repetidos pero en formato wide, entonces los 15 archivos son:
+Con el dataset en "nuestras manos", vemos que este contiene datos de 33 usuarios registrados entre el 12 de mayo y el 12 de abril del 2016, este está organizado en 18 archivos CSV, de los cuales excluiremos de una vez 3 de ellos ya que son repetidos pero en formato wide. Entonces los 15 archivos que tenemos son:
 
 | Dataframe | Descripcion de registros|
 | :--------------- | :--------------- |
@@ -61,40 +61,50 @@ Los datos de 33 usuarios registrados entre el 12 de mayo y el 12 de abril del 20
 | sleepDay_merged.csv | Por usuario(Id) por dia: la cantidad de sueño y el numero de sesiones.  |
 | weightLogInfo_merged.csv | Por usuario(Id): el peso autoreportado.  |
 
-Creemos util emplear datos por dia, hora y adicionalmente el sueño, el peso y el ritmo cardiaco ya que son indicadores importantes acerca de la salud. bio-metricos.dñajsdflgkajsdlgkj
+Creemos util emplear datos por dia, hora, del sueño, el peso y el ritmo cardiaco ya que son indicadores importantes acerca de la salud. Prescindiremos de los datos a nivel de detalle de minutos.
 
-### ROCCC????
+### Fiabilidad de los datos
 
-dfasdfa
+✔️ Los datos son de una fuente secundaria pues han sido recolectados por unos investigadores en otro estudio. Los participantes de dicho estudio accedieron a compartir sus datos de un mes completo de sus actividades. Podemos decir que han sido adquiridos y compartidos consentidamente y de una forma etica. 
 
-### Ayuda a responder la pregunta???
+✔️ Como pudimos ver al revisar el contenido y la organizacion del dataset, contamos con la informacion integra de estas personas en este periodo de tiempo. La informacion es del 2016 pero sigue siendo relevante pues si bien los dispositivos comerciales de bio-monitoreo han mejorado, esencialmente continuan haciendo lo mismo.
+
+✖️ Por otra parte, contar con 33 participantes, usuarios de dispositivos de bio-monitoreo, es una muestra pequeña de personas para establecer comportamientos universales de la actividad fisica de las personas. En el caso del sueño, el ritmo cardiaco y el peso, apenas contamos con registros de 24, 14 y 8 participantes respectivamente. No excluimos estos ultimos datos ya que son indicadores importantes, y en general aunque sea una muestra pequeña podemos intentar ver tendencias en ellos.
+
+Los datos nos ayudan a responder preguntas y son relativos a la tarea empresarial.
 
 ## :three:. FASE DE PROCESAMIENTO: de los datos
 
 que pasos de limpieza hicimos ????¿¿¿¿¿ fsdiojfopiasjgiopjoi copiar y pegar partes del codigo y resultados de ejecutarlo...
-### ¿Que herramienta elegimos para este estudio y analisis?
 
-Usare el el lenguaje R dado que es una herramienta poderosa que nos permite realizar todos los pasos del analisis de datos, desde limpiar, visualizar, analizar hasta graficar y sacar conclusiones, ademas con esta herramienta podemos tener en un solo lugar el codigo y los pasos tomados. (mirar cuadro del roadmap del curso de google pasoidjasiodgjoasijdgioqjweoijsdaskd ......... sdiasjdogj)
+### ¿Que herramienta elegimos para este tarea de analisis?
 
-### Revisamos los registros, Ids, valores nulos y filas duplicadas:
+La herramienta definitiva elegida para este caso, es el lenguaje R, dado que este es una herramienta poderosa que nos permite realizar todos los pasos del analisis de datos. Complementariamente, usamos RStudio y un repositorio de GitHub para poder avanzar nuestro trabajo, organizarlo, comentarlo y mantenerlo al dia. En el lenguaje R hacemos tareas claves como ver dimensiones, buscar duplicados, buscar valores nulos, adecuar formatos, unir tablas, filtrar, ordenar, calcular, resumir, graficar y documentar como se muestra.
+
+### Revision registros: Ids, valores nulos y filas duplicadas
+
+Hacemos un nuevo vistazo en mas detalle de las tablas y su limpieza aunque parezcan ordenadas a simple vista.
 
 ```{r}
+#valores distintos
 n_distinct(activityday$Id) ; n_distinct(sleepday$Id)
 n_distinct(calorieshour$Id) ; n_distinct(stepshour$Id) ; n_distinct(intensitieshour$Id)
 n_distinct(weight$Id) ; n_distinct(heartrate$Id)
 
+#valores nulos
 sum(is.na(activityday)) ; sum(is.na(sleepday))
 sum(is.na(calorieshour)) ; sum(is.na(stepshour)) ; sum(is.na(intensitieshour))
 sum(is.na(weight)) ; sum(is.na(heartrate))
 
+#filas duplicadas
 sum(duplicated(activityday)) ; sum(duplicated(sleepday))
 sum(duplicated(calorieshour)) ; sum(duplicated(stepshour)) ; sum(duplicated(intensitieshour))
 sum(duplicated(weight)) ; sum(duplicated(heartrate))
 ```
 
-Encontramos que con los dataframes que elegimos trabajar, tenemos 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmocardiaco. Si bien algunos registran datos de menos usuarios, pueden llegar a darnos información útil.
+Encontramos que con los tablas (o dataframes) en que elegimos trabajar, efectivamente contamos con 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmo cardiaco. Ya hemos decidido preservar todos estos.
 
-Ademas de esto, encontramos que sleepday tiene 3 filas duplicadas y weight 44 valores nulos. En una sucesiva revision encontramos que estos valores nulos son en una columna de poca importancia, en cambio sí eliminamos los 3 duplicados de sleepday:
+Mas alla de lo anterior, encontramos que sleepday tiene 3 filas duplicadas y weight 44 valores nulos. En una sucesiva revision encontramos que estos valores nulos son de la columna Fat en la tabla weight, una columna de poca importancia. En cambio sí eliminamos los 3 duplicados de sleepday.
 
 ```{r}
 glimpse(weight)
@@ -104,21 +114,28 @@ sleepday <- distinct(sleepday)
 sum(duplicated(sleepday))
 ```
 
-Despues de esto, cambiamos las estampillas de tiempo que tienen cada uno de los archivos que vamos a utilizar ya que se encuentran en formato de texto y no en date o datetime.
+### Adecuacion de estampillas de tiempo
+
+Adecuaremos el formato de las estampillas de tiempo que tienen los registros en cada una de las tablas ya que se encuentran en formato de texto y no en date o datetime.
 
 ```{r}
+#dates
 activityday <- activityday %>%  mutate(ActivityDate = date(mdy(ActivityDate))) %>%  rename(date = ActivityDate)
 sleepday <- sleepday %>%  mutate(SleepDay = date(mdy_hms(SleepDay))) %>%  rename(date = SleepDay)
 weight <- weight %>%  mutate(Date = date(mdy_hms(Date))) %>%  rename(date = Date)
 
+#datetimes
 calorieshour <- calorieshour %>%  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%  rename(datetime = ActivityHour)
 stepshour <- stepshour %>%  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%  rename(datetime = ActivityHour)
 intensitieshour <- intensitieshour %>%  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%  rename(datetime = ActivityHour)
 heartrate <- heartrate %>%  mutate(Time = mdy_hms(Time)) %>%  rename(datetime = Time)
 ```
-De esta manera ya tenemos a todos los archivos a utilizar en date si tienen informacion diaria, o datetime si tienen a nivel de horas y/o minutos.
+De esta manera ya tenemos a todos los archivos a utilizar en date si tienen informacion diaria, o datetime si tienen a nivel de horas y/o minutos. 
 
-El siguiente paso consiste en unificar algunos archivos
+### Union de tablas
+
+Con la columna date o datetime en buen estado y en conjunto con el Id de los usuarios, podemos usar tranquilamente ambos valores como identificacion unica de cada registro para unir tablas buscando el orden y facilitar la manipulacion.
+
 ```{r}
 activityday <- activityday %>%
   left_join(sleepday, by=c("Id", "date"))
@@ -127,7 +144,7 @@ activityhour <- calorieshour %>%
   inner_join(stepshour, by=c("Id", "datetime")) %>%
   inner_join(intensitieshour, by=c("Id", "datetime"))
 ```
-Y los visualizamos para asegurar que se hayan unido bien, el numero de filas sea el que debe haberse preservado, que los valores no se encuentren fuera de un rango razonable, etc.
+Estando unidas, ahora visualizamos de nuevo para asegurarnos que se hayan unido bien, que el numero de filas sea el que debe haberse preservado tras la union y que los valores no se encuentren fuera de un rango razonable.
 
 ```{r}
 glimpse(activityday)
@@ -142,17 +159,15 @@ summary(weight)
 glimpse(heartrate)
 summary(heartrate)
 ```
+Todas las variables (o columnas) tienen rangos de valores razonables, posibles y no irreales, por lo que las tablas estan limpias, organizadas y limpias. 
 
-Finalizando esta limpieza y exploracion preliminar, ya sabemos qué registros contienen cada uno y que estos registros son razonable y unicos identificandose por el Id del usuario y una estampilla de tiempo en su debido formato.
+### Tablas definitivas: organizadas y limpias
 
-La estrategia de analisis continuara utilizando 4 grupos de dataframes:
-* La actividad diaria, en un dataframe llamado activityday (de 33 usuarios), unido por facilidad con los datos del sueño (de 24 usuarios). Nos sera util para estudiar el comportamiento a lo largo de las semanas.
-* La actividad por hora, en un dataframe llamado activityhour (de 33 usuarios) uniendo los 3 archivos de actividad por hora. Nos sera util para estudiar el comportamiento a lo largo del dia.
-* Ademas, usaremos el ritmo cardiaco, pues es una medicion muy importante para la salud y diciente de la actividad fisica, la dificultad con este es que se muchos registros pues son casi en "tiempo real".
-* Y tambien usaremos el peso pues es tambien un dato importante para la salud.
-
-...
-
+* activityday: Por dia: niveles de actividad medidos en minutos y en distancia, pasos, calorias y sueño.
+* activityhour: Por hora: medida de nivel de actividad, pasos y calorias.
+* heartrate: Por minuto (o par de minutos): ritmo cardiaco.
+* weight: Por fecha de autoregistro: peso.
+  
 ## :four:. FASE DE ANALISIS: de los datos
 
 En esta fase empezaremos a "jugar" con los datos que ya estan limpios y preparados. Ahora trataremos de visualizar los datos, descubriendo tendencias y particularidades de los usuarios de los que contamos con sus datos.
@@ -163,11 +178,15 @@ En primer lugar dentro de los datos disponibles, exploraremos la relacion entre 
 
 ![pasos_vs_calorias_vs_distancia](https://user-images.githubusercontent.com/124465699/221270638-59709d94-97b7-4e2c-9383-2bf4d3be1976.png)
 
+A mas pasos dados, mas distancia recorrida y mas calorias quemadas, las tres variables se correlacionan porque finalmente todas son indicadoras de la actividad fisica.
+
 ### Actividad diaria
 
 Tambien contamos con informacion del nivel de actividad de los usuarios, para saber que porcentaje del dia realizan distintos niveles de actividad, sabemos que es importante mantenernos activos fisicamente para conservar un buen estado de salud.
 
-En este caso, teniamos el tiempo en minutos diarios dedicados a cada nivel de actividad. Los niveles de actividad son Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo). Comprobamos que en el nivel sedentario estuviera incluido el tiempo de sueño.
+En este caso, teniamos el tiempo en minutos diarios dedicados a cada nivel de actividad. Los niveles de actividad son Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo). 
+
+Para tener una informacion mas util, excluimos el tiempo de suerño, comprobamos que en el nivel sedentario estuviera incluido el tiempo de sueño.
 ```{r}
 activityday %>%
   mutate(semana = isoweek(date), dia = wday(date, abbr = FALSE,
@@ -187,3 +206,10 @@ Podemos apreciar, (averiguar que se recomienda respecto al nivel de actividad).
 ![intensidad_de_actividad_por_hora_del_dia-](https://user-images.githubusercontent.com/124465699/221300013-a6394d78-54c2-431f-b585-bc42218a15b7.png)
 
 Podemos observar que las horas en que mas actividad intensa se realiza son entre las 5 pm y 8 pm.
+
+### Actividad diaria por hora del dia
+
+
+### Actividad por dia de la semana
+
+###
