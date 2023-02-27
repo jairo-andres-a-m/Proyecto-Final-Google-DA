@@ -96,6 +96,7 @@ heartrate <- heartrate %>%
 ```
 
 Las fechas están en un formato correcto para facilitar su uso mas adelante, también aprovechamos el Id en conjunto con la estampilla de tiempo como identificación única de cada registro.
+
 Con esto podemos unir tablas de datos para facilitar el manejo. Quedaremos con activityday, incluida la información de sleepday, activityhour uniendo las 3 de actividad por hora y weight y heartrate.
 
 ```{r}
@@ -136,38 +137,24 @@ Empezaremos realizando visualizaciones como:
 
 Ahora empezamos a realizar gráficas que nos permitan dilucidar la información que contiene nuestros datos y que con esto podamos caracterizar a los usuarios de los dispositivos FitBit o de cualquier dispositivo de bio-monitoreo inteligente.
 
+
+En primer lugar queremos ver la relacion entre Calorias, Pasos dados y Distancia recorrida.
+
 ```{r}
-ggplot(activityday) +
-  geom_point(aes(TotalDistance, TotalSteps)) +
-  geom_smooth(aes(TotalDistance, TotalSteps))
-
-ggplot(activityday) +
-  geom_point(aes(TotalSteps, Calories)) +
-  geom_smooth(aes(TotalSteps, Calories))
-
-ggplot(activityday) +
-  geom_point(aes(TotalDistance, Calories, color=TotalSteps)) +
-  geom_smooth(aes(TotalDistance, Calories))
+ggplot(data=activityday, aes(x=TotalSteps, y=Calories)) +
+        geom_point(mapping=aes(color=TotalDistance)) +
+        geom_smooth() +
+        labs(x = "Numero de Pasos", y = "Calorias", color="Distancia Recorrida", title="Numero de Pasos vs Calorias vs Distancia Recorrida")
 ```
 
-Acá encontramos la relación de Calorias y Distancia Recorrida, van completamente correlacionados. 
+Como es de esperarse a cuanto mas pasos mas distancia y mas calorías, van correlacionadas las tres variables, aunque midan cosas distintas, al final pueden indicar el nivel de actividad fisica de una persona.
 (esto podría ir en preparación y revisión...)
 
-```{r}
-minutos_totales <- sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes)
 
-porcentaje_sedentary <- (sum(activityday$SedentaryMinutes) / minutos_totales) * 100
-porcentaje_lightly <- (sum(activityday$LightlyActiveMinutes) / minutos_totales) * 100
-porcentaje_fairly <- (sum(activityday$FairlyActiveMinutes) / minutos_totales) * 100
-porcentaje_veryactive <- (sum(activityday$VeryActiveMinutes) / minutos_totales) * 100
-```
+Queremos calcular el porcentaje del dia dedicado a cada nivel de actividad.
 
-Así tenemos calculados los porcentajes de nivel de intensidad de los días.
-
-Como no contamos con el registro de sueño de todos los días de todos los participantes del estudio, hacemos esto:
+Pero extraeremos el tiempo de sueño. Como no contamos con el registro de sueño de todos los días de todos los participantes del estudio, hacemos esto:
 Hallaremos el promedio de tiempo de sueño diario promedio, en base a los minutos totales de registro de actividad, calcularemos cuantos días totales tenemos de registro de actividad.
-
-asi hallaremos 
 
 Restaremos el tiempo en que los participantes del estudio durmieron, para esto, como no tenemos registro de todos los días de sueño
 de todos los usuarios, determinaremos le tiempo de sueño promedio diario y estimaremos el porcentaje de este en el promedio de dias de los que tenemos
@@ -190,55 +177,32 @@ mean(sleepday$TotalMinutesAsleep) / 60
 
 minutos_totales2 <- sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes) - (mean(sleepday$TotalMinutesAsleep)*940)
 
-porcentaje_sedentary2 <- ((sum(activityday$SedentaryMinutes)- (mean(sleepday$TotalMinutesAsleep)*940)) / minutos_totales2) * 100
-porcentaje_lightly2 <- (sum(activityday$LightlyActiveMinutes) / minutos_totales2) * 100
-porcentaje_fairly2 <- (sum(activityday$FairlyActiveMinutes) / minutos_totales2) * 100
-porcentaje_veryactive2 <- (sum(activityday$VeryActiveMinutes) / minutos_totales2) * 100
+porcentaje_sedentary <- ((sum(activityday$SedentaryMinutes)- (mean(sleepday$TotalMinutesAsleep)*940)) / minutos_totales2) * 100
+porcentaje_lightly <- (sum(activityday$LightlyActiveMinutes) / minutos_totales2) * 100
+porcentaje_fairly <- (sum(activityday$FairlyActiveMinutes) / minutos_totales2) * 100
+porcentaje_veryactive <- (sum(activityday$VeryActiveMinutes) / minutos_totales2) * 100
 
 ```
 Hacemos una comprobación para ver que los registros de minutos de actividad son de todo el dia. Efectivamente, la mayoria de ellos por dia e Id son de 24 horas o un poco menos, si el dispositivo inteligente esta apagado, pero esto nos da a entender que en el tiempo sedentary, se incluye el tiempo de sueño. Por esta razon restaremos el tiempo dormido a la actividad diaria en sedentario.
 ```{r}
 
 activityday %>%
-  mutate(semana = isoweek(date), dia = wday(date, abbr = FALSE,
-  week_start = getOption("lubridate.week.start", 1),
-  )) %>%
+  mutate( semana = isoweek(date), 
+          dia = wday(date, abbr = FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
   group_by(semana, dia, Id) %>%
   arrange(semana, dia) %>%
-  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60) %>% 
-  summarize(n_horas_dia_24 = sum(horas_dia > 23.5))
-
-
-
+  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
 ```
 En primer lugar, comprobamos la relación existente entre las calorías, los pasos y la distancia.
 
-Vemos que existe una correlacion positiva entre las calorías quemadas y los pasos dados, los que al mismo tiempo se relacionan positivamente con la distancia recorrida con el usuario, como es de esperarse.
-```{r}
-ggplot(data=activityday, aes(x=TotalSteps, y=Calories)) +
-        geom_point(mapping=aes(color=TotalDistance)) +
-        geom_smooth() +
-        labs(x = "Numero de Pasos", y = "Calorias", color="Distancia Recorrida", title="Numero de Pasos vs Calorias vs Distancia Recorrida")
-```
-
-
-
-
+Vemos que existe una correlación positiva entre las calorías quemadas y los pasos dados, los que al mismo tiempo se relacionan positivamente con la distancia recorrida con el usuario, como es de esperarse.
 
 ```{r}
 porcentajes_pie <- tibble(
   Group=factor(c("Sedentary","Lightly active","Fairly active", "Very active")),
   Percentages=c(porcentaje_sedentary, porcentaje_lightly, porcentaje_fairly, porcentaje_veryactive))
 
-plot_ly(porcentajes_pie, labels = ~Group, values = ~Percentages, type = 'pie',textposition = 'outside',textinfo = 'label+percent') %>% layout(title = 'Nivel de Actividad Promedio por dia',
-         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
-
-porcentajes_pie2 <- tibble(
-  Group=factor(c("Sedentary2","Lightly active2","Fairly active2", "Very active2")),
-  Percentages=c(porcentaje_sedentary2, porcentaje_lightly2, porcentaje_fairly2, porcentaje_veryactive2))
-
-plot_ly(porcentajes_pie2, labels = ~Group, values = ~Percentages, type = 'pie',textposition = 'outside',textinfo = 'label+percent') %>% layout(title = '<b>Porcentaje de dia dedicado a Nivel de Actividad <b>',
+plot_ly(porcentajes_pie, labels = ~Group, values = ~Percentages, type = 'pie',textposition = 'outside',textinfo = 'label+percent') %>% layout(title = '<b>Porcentaje de dia dedicado a Nivel de Actividad <b>',
          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 
