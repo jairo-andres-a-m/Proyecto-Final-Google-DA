@@ -79,7 +79,7 @@ que pasos de limpieza hicimos ????¿¿¿¿¿ fsdiojfopiasjgiopjoi copiar y pegar
 
 ### ¿Que herramienta elegimos para este tarea de analisis?
 
-La herramienta definitiva elegida para este caso, es el lenguaje R, dado que este es una herramienta poderosa que nos permite realizar todos los pasos del analisis de datos, desde visualizar, limpiar, analizar, graficar y comentar las conclusiones. Usando el RStudio y un repositorio de GitHub podemos avanzar nuestro trabajo, organizarlo, comentarlo y mantenerlo al dia. Tareas claves como ver dimensiones, buscar duplicados, valores nulos, adecuar formatos, unir tablas, filtrar, ordenar, resumir, graficar, entre otras, son tareas que se desarrollan en adelante.
+La herramienta definitiva elegida para este caso, es el lenguaje R, dado que este es una herramienta poderosa que nos permite realizar todos los pasos del analisis de datos. Usando el RStudio y un repositorio de GitHub podemos avanzar nuestro trabajo, organizarlo, comentarlo y mantenerlo al dia. En el lenguaje R hacemos tareas claves como ver dimensiones, buscar duplicados, buscar valores nulos, adecuar formatos, unir tablas, filtrar, ordenar, resumir, graficar y documentar como se muestra.
 
 ### Revisamos los registros, Ids, valores nulos y filas duplicadas:
 
