@@ -166,7 +166,7 @@ Todas las variables (o columnas) tienen rangos de valores razonables, posibles y
 * activityday: Por dia: niveles de actividad medidos en minutos y en distancia, pasos, calorias y sueño.
 * activityhour: Por hora: medida de nivel de actividad, pasos y calorias.
 * heartrate: Por minuto (o par de minutos): ritmo cardiaco.
-* weight: Por autoregistro: peso.
+* weight: Por fecha de autoregistro: peso.
   
 ## :four:. FASE DE ANALISIS: de los datos
 
