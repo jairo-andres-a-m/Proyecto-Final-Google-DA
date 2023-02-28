@@ -168,23 +168,29 @@ Todas las variables (o columnas) tienen rangos de valores razonables, posibles y
   
 ## :four:. FASE DE ANALISIS: de los datos
 
-En esta fase empezaremos a "jugar" con los datos que ya estan limpios y preparados. Ahora trataremos de visualizar los datos, descubriendo tendencias y particularidades de los usuarios de los que contamos con sus datos.
+En esta fase ya tenemos los datos listos. Empezamos a hacer visualizaciones para leer la informacion en ellos.
 
-### Calorias quemadas, pasos dados y distancia recorrida
+Como todos sabemos, la actividad fisica es muy importante para mantener un buen estado de salud. Llevar un estilo de vida fisicamente activo esta vinculado tener buena fuerza muscular, aptitud cardiorespiratoria, niveles de azucar controlados, buena densidad osea, mejor rendimiento mental y en general una mejor expectativa de vida.
 
-En primer lugar dentro de los datos disponibles, exploraremos la relacion entre Las Calorias quemadas, Los Pasos dados y La Distancia recorrida por los participantes del estudio. Es de esperarse que las 3 esten directamente relacionadas, como lo vemos a continuacion:
+Investigaciones han demostrado que para tener un buen estado fisico, es importante mantenerse activo, desplazarse usando nuestras piernas es una buena forma de mantenernos activos, pero mas alla de esto, se ha probado que la actividad fisica intensa, aun en periodos de tiempo cortos, puede aun contrarestar el efecto de otros malos habitos.
+
+[https://www.bbc.com/mundo/noticias-58823922]
+[https://www.gq.com.mx/cuidado-personal/articulo/ejercicio-intenso-como-combate-los-danos-del-sendentarismo]
+
+### Pasos dados, Distancia recorrida y Calorias quemadas
+
+En base a lo anterior, visualizamos la relacion entre los pasos dados, la distancia recorrida y las calorias quemadas, estas son buenos indicadores de la actividad fisica.
 
 ![pasos_vs_calorias_vs_distancia](https://user-images.githubusercontent.com/124465699/221270638-59709d94-97b7-4e2c-9383-2bf4d3be1976.png)
 
-A mas pasos dados, mas distancia recorrida y mas calorias quemadas, las tres variables se correlacionan porque finalmente todas son indicadoras de la actividad fisica.
+Como es de esperarse, las tres van correlacionadas positivamente, por lo que cualquiera de las tres nos puede indicar los niveles de actividad de los usuarios en distintos periodos de tiempo. Esto tambien nos confirma que los datos son concordantes y fiables.
 
 ### Actividad diaria
 
-Tambien contamos con informacion del nivel de actividad de los usuarios, para saber que porcentaje del dia realizan distintos niveles de actividad, sabemos que es importante mantenernos activos fisicamente para conservar un buen estado de salud.
+Evaluaremos ahora la actividad fisica en un dia, para saber que porcentaje del dia se dedica en promedio a unas categorias de nivel de actividad fisica: Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo).
 
-En este caso, teniamos el tiempo en minutos diarios dedicados a cada nivel de actividad. Los niveles de actividad son Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo). 
+Haremos una comprobacion para ver si la suma de estas categorias de nivel de actividad son la totalidad de las 24 horas del dia.
 
-Para tener una informacion mas util, excluimos el tiempo de suerño, comprobamos que en el nivel sedentario estuviera incluido el tiempo de sueño.
 ```{r}
 activityday %>%
   mutate(semana = isoweek(date), dia = wday(date, abbr = FALSE,
@@ -193,21 +199,32 @@ activityday %>%
   group_by(semana, dia, Id) %>%
   summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
 ```
-Extrayendo este resumen, encontramos que muchos, sino la mayoria de los registros sumando los niveles de actividad, suman 24 horas, por lo que estos incluyen todo el tiempo, incluso el de sueño que entraria en la categoria de sedentario. Pero esto no afecta porque es de esperarse que asi se gasta el tiempo de sueño que ademas es de descanso, por esto restamos el tiempo de sueño y tenemos el porcentaje de nivel de actividad en el tiempo despierto de un dia promedio.
-
+  
+En este resumen (summarize) encontramos que la mayoria de los registros suman 24 horas en un dia, los que no, debe ser porque el dispositivo de bio-monitoreo no estuvo encendido todo el tiempo. Por esta misma razon, deducimos que el tiempo de sueño, esta categorizado dentro del tiempo sedentario.
+  
+Entonces, hacemos una visualizacion del porcentaje de tiempo despierto (excluye el tiempo de sueño) que se dedica a cada categoria de nivel de actividad fisica.
+  
 ![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221300359-e564eb64-db6f-4fd5-afc9-3b3d7840333f.png)
-
-Podemos apreciar, (averiguar que se recomienda respecto al nivel de actividad).
-
+  
+Naturalmente la mayor parte del tiempo estamos sedentarios, quietos, pero es importante notar si estamos teniendo una actividad que mantenga a nuestra salud fisica y/o contrarreste el exceso de sedentarismo debido al estilo de vida y las obligaciones como el trabajo, el transporte motorizado, entre otras. (añadir cifras precisas)
+  
 ### Distribucion de la actividad en el dia
 
+Ahora mirando mas en detalle, la distribucion de esta actividad fisica a lo largo del dia, determinamos que momentos son en los que la gente es mas activa.
+  
 ![intensidad_de_actividad_por_hora_del_dia-](https://user-images.githubusercontent.com/124465699/221300013-a6394d78-54c2-431f-b585-bc42218a15b7.png)
 
-Podemos observar que las horas en que mas actividad intensa se realiza son entre las 5 pm y 8 pm.
+Podemos observar qeu las horas en las qeu la gente realiza mas actividad son entre las 5 y 8 pm. (añadir explicacion o analisis, que se puede sacar para mejorar o aprovechar el tiempo en pro de hacer mas actividad)
+ 
+### Distribucion de la actividad en la semana y el mes
 
-### Actividad diaria por hora del dia
+![intensidad_de_actividad_dia_a_dia](https://user-images.githubusercontent.com/124465699/221989047-786e3017-a67f-4441-abab-07c2e330d15a.png)
+![boxplot por dia](https://user-images.githubusercontent.com/124465699/221989277-8fb9ec11-def7-4e3b-8a28-b95a4911250d.png)
 
 
-### Actividad por dia de la semana
+![intensidad_de_actividad_dia_de_la_semana](https://user-images.githubusercontent.com/124465699/221989169-511e3176-f07b-4532-9379-a1ab3142fa51.png)
 
-###
+### Relacion actividad - calorias
+
+![calorias_vs_minutos_de_actividad](https://user-images.githubusercontent.com/124465699/221989248-23f23d0f-8603-4181-abdf-7a4b6f90e862.png)
+
