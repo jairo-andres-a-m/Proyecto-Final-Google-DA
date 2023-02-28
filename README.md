@@ -74,9 +74,7 @@ Creemos util emplear datos por dia, hora, del sueño, el peso y el ritmo cardiac
 Los datos nos ayudan a responder preguntas y son relativos a la tarea empresarial.
 
 ## :three:. FASE DE PROCESAMIENTO: de los datos
-
-que pasos de limpieza hicimos ????¿¿¿¿¿ fsdiojfopiasjgiopjoi copiar y pegar partes del codigo y resultados de ejecutarlo...
-
+  
 ### ¿Que herramienta elegimos para este tarea de analisis?
 
 La herramienta definitiva elegida para este caso, es el lenguaje R, dado que este es una herramienta poderosa que nos permite realizar todos los pasos del analisis de datos. Complementariamente, usamos RStudio y un repositorio de GitHub para poder avanzar nuestro trabajo, organizarlo, comentarlo y mantenerlo al dia. En el lenguaje R hacemos tareas claves como ver dimensiones, buscar duplicados, buscar valores nulos, adecuar formatos, unir tablas, filtrar, ordenar, calcular, resumir, graficar y documentar como se muestra.
