@@ -181,15 +181,14 @@ mirara fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadict
 
 ### Pasos dados, Distancia recorrida y Calorias quemadas
 
-En base a lo anterior, empezamos por visualizar la relacion entre los pasos dados y la distancia recorrida.
+Empezamos por visualizar la relacion entre los pasos dados y la distancia recorrida, como vemos, podemos tener la certeza de que los registros de distancia son de los desplazamientos realizados unicamente usando las propias piernas de los usuarios. Adicionalmente 
 
-![numero_pasos_vs_distancia_recorrida](https://user-images.githubusercontent.com/124465699/222205220-ff18b676-2187-4828-af87-e116cc37dd74.png)
+![2_pasos_distancia_calorias](https://user-images.githubusercontent.com/124465699/222209587-d652f4c7-d237-4649-81ee-014b542aedc9.png)
 
-Como vemos, podemos tener la certeza de que los registros de distancia son los desplazamientos realizados por los usuarios usando sus propias piernas registrados tambien en los pasos y por lo tanto son actividad fisica. Un indicativo de que los datos son fiables.
+
+Como vemos, p Un indicativo de que los datos son fiables.
 
 Ahora visualizaremos los pasos dados comparados con las calorias quemadas.
-
-![pasos_vs_calorias_vs_distancia](https://user-images.githubusercontent.com/124465699/221270638-59709d94-97b7-4e2c-9383-2bf4d3be1976.png)
 
 Como vemos, la relacion es positiva pero hay mayor variabilidad, dado que a mas pasos dados mas calorias quemadas pero con mas variabilidad. Esto se debe a que es variable la energia en calorias empleada segun el nivel de actividad o la actividad especifica qeu este haciendo el usuario.
 
