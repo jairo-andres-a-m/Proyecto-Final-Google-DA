@@ -170,20 +170,29 @@ Todas las variables (o columnas) tienen rangos de valores razonables, posibles y
 
 En esta fase ya tenemos los datos listos. Empezamos a hacer visualizaciones para leer la informacion en ellos.
 
-Como todos sabemos, la actividad fisica es muy importante para mantener un buen estado de salud. Llevar un estilo de vida fisicamente activo esta vinculado tener buena fuerza muscular, aptitud cardiorespiratoria, niveles de azucar controlados, buena densidad osea, mejor rendimiento mental y en general una mejor expectativa de vida.
+Como todos sabemos, la actividad fisica es muy importante para mantener un buen estado de salud. Llevar un estilo de vida fisicamente activo esta vinculado tener buena fuerza muscular, buena aptitud cardiorespiratoria, niveles de azucar controlados, buena densidad osea, mejor rendimiento mental y en general una mejor expectativa de vida.
 
-Investigaciones han demostrado que para tener un buen estado fisico, es importante mantenerse activo, desplazarse usando nuestras piernas es una buena forma de mantenernos activos, pero mas alla de esto, se ha probado que la actividad fisica intensa, aun en periodos de tiempo cortos, puede aun contrarestar el efecto de otros malos habitos.
+Investigaciones han demostrado la importancia de mantenerse activo, desplazarnos usando nuestras piernas es una buena forma de mantenernos activos pero mas alla de esto, se ha probado que la actividad fisica intensa, aun en periodos de tiempo cortos, puede contrarestar el efecto de un estilo de vida sedentario.
 
 [https://www.bbc.com/mundo/noticias-58823922]
 [https://www.gq.com.mx/cuidado-personal/articulo/ejercicio-intenso-como-combate-los-danos-del-sendentarismo]
 
+mirara fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
+
 ### Pasos dados, Distancia recorrida y Calorias quemadas
 
-En base a lo anterior, visualizamos la relacion entre los pasos dados, la distancia recorrida y las calorias quemadas, estas son buenos indicadores de la actividad fisica.
+En base a lo anterior, empezamos por visualizar la relacion entre los pasos dados y la distancia recorrida.
+
+![numero_pasos_vs_distancia_recorrida](https://user-images.githubusercontent.com/124465699/222205220-ff18b676-2187-4828-af87-e116cc37dd74.png)
+
+Como vemos, podemos tener la certeza de que los registros de distancia son los desplazamientos realizados por los usuarios usando sus propias piernas registrados tambien en los pasos y por lo tanto son actividad fisica. Un indicativo de que los datos son fiables.
+
+Ahora visualizaremos los pasos dados comparados con las calorias quemadas.
 
 ![pasos_vs_calorias_vs_distancia](https://user-images.githubusercontent.com/124465699/221270638-59709d94-97b7-4e2c-9383-2bf4d3be1976.png)
 
-Como es de esperarse, las tres van correlacionadas positivamente, por lo que cualquiera de las tres nos puede indicar los niveles de actividad de los usuarios en distintos periodos de tiempo. Esto tambien nos confirma que los datos son concordantes y fiables.
+Como vemos, la relacion es positiva pero hay mayor variabilidad, dado que a mas pasos dados mas calorias quemadas pero con mas variabilidad. Esto se debe a que es variable la energia en calorias empleada segun el nivel de actividad o la actividad especifica qeu este haciendo el usuario.
+
 
 ### Actividad diaria
 
