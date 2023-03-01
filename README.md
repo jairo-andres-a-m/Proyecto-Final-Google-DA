@@ -168,36 +168,25 @@ Todas las variables (o columnas) tienen rangos de valores razonables, posibles y
   
 ## :four:. FASE DE ANALISIS: de los datos
 
-En esta fase ya tenemos los datos listos. Empezamos a hacer visualizaciones para leer la informacion en ellos.
-
-Como todos sabemos, la actividad fisica es muy importante para mantener un buen estado de salud. Llevar un estilo de vida fisicamente activo esta vinculado tener buena fuerza muscular, buena aptitud cardiorespiratoria, niveles de azucar controlados, buena densidad osea, mejor rendimiento mental y en general una mejor expectativa de vida.
-
-Investigaciones han demostrado la importancia de mantenerse activo, desplazarnos usando nuestras piernas es una buena forma de mantenernos activos pero mas alla de esto, se ha probado que la actividad fisica intensa, aun en periodos de tiempo cortos, puede contrarestar el efecto de un estilo de vida sedentario.
-
-[https://www.bbc.com/mundo/noticias-58823922]
-[https://www.gq.com.mx/cuidado-personal/articulo/ejercicio-intenso-como-combate-los-danos-del-sendentarismo]
-
-mirara fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
+En esta fase ya tenemos los datos listos y preparados, empezaremos a hacer visualizaciones para leer la informacion en ellos.
 
 ### Pasos dados, Distancia recorrida y Calorias quemadas
 
-Empezamos por visualizar la relacion entre los pasos dados y la distancia recorrida, como vemos, podemos tener la certeza de que los registros de distancia son de los desplazamientos realizados unicamente usando las propias piernas de los usuarios. Adicionalmente 
+En primer lugar echamos un vistazo a la relación entre pasos dados, distancia recorrida y calorías. Como es de esperarse, estas tres variables estén estrechamente relacionadas ya que son indicadores directos de la actividad física.
 
 ![2_pasos_distancia_calorias](https://user-images.githubusercontent.com/124465699/222209587-d652f4c7-d237-4649-81ee-014b542aedc9.png)
 
+* Los pasos dados y la distancia recorrida están muy estrechamente relacionados, por esto podemos tener la certeza de que los registros de distancia son unicamente de desplazamientos hechos a pie por los usuarios.
 
-Como vemos, p Un indicativo de que los datos son fiables.
-
-Ahora visualizaremos los pasos dados comparados con las calorias quemadas.
-
-Como vemos, la relacion es positiva pero hay mayor variabilidad, dado que a mas pasos dados mas calorias quemadas pero con mas variabilidad. Esto se debe a que es variable la energia en calorias empleada segun el nivel de actividad o la actividad especifica qeu este haciendo el usuario.
+* Al comparar los pasos dados con las calorias quemadas, notamos que hay correlacion pero mas variabilidad, ya que no se toma en cuenta la actividad especifica que se esta haciendo a veces a mismos pasos dados, se queman mas o menos calorias.
 
 
 ### Actividad diaria
 
-Evaluaremos ahora la actividad fisica en un dia, para saber que porcentaje del dia se dedica en promedio a unas categorias de nivel de actividad fisica: Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo).
+Ahora miraremos que porcentaje del tiempo en que estan despiertos los usuarios, lo dedican a cada categoria de nivel de actividad fisica:
+Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo).
 
-Haremos una comprobacion para ver si la suma de estas categorias de nivel de actividad son la totalidad de las 24 horas del dia.
+Haremos una comprobacion para ver si la suma de estas categorias de nivel de actividad comprenden la totalidad de las 24 horas del dia.
 
 ```{r}
 activityday %>%
@@ -208,13 +197,14 @@ activityday %>%
   summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
 ```
   
-En este resumen (summarize) encontramos que la mayoria de los registros suman 24 horas en un dia, los que no, debe ser porque el dispositivo de bio-monitoreo no estuvo encendido todo el tiempo. Por esta misma razon, deducimos que el tiempo de sueño, esta categorizado dentro del tiempo sedentario.
+* En el resumen (summarize) generado encontramos que mas de la mitad suman 24 horas y ningun valor esta por encima, lo que debe ser porque el dispositivo de bio-monitoreo no estuvo encendido todo el dia. Por esto deducimos que el sueño esta contabilizado en el tiempo sedentario y lo excluiremos.
   
-Entonces, hacemos una visualizacion del porcentaje de tiempo despierto (excluye el tiempo de sueño) que se dedica a cada categoria de nivel de actividad fisica.
+Entonces, hacemos una visualizacion del tiempo despierto dedicado a cada categoria de nivel de actividad fisica.
   
 ![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221300359-e564eb64-db6f-4fd5-afc9-3b3d7840333f.png)
   
-Naturalmente la mayor parte del tiempo estamos sedentarios, quietos, pero es importante notar si estamos teniendo una actividad que mantenga a nuestra salud fisica y/o contrarreste el exceso de sedentarismo debido al estilo de vida y las obligaciones como el trabajo, el transporte motorizado, entre otras. (añadir cifras precisas)
+* 
+* Naturalmente la mayor parte del tiempo estamos sedentarios, quietos, pero es importante notar si estamos teniendo una actividad que mantenga a nuestra salud fisica y/o contrarreste el exceso de sedentarismo debido al estilo de vida y las obligaciones como el trabajo, el transporte motorizado, entre otras. (añadir cifras precisas)
   
 ### Distribucion de la actividad en el dia
 
@@ -236,3 +226,21 @@ Podemos observar qeu las horas en las qeu la gente realiza mas actividad son ent
 
 ![calorias_vs_minutos_de_actividad](https://user-images.githubusercontent.com/124465699/221989248-23f23d0f-8603-4181-abdf-7a4b6f90e862.png)
 
+
+-------------------------------------------------------------------------------------------------------------------
+Como sabemos mantenernos activos físicamente es muy importante, al hacerlo estamos garantizando el conservar nuestra fuerza muscular, aptitud cardiorrespiratoria, controlados niveles de azúcar, densidad ósea y rendimiento mental, entre otros, haciéndonos sentir mejor, mejorando nuestra calidad y expectativa de vida.
+Por un lado, es importante controlar las calorías ingeridas y usadas para mantener la forma física y por otro el mantenerse activo y/o el ejercicio vigoroso activa mecanismos que hacen mantenimiento a nuestro cuerpo.
+
+
+Como todos sabemos, la actividad fisica es muy importante para mantener un buen estado de salud. Llevar un estilo de vida fisicamente activo esta vinculado tener buena fuerza muscular, buena aptitud cardiorespiratoria, niveles de azucar controlados, buena densidad osea, mejor rendimiento mental y en general una mejor expectativa de vida.
+
+Investigaciones han demostrado la importancia de mantenerse activo, desplazarnos usando nuestras piernas es una buena forma de mantenernos activos pero mas alla de esto, se ha probado que la actividad fisica intensa, aun en periodos de tiempo cortos, puede contrarestar el efecto de un estilo de vida sedentario.
+
+[https://www.bbc.com/mundo/noticias-58823922]
+[https://www.gq.com.mx/cuidado-personal/articulo/ejercicio-intenso-como-combate-los-danos-del-sendentarismo]
+
+mirara fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
+
+[https://www.nhs.uk/live-well/exercise/exercise-guidelines/physical-activity-guidelines-for-adults-aged-19-to-64/#:~:text=do%20at%20least%20150%20minutes,not%20moving%20with%20some%20activity]
+
+[https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/understanding-calories/#:~:text=As%20a%20guide%2C%20an%20average,physical%20activity%2C%20among%20other%20factors.]
