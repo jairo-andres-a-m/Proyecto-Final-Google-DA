@@ -197,24 +197,25 @@ activityday %>%
   summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
 ```
   
-* En el resumen (summarize) generado encontramos que mas de la mitad suman 24 horas y ningun valor esta por encima, lo que debe ser porque el dispositivo de bio-monitoreo no estuvo encendido todo el dia. Por esto deducimos que el sueño esta contabilizado en el tiempo sedentario y lo excluiremos.
+* En el resumen (summarize) generado encontramos que mas de la mitad de los registros suman 24 horas y ningun valor esta por encima, lo que debe ser porque el dispositivo de bio-monitoreo no estuvo encendido todo el dia. Por esto deducimos que el sueño esta contabilizado en el tiempo sedentario y lo excluiremos.
   
 Entonces, hacemos una visualizacion del tiempo despierto dedicado a cada categoria de nivel de actividad fisica.
   
 ![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221300359-e564eb64-db6f-4fd5-afc9-3b3d7840333f.png)
   
-* 
-* Naturalmente la mayor parte del tiempo estamos sedentarios, quietos, pero es importante notar si estamos teniendo una actividad que mantenga a nuestra salud fisica y/o contrarreste el exceso de sedentarismo debido al estilo de vida y las obligaciones como el trabajo, el transporte motorizado, entre otras. (añadir cifras precisas)
+* La mayor parte del tiempo la dedican a estar sedentarios, lo que es natural, es importante tener un buen porcentaje dedicado a actividad moderada o actividad intensa, ya que esta ultima ayuda a contrarrestar el exceso de sedentarismo del estilo de vida, obligaciones del trabajo en oficina, transporte motorizado, entre otras (añadir cifras precisas).
   
 ### Distribucion de la actividad en el dia
 
-Ahora mirando mas en detalle, la distribucion de esta actividad fisica a lo largo del dia, determinamos que momentos son en los que la gente es mas activa.
+Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, determinando en que momentos la gente es mas activa.
   
 ![intensidad_de_actividad_por_hora_del_dia-](https://user-images.githubusercontent.com/124465699/221300013-a6394d78-54c2-431f-b585-bc42218a15b7.png)
 
-Podemos observar qeu las horas en las qeu la gente realiza mas actividad son entre las 5 y 8 pm. (añadir explicacion o analisis, que se puede sacar para mejorar o aprovechar el tiempo en pro de hacer mas actividad)
+* Podemos observar que las horas en las qeu la gente realiza mas actividad son entre las 5 y 8 pm. (añadir explicacion o analisis, que se puede sacar para mejorar o aprovechar el tiempo en pro de hacer mas actividad)
  
 ### Distribucion de la actividad en la semana y el mes
+
+Detallamos la distribucion de la actividad fisica en dias de la semana
 
 ![intensidad_de_actividad_dia_a_dia](https://user-images.githubusercontent.com/124465699/221989047-786e3017-a67f-4441-abab-07c2e330d15a.png)
 ![boxplot por dia](https://user-images.githubusercontent.com/124465699/221989277-8fb9ec11-def7-4e3b-8a28-b95a4911250d.png)
