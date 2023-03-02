@@ -211,13 +211,16 @@ Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, de
   
 ![intensidad_de_actividad_por_hora_del_dia-](https://user-images.githubusercontent.com/124465699/221300013-a6394d78-54c2-431f-b585-bc42218a15b7.png)
 
-* Podemos observar que las horas en las qeu la gente realiza mas actividad son entre las 5 y 8 pm. (añadir explicacion o analisis, que se puede sacar para mejorar o aprovechar el tiempo en pro de hacer mas actividad)
+* Podemos observar que las horas en las que la gente realiza mas actividad son entre las 5 y 8 pm.
  
 ### Distribucion de la actividad en la semana y el mes
 
-Detallamos la distribucion de la actividad fisica en dias de la semana
+Detallamos la distribucion de la actividad fisica en dias de la semana.
 
 ![intensidad_de_actividad_dia_a_dia](https://user-images.githubusercontent.com/124465699/221989047-786e3017-a67f-4441-abab-07c2e330d15a.png)
+
+* Podemos ver que la actividad es variable entre las semanas, al parecer los sabados son los dias de mas actividad y los domngos los de menos. Parece haber una irregularidad en la medicion del ultimo dia.
+
 ![boxplot por dia](https://user-images.githubusercontent.com/124465699/221989277-8fb9ec11-def7-4e3b-8a28-b95a4911250d.png)
 
 
@@ -227,7 +230,7 @@ Detallamos la distribucion de la actividad fisica en dias de la semana
 
 ![calorias_vs_minutos_de_actividad](https://user-images.githubusercontent.com/124465699/221989248-23f23d0f-8603-4181-abdf-7a4b6f90e862.png)
 
-
+En este grafico podemos ver que quienes gastan mas calorias en u
 -------------------------------------------------------------------------------------------------------------------
 Como sabemos mantenernos activos físicamente es muy importante, al hacerlo estamos garantizando el conservar nuestra fuerza muscular, aptitud cardiorrespiratoria, controlados niveles de azúcar, densidad ósea y rendimiento mental, entre otros, haciéndonos sentir mejor, mejorando nuestra calidad y expectativa de vida.
 Por un lado, es importante controlar las calorías ingeridas y usadas para mantener la forma física y por otro el mantenerse activo y/o el ejercicio vigoroso activa mecanismos que hacen mantenimiento a nuestro cuerpo.
