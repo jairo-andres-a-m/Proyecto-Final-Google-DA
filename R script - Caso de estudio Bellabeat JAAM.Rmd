@@ -118,7 +118,7 @@ activityday <- activityday %>%
 
 activityhour <- activityhour %>%
   mutate(semana=isoweek(datetime), dia=wday(datetime, abbr = FALSE, week_start = getOption("lubridate.week.start", 1)), hora=hour(datetime)) %>%
-  relocate(Id, datetime, semana, dia, hora)
+  relocate(Id, date, semana, dia)
 ```
 
 
@@ -282,8 +282,11 @@ activityhour %>%
     
     labs(x = "Dia de la semana", y = "", title="Intensidad de Actividad promedio por dia de la semana")
 ```
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 68b1f442b10410d88a759f992e3ff5636e016073
 ```{r}
 ggplot(activityhour) +
   geom_point(aes(Calories, TotalIntensity))
