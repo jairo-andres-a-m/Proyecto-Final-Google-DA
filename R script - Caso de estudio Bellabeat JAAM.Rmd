@@ -113,11 +113,11 @@ semana y dia para activityday y semana, dia y hora para activityhour.
 
 ```{r}
 activityday <- activityday %>%
-  mutate(semana=isoweek(date), dia=wday(date)) %>%
+  mutate(semana=isoweek(date), dia=wday(date, abbr = FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
   relocate(Id, date, semana, dia)
 
 activityhour <- activityhour %>%
-  mutate(semana=isoweek(datetime), dia=wday(datetime), hora=hour(datetime)) %>%
+  mutate(semana=isoweek(datetime), dia=wday(datetime, abbr = FALSE, week_start = getOption("lubridate.week.start", 1)), hora=hour(datetime)) %>%
   relocate(Id, datetime, semana, dia, hora)
 ```
 
@@ -210,15 +210,11 @@ Hacemos una comprobación para ver que los registros de minutos de actividad son
 ```{r}
 
 activityday %>%
-  mutate( semana = isoweek(date), 
-          dia = wday(date, abbr = FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
   group_by(semana, dia, Id) %>%
   arrange(semana, dia) %>%
   summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
 
 activityday %>%
-  mutate( semana = isoweek(date), 
-          dia = wday(date, abbr = FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
   group_by(semana, dia, Id) %>%
   arrange(semana, dia) %>%
   summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60) %>%
@@ -246,7 +242,6 @@ Ahora veremos la actividad a lo largo del día
 
 ```{r}
 activityhour %>%
-    mutate(hora = hour(datetime)) %>%
     group_by(hora) %>%
     summarize(Intensidad_de_actividad = mean(TotalIntensity)) %>%
     ggplot(aes(x=hora, y=Intensidad_de_actividad, fill=Intensidad_de_actividad)) +
@@ -262,7 +257,6 @@ Ahora miraremos como varia la actividad de acuerdo al día de la semana
 
 ```{r}
 activityhour %>% 
-    mutate(semana = isoweek(datetime), dia = wday(datetime, label=TRUE, abb=FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
     group_by(semana, dia) %>%
     summarize(intensity = mean(TotalIntensity)) %>%
     ggplot(mapping=aes(x=dia, y=semana, fill=intensity)) +
@@ -272,7 +266,6 @@ activityhour %>%
     labs(x = "Dia de la semana", y = "Semana", title="Intensidad de Actividad dia a dia")
 
 activityhour %>% 
-    mutate(semana = isoweek(datetime), dia = wday(datetime, label=TRUE, abb=FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
     group_by(dia) %>%
     summarize(mean_calories = mean(Calories)) %>%
     ggplot(mapping=aes(x=dia, y="", fill=mean_calories)) +
@@ -283,19 +276,19 @@ activityhour %>%
     labs(x = "Dia de la semana", y = "", title="Intensidad de Actividad promedio por dia de la semana")
 
 activityhour %>% 
-    mutate(semana = isoweek(datetime), dia = wday(datetime, label=TRUE, abb=FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
     ggplot(mapping=aes(x=dia, y=Calories)) +
     geom_boxplot() + 
     scale_fill_gradient(low = "steelblue", high = "mediumseagreen") +
     
     labs(x = "Dia de la semana", y = "", title="Intensidad de Actividad promedio por dia de la semana")
 ```
+
+
 ```{r}
 ggplot(activityhour) +
   geom_point(aes(Calories, TotalIntensity))
 
 activityhour %>% 
-    mutate(semana = isoweek(datetime), dia = wday(datetime, label=TRUE, abb=FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
     group_by(semana, dia) %>%
     summarize(mean_calories = mean(Calories)) %>%
     ggplot(mapping=aes(x=dia, y=semana, fill=mean_calories)) +
@@ -305,7 +298,6 @@ activityhour %>%
     labs(x = "Dia de la semana", y = "Semana", title="Calorias dia a dia")
 
 activityhour %>% 
-    mutate(semana = isoweek(datetime), dia = wday(datetime, label=TRUE, abb=FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
     group_by(dia) %>%
     summarize(mean_calories = mean(Calories)) %>%
     ggplot(mapping=aes(x=dia, y="", fill=mean_calories)) +
