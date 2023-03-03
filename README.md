@@ -168,23 +168,26 @@ Todas las variables (o columnas) tienen rangos de valores razonables, posibles y
   
 ## :four:. FASE DE ANALISIS: de los datos
 
-En esta fase empezaremos a "jugar" con los datos que ya estan limpios y preparados. Ahora trataremos de visualizar los datos, descubriendo tendencias y particularidades de los usuarios de los que contamos con sus datos.
+En esta fase ya tenemos los datos listos y preparados, empezaremos a hacer visualizaciones para leer la informacion en ellos.
 
-### Calorias quemadas, pasos dados y distancia recorrida
+### Pasos dados, Distancia recorrida y Calorias quemadas
 
-En primer lugar dentro de los datos disponibles, exploraremos la relacion entre Las Calorias quemadas, Los Pasos dados y La Distancia recorrida por los participantes del estudio. Es de esperarse que las 3 esten directamente relacionadas, como lo vemos a continuacion:
+En primer lugar echamos un vistazo a la relación entre pasos dados, distancia recorrida y calorías. Como es de esperarse, estas tres variables estén estrechamente relacionadas ya que son indicadores directos de la actividad física.
 
-![pasos_vs_calorias_vs_distancia](https://user-images.githubusercontent.com/124465699/221270638-59709d94-97b7-4e2c-9383-2bf4d3be1976.png)
+![2_pasos_distancia_calorias](https://user-images.githubusercontent.com/124465699/222209587-d652f4c7-d237-4649-81ee-014b542aedc9.png)
 
-A mas pasos dados, mas distancia recorrida y mas calorias quemadas, las tres variables se correlacionan porque finalmente todas son indicadoras de la actividad fisica.
+* Los pasos dados y la distancia recorrida están muy estrechamente relacionados, por esto podemos tener la certeza de que los registros de distancia son unicamente de desplazamientos hechos a pie por los usuarios.
+
+* Al comparar los pasos dados con las calorias quemadas, notamos que hay correlacion pero mas variabilidad, ya que no se toma en cuenta la actividad especifica que se esta haciendo a veces a mismos pasos dados, se queman mas o menos calorias.
+
 
 ### Actividad diaria
 
-Tambien contamos con informacion del nivel de actividad de los usuarios, para saber que porcentaje del dia realizan distintos niveles de actividad, sabemos que es importante mantenernos activos fisicamente para conservar un buen estado de salud.
+Ahora miraremos que porcentaje del tiempo en que estan despiertos los usuarios, lo dedican a cada categoria de nivel de actividad fisica:
+Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo).
 
-En este caso, teniamos el tiempo en minutos diarios dedicados a cada nivel de actividad. Los niveles de actividad son Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo). 
+Haremos una comprobacion para ver si la suma de estas categorias de nivel de actividad comprenden la totalidad de las 24 horas del dia.
 
-Para tener una informacion mas util, excluimos el tiempo de suerño, comprobamos que en el nivel sedentario estuviera incluido el tiempo de sueño.
 ```{r}
 activityday %>%
   mutate(semana = isoweek(date), dia = wday(date, abbr = FALSE,
@@ -193,21 +196,55 @@ activityday %>%
   group_by(semana, dia, Id) %>%
   summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
 ```
-Extrayendo este resumen, encontramos que muchos, sino la mayoria de los registros sumando los niveles de actividad, suman 24 horas, por lo que estos incluyen todo el tiempo, incluso el de sueño que entraria en la categoria de sedentario. Pero esto no afecta porque es de esperarse que asi se gasta el tiempo de sueño que ademas es de descanso, por esto restamos el tiempo de sueño y tenemos el porcentaje de nivel de actividad en el tiempo despierto de un dia promedio.
-
+  
+* En el resumen (summarize) generado encontramos que mas de la mitad de los registros suman 24 horas y ningun valor esta por encima, lo que debe ser porque el dispositivo de bio-monitoreo no estuvo encendido todo el dia. Por esto deducimos que el sueño esta contabilizado en el tiempo sedentario y lo excluiremos.
+  
+Entonces, hacemos una visualizacion del tiempo despierto dedicado a cada categoria de nivel de actividad fisica.
+  
 ![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221300359-e564eb64-db6f-4fd5-afc9-3b3d7840333f.png)
-
-Podemos apreciar, (averiguar que se recomienda respecto al nivel de actividad).
-
+  
+* La mayor parte del tiempo la dedican a estar sedentarios, lo que es natural, es importante tener un buen porcentaje dedicado a actividad moderada o actividad intensa, ya que esta ultima ayuda a contrarrestar el exceso de sedentarismo del estilo de vida, obligaciones del trabajo en oficina, transporte motorizado, entre otras (añadir cifras precisas).
+  
 ### Distribucion de la actividad en el dia
 
+Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, determinando en que momentos la gente es mas activa.
+  
 ![intensidad_de_actividad_por_hora_del_dia-](https://user-images.githubusercontent.com/124465699/221300013-a6394d78-54c2-431f-b585-bc42218a15b7.png)
 
-Podemos observar que las horas en que mas actividad intensa se realiza son entre las 5 pm y 8 pm.
+* Podemos observar que las horas en las que la gente realiza mas actividad son entre las 5 y 8 pm.
+ 
+### Distribucion de la actividad en la semana y el mes
 
-### Actividad diaria por hora del dia
+Detallamos la distribucion de la actividad fisica en dias de la semana.
+
+![intensidad_de_actividad_dia_a_dia](https://user-images.githubusercontent.com/124465699/221989047-786e3017-a67f-4441-abab-07c2e330d15a.png)
+
+* Podemos ver que la actividad es variable entre las semanas, al parecer los sabados son los dias de mas actividad y los domngos los de menos. Parece haber una irregularidad en la medicion del ultimo dia.
+
+![boxplot por dia](https://user-images.githubusercontent.com/124465699/221989277-8fb9ec11-def7-4e3b-8a28-b95a4911250d.png)
 
 
-### Actividad por dia de la semana
+![intensidad_de_actividad_dia_de_la_semana](https://user-images.githubusercontent.com/124465699/221989169-511e3176-f07b-4532-9379-a1ab3142fa51.png)
 
-###
+### Relacion actividad - calorias
+
+![calorias_vs_minutos_de_actividad](https://user-images.githubusercontent.com/124465699/221989248-23f23d0f-8603-4181-abdf-7a4b6f90e862.png)
+
+En este grafico podemos ver que quienes gastan mas calorias en u
+-------------------------------------------------------------------------------------------------------------------
+Como sabemos mantenernos activos físicamente es muy importante, al hacerlo estamos garantizando el conservar nuestra fuerza muscular, aptitud cardiorrespiratoria, controlados niveles de azúcar, densidad ósea y rendimiento mental, entre otros, haciéndonos sentir mejor, mejorando nuestra calidad y expectativa de vida.
+Por un lado, es importante controlar las calorías ingeridas y usadas para mantener la forma física y por otro el mantenerse activo y/o el ejercicio vigoroso activa mecanismos que hacen mantenimiento a nuestro cuerpo.
+
+
+Como todos sabemos, la actividad fisica es muy importante para mantener un buen estado de salud. Llevar un estilo de vida fisicamente activo esta vinculado tener buena fuerza muscular, buena aptitud cardiorespiratoria, niveles de azucar controlados, buena densidad osea, mejor rendimiento mental y en general una mejor expectativa de vida.
+
+Investigaciones han demostrado la importancia de mantenerse activo, desplazarnos usando nuestras piernas es una buena forma de mantenernos activos pero mas alla de esto, se ha probado que la actividad fisica intensa, aun en periodos de tiempo cortos, puede contrarestar el efecto de un estilo de vida sedentario.
+
+[https://www.bbc.com/mundo/noticias-58823922]
+[https://www.gq.com.mx/cuidado-personal/articulo/ejercicio-intenso-como-combate-los-danos-del-sendentarismo]
+
+mirara fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
+
+[https://www.nhs.uk/live-well/exercise/exercise-guidelines/physical-activity-guidelines-for-adults-aged-19-to-64/#:~:text=do%20at%20least%20150%20minutes,not%20moving%20with%20some%20activity]
+
+[https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/understanding-calories/#:~:text=As%20a%20guide%2C%20an%20average,physical%20activity%2C%20among%20other%20factors.]
