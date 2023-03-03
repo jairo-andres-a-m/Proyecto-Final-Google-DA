@@ -192,18 +192,19 @@ n_distinct(activityday$Id)
 n_distinct(activityday$date)
 #940 registros de activityday (registrso de 940 dias)
 
-minutlos_sueño_promedio_por_registro <- sum(sleepday$TotalMinutesAsleep) / 410
+#Minutos de sueño promedio por registro
+minutos_sueño_promedio <- sum(sleepday$TotalMinutesAsleep) / 410 #6.98622 horas de sueño en promedio
 
-minutlos_sueño_promedio_por_registro / (60)
 
-mean(sleepday$TotalMinutesAsleep) / 60
+minutos_totales <- sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes)
 
-minutos_totales2 <- sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes) - (mean(sleepday$TotalMinutesAsleep)*940)
+#6.98622 horas de sueño promedio, serian 29.10925
+porcentaje_sedentary_sleep <- 29.10925
 
-porcentaje_sedentary <- ((sum(activityday$SedentaryMinutes)- (mean(sleepday$TotalMinutesAsleep)*940)) / minutos_totales2) * 100
-porcentaje_lightly <- (sum(activityday$LightlyActiveMinutes) / minutos_totales2) * 100
-porcentaje_fairly <- (sum(activityday$FairlyActiveMinutes) / minutos_totales2) * 100
-porcentaje_veryactive <- (sum(activityday$VeryActiveMinutes) / minutos_totales2) * 100
+porcentaje_sedentary <- ((sum(activityday$SedentaryMinutes) / minutos_totales)*100) - porcentaje_sedentary_sleep
+porcentaje_lightly <- (sum(activityday$LightlyActiveMinutes) / minutos_totales) * 100
+porcentaje_fairly <- (sum(activityday$FairlyActiveMinutes) / minutos_totales) * 100
+porcentaje_veryactive <- (sum(activityday$VeryActiveMinutes) / minutos_totales) * 100
 
 ```
 Hacemos una comprobación para ver que los registros de minutos de actividad son de todo el dia. Efectivamente, la mayoria de ellos por dia e Id son de 24 horas o un poco menos, si el dispositivo inteligente esta apagado, pero esto nos da a entender que en el tiempo sedentary, se incluye el tiempo de sueño. Por esta razon restaremos el tiempo dormido a la actividad diaria en sedentario.
@@ -226,10 +227,16 @@ Vemos que existe una correlación positiva entre las calorías quemadas y los pa
 
 ```{r}
 porcentajes_pie <- tibble(
-  Group=factor(c("Sedentary","Lightly active","Fairly active", "Very active")),
-  Percentages=c(porcentaje_sedentary, porcentaje_lightly, porcentaje_fairly, porcentaje_veryactive))
+  Group=factor(c("Sedentary(Sleep)", "Sedentary","Lightly active","Fairly active", "Very active")),
+  Percentages=c(porcentaje_sedentary_sleep, porcentaje_sedentary, porcentaje_lightly, porcentaje_fairly, porcentaje_veryactive))
+colors <- c("#398EE3", "#3674E0","#FF9612", "#A650EB", "#51BD51")
 
-plot_ly(porcentajes_pie, labels = ~Group, values = ~Percentages, type = 'pie',textposition = 'outside',textinfo = 'label+percent') %>% layout(title = '<b>Porcentaje de dia dedicado a Nivel de Actividad <b>',
+plot_ly(porcentajes_pie, 
+        labels = ~Group, values = ~Percentages,
+        type = 'pie', sort = FALSE,
+        marker=list(colors=colors),
+        textposition = 'outside',textinfo = 'label+percent') %>% 
+  layout(title = '<b>Porcentaje de dia dedicado a Nivel de Actividad <b>', 
          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 
