@@ -195,16 +195,11 @@ Como sabemos mantenernos activos físicamente es muy importante para mantenernos
 
 Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida. Entonces nos surge la duda:
 
-¿Como alcanzar o mantenernos en forma?
-
-> Al dia, un hombre y una mujer promedio deben consumir unas 2500 y unas 2000 Calorias respectivamente. Junto con esto, es importante que esta dieta sea balanceada y evitar el exceso de azucares y grasas malas.  
-> Evitar un estilo de vida sedentario en exceso, pues afecta el balance energetico y debilita el buen estado fisico del cuerpo.  
-> Hacer actividad fisica regularmente. Aun si pasamos largas horas de forma sedentaria, ya sea por trabajo de oficina, transportandonos, etc, estudios recientes han demostrado el gran beneficio de la actividad fisica intensa aun en periodos de tiempo cortos y la capacidad para contrarrestar el efecto de largos periodos de sedentarismo.
-
-
-
-
-al hacerlo estamos garantizando conservar nuestra fuerza muscular, aptitud cardiorrespiratoria, controlados niveles de azúcar, densidad ósea y rendimiento mental, entre otros, haciéndonos sentir mejor, mejorando nuestra calidad y expectativa de vida.
+> | ¿Como alcanzar o mantenernos en forma? |
+> | :--------------- |
+> | Al dia, un hombre y una mujer promedio deben consumir unas 2500 y unas 2000 Calorias respectivamente. Junto con esto, es importante que esta dieta sea balanceada y evitar el exceso de azucares y grasas malas.   |
+> | Evitar un estilo de vida sedentario en exceso, pues afecta el balance energetico y debilita el buen estado fisico del cuerpo.** |
+> | Hacer actividad fisica regularmente. Aun si pasamos largas horas de forma sedentaria, ya sea por trabajo de oficina, transportandonos, etc, estudios recientes han demostrado el gran beneficio de la actividad fisica intensa aun en periodos de tiempo cortos y la capacidad para contrarrestar el efecto de largos periodos de sedentarismo. |
 
 Existen 2 cosas principalmente por las que debemos preocuparnos para mantener: 
 Por un lado, es importante controlar las calorías ingeridas y usadas para mantener la forma física 
@@ -280,6 +275,7 @@ Como todos sabemos, la actividad fisica es muy importante para mantener un buen 
 Investigaciones han demostrado la importancia de mantenerse activo, desplazarnos usando nuestras piernas es una buena forma de mantenernos activos pero mas alla de esto, se ha probado que la actividad fisica intensa, aun en periodos de tiempo cortos, puede contrarestar el efecto de un estilo de vida sedentario.
 
 [https://www.bbc.com/mundo/noticias-58823922]
+[https://www.bbc.com/mundo/noticias-62067159]
 [https://www.gq.com.mx/cuidado-personal/articulo/ejercicio-intenso-como-combate-los-danos-del-sendentarismo]
 
 mirara fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
