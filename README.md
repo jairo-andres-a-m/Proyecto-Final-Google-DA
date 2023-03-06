@@ -100,9 +100,9 @@ sum(duplicated(calorieshour)) ; sum(duplicated(stepshour)) ; sum(duplicated(inte
 sum(duplicated(weight)) ; sum(duplicated(heartrate))
 ```
 
-Encontramos que con los tablas (o dataframes) en que elegimos trabajar, efectivamente contamos con 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmo cardiaco. Ya hemos decidido preservar todos estos.
+En las tablas (o dataframes) en que elegimos trabajar, encontramos que contamos con 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmo cardiaco. Ya hemos decidido preservar todos estos.
 
-Mas alla de lo anterior, encontramos que sleepday tiene 3 filas duplicadas y weight 44 valores nulos. En una sucesiva revision encontramos que estos valores nulos son de la columna Fat en la tabla weight, una columna de poca importancia. En cambio sí eliminamos los 3 duplicados de sleepday.
+Mas alla de lo anterior, encontramos que sleepday tiene 3 filas duplicadas y weight 44 valores nulos. En una sucesiva revision encontramos que estos valores nulos son de la columna Fat en la tabla weight, una columna de poca importancia que dejaremos como está. En cambio sí eliminamos los 3 duplicados de sleepday.
 
 ```{r}
 glimpse(weight)
@@ -130,9 +130,9 @@ heartrate <- heartrate %>%  mutate(Time = mdy_hms(Time)) %>%  rename(datetime = 
 ```
 De esta manera ya tenemos a todos los archivos a utilizar en date si tienen informacion diaria, o datetime si tienen a nivel de horas y/o minutos. 
 
-### Union de tablas
+### Union de tablas y variables adicionales de tiempo
 
-Con la columna date o datetime en buen estado y en conjunto con el Id de los usuarios, podemos usar tranquilamente ambos valores como identificacion unica de cada registro para unir tablas buscando el orden y facilitar la manipulacion.
+Con la columna date o datetime en buen estado y en conjunto con la columna de Id de los usuarios, podemos utilizarlos tranquilamente como identificacion unica de cada registro para unir tablas buscando el orden y facilitar la manipulacion.
 
 ```{r}
 activityday <- activityday %>%
@@ -142,7 +142,22 @@ activityhour <- calorieshour %>%
   inner_join(stepshour, by=c("Id", "datetime")) %>%
   inner_join(intensitieshour, by=c("Id", "datetime"))
 ```
-Estando unidas, ahora visualizamos de nuevo para asegurarnos que se hayan unido bien, que el numero de filas sea el que debe haberse preservado tras la union y que los valores no se encuentren fuera de un rango razonable.
+
+Para facilitar mas la manipulacion, y ya contando con las dos tablas principales producto de las anteriores uniones, añadiremos columnas adicionales, semana y dia del registro para activityday y semana, dia y hora para activityhour.
+
+```{r}
+activityday <- activityday %>%
+  mutate(semana=isoweek(date), dia=wday(date, label=TRUE, abbr = FALSE, week_start = getOption("lubridate.week.start", 1))) %>%
+  relocate(Id, date, semana, dia)
+
+activityhour <- activityhour %>%
+  mutate(semana=isoweek(datetime), dia=wday(datetime, label=TRUE, abbr = FALSE, week_start = getOption("lubridate.week.start", 1)), hora=hour(datetime)) %>%
+  relocate(Id, datetime, semana, dia, hora)
+```
+
+### Un vistazo general
+
+Estando adecuadas las tablas, ahora visualizamos de nuevo para asegurarnos que se hayan unido bien, que el numero de filas sea el que debe haberse preservado tras la union, que esten las columnas que son y como debe ser, y que los valores se encuentren en un rango razonable.
 
 ```{r}
 glimpse(activityday)
@@ -157,7 +172,7 @@ summary(weight)
 glimpse(heartrate)
 summary(heartrate)
 ```
-Todas las variables (o columnas) tienen rangos de valores razonables, posibles y no irreales, por lo que las tablas estan limpias, organizadas y limpias. 
+Todas las columnas (o variables) estan en orden, tienen rangos de valores razonables, posibles y no irreales, por lo que las tablas estan limpias, organizadas y limpias. 
 
 ### Tablas definitivas: organizadas y limpias
 
@@ -169,6 +184,33 @@ Todas las variables (o columnas) tienen rangos de valores razonables, posibles y
 ## :four:. FASE DE ANALISIS: de los datos
 
 En esta fase ya tenemos los datos listos y preparados, empezaremos a hacer visualizaciones para leer la informacion en ellos.
+
+Como sabemos mantenernos activos físicamente es muy importante para mantenernos en forma. Mantenernos en forma implica que conservemos:
+
+>:muscle: la fuerza muscular  
+>:lungs: la aptitud cardiorespiratoria  
+>:drop_of_blood: niveles controlados de azucar  
+>:bone: densidad osea  
+>:brain: rendimiento y salud mental   
+
+Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida. Entonces nos surge la duda:
+
+¿Como alcanzar o mantenernos en forma?
+
+> Al dia, un hombre y una mujer promedio deben consumir unas 2500 y unas 2000 Calorias respectivamente. Junto con esto, es importante que esta dieta sea balanceada y evitar el exceso de azucares y grasas malas.  
+> Evitar un estilo de vida sedentario en exceso, pues afecta el balance energetico y debilita el buen estado fisico del cuerpo.  
+> Hacer actividad fisica regularmente. Aun si pasamos largas horas de forma sedentaria, ya sea por trabajo de oficina, transportandonos, etc, estudios recientes han demostrado el gran beneficio de la actividad fisica intensa aun en periodos de tiempo cortos y la capacidad para contrarrestar el efecto de largos periodos de sedentarismo.
+
+
+
+
+al hacerlo estamos garantizando conservar nuestra fuerza muscular, aptitud cardiorrespiratoria, controlados niveles de azúcar, densidad ósea y rendimiento mental, entre otros, haciéndonos sentir mejor, mejorando nuestra calidad y expectativa de vida.
+
+Existen 2 cosas principalmente por las que debemos preocuparnos para mantener: 
+Por un lado, es importante controlar las calorías ingeridas y usadas para mantener la forma física 
+
+y por otro el mantenerse activo y/o el ejercicio vigoroso activa mecanismos que hacen mantenimiento a nuestro cuerpo.
+
 
 ### Pasos dados, Distancia recorrida y Calorias quemadas
 
@@ -183,23 +225,20 @@ En primer lugar echamos un vistazo a la relación entre pasos dados, distancia r
 
 ### Actividad diaria
 
-Ahora miraremos que porcentaje del tiempo en que estan despiertos los usuarios, lo dedican a cada categoria de nivel de actividad fisica:
+Ahora miraremos que porcentaje de un dia se dedica a cada categoria de nivel de actividad fisica:
 Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo).
 
-Haremos una comprobacion para ver si la suma de estas categorias de nivel de actividad comprenden la totalidad de las 24 horas del dia.
+Hacemos una comprobacion para demostrar que en conjunto estas actividades comprenden la totalidad del dia.
 
 ```{r}
 activityday %>%
-  mutate(semana = isoweek(date), dia = wday(date, abbr = FALSE,
-  week_start = getOption("lubridate.week.start", 1),
-  )) %>%
   group_by(semana, dia, Id) %>%
   summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
 ```
   
-* En el resumen (summarize) generado encontramos que mas de la mitad de los registros suman 24 horas y ningun valor esta por encima, lo que debe ser porque el dispositivo de bio-monitoreo no estuvo encendido todo el dia. Por esto deducimos que el sueño esta contabilizado en el tiempo sedentario y lo excluiremos.
+* En este resumen (summarize) generado, encontramos que mas de la mitad de registros suman 24 horas, ningun valor esta por encima y los que estan por debajo puede ser porque el dispositivo de bio-monitoreo no estuvo encendido todo el dia.
+* Por esto tambien deducimos que el sueño esta contabilizado en el tiempo sedentario y por eso lo distinguiremos como Sedentary (Sleep) (Sedentario dormido).
   
-Entonces, hacemos una visualizacion del tiempo despierto dedicado a cada categoria de nivel de actividad fisica.
   
 ![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221300359-e564eb64-db6f-4fd5-afc9-3b3d7840333f.png)
   
