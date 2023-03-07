@@ -197,8 +197,8 @@ Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida
 
 > | ¿Como alcanzar o mantenernos en forma? |
 > | :--------------- |
-> | Al dia, un hombre y una mujer promedio deben consumir unas 2500 y unas 2000 Calorias respectivamente. Junto con esto, es importante que esta dieta sea balanceada y evitar el exceso de azucares y grasas malas.   |
-> | Evitar un estilo de vida sedentario en exceso, pues afecta el balance energetico y debilita el buen estado fisico del cuerpo.** |
+> | Un hombre y una mujer promedio deben consumir al dia unas 2500 y unas 2000 Calorias respectivamente. Junto con esto, es importante que la dieta sea balanceada y evitar el exceso de azucares y grasas malas.   |
+> | Evitar un estilo de vida sedentario, pues afecta el balance energetico y debilita el buen estado fisico del cuerpo.** |
 > | Hacer actividad fisica regularmente. Aun si pasamos largas horas de forma sedentaria, ya sea por trabajo de oficina, transportandonos, etc, estudios recientes han demostrado el gran beneficio de la actividad fisica intensa aun en periodos de tiempo cortos y la capacidad para contrarrestar el efecto de largos periodos de sedentarismo. |
 
 Existen 2 cosas principalmente por las que debemos preocuparnos para mantener: 
