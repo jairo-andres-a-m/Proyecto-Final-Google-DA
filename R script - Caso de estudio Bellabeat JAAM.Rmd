@@ -20,16 +20,16 @@ actividad diaria (+ sueño), actividad por hora, peso y ritmo cardíaco.
 path_pc_local <- "C:/Users/JairoA/Documents/R_Studio_JAAM_Files/Capstone Project JAAM/Fitabase_Data_04122016-05122016"
 path_pc_oficina <- "D:/RStudio/Fitabase Data 4.12.16-5.12.16"
 
-activityday <- read_csv(file.path(path_pc_oficina, "dailyActivity_merged.csv"))
-sleepday <- read_csv(file.path(path_pc_oficina, "sleepDay_merged.csv"))
+activityday <- read_csv(file.path(path_pc_local, "dailyActivity_merged.csv"))
+sleepday <- read_csv(file.path(path_pc_local, "sleepDay_merged.csv"))
 
-calorieshour <- read_csv(file.path(path_pc_oficina, "hourlyCalories_merged.csv"))
-stepshour <- read_csv(file.path(path_pc_oficina, "hourlySteps_merged.csv"))
-intensitieshour <- read_csv(file.path(path_pc_oficina, "hourlyIntensities_merged.csv"))
+calorieshour <- read_csv(file.path(path_pc_local, "hourlyCalories_merged.csv"))
+stepshour <- read_csv(file.path(path_pc_local, "hourlySteps_merged.csv"))
+intensitieshour <- read_csv(file.path(path_pc_local, "hourlyIntensities_merged.csv"))
 
-weight <- read_csv(file.path(path_pc_oficina, "weightLogInfo_merged.csv"))
+weight <- read_csv(file.path(path_pc_local, "weightLogInfo_merged.csv"))
 
-heartrate <- read_csv(file.path(path_pc_oficina, "heartrate_seconds_merged.csv"))
+heartrate <- read_csv(file.path(path_pc_local, "heartrate_seconds_merged.csv"))
 ```
 
 Revisamos que los archivos se hayan subido correctamente.
@@ -229,18 +229,15 @@ Vemos que existe una correlación positiva entre las calorías quemadas y los pa
 porcentajes_pie <- tibble(
   Group=factor(c("Sedentary(Sleep)", "Sedentary","Lightly active","Fairly active", "Very active")),
   Percentages=c(porcentaje_sedentary_sleep, porcentaje_sedentary, porcentaje_lightly, porcentaje_fairly, porcentaje_veryactive))
-colors <- c("#398EE3", "#3674E0","#FF9612", "#A650EB", "#51BD51")
 
-plot_ly(porcentajes_pie, 
-        labels = ~Group, values = ~Percentages,
-        type = 'pie', sort = FALSE,
-        marker=list(colors=colors),
+colors <- c("#398EE3", "#3674E0","#FF9612", "#84D564", "#FC4539")
+
+plot_ly(porcentajes_pie, labels = ~Group, values = ~Percentages, 
+        type = 'pie', sort = FALSE, marker=list(colors=colors), 
         textposition = 'outside',textinfo = 'label+percent') %>% 
   layout(title = '<b>Porcentaje de dia dedicado a Nivel de Actividad <b>', 
          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
-
-#con esto le habremos restado al tiempo sedentario el tiempo de sueño
 ```
 Esta gráfica es diciente, muestra el porcentaje de tiempo que se dedica a distintos niveles de actividad.
 Para mejorar el gráfico, podemos restar el tiempo dormido por las personas... debo hacerlo...
@@ -282,12 +279,12 @@ activityhour %>%
     
     labs(x = "Dia de la semana", y = "", title="Intensidad de Actividad promedio por dia de la semana")
 
-activityhour %>% 
-    ggplot(mapping=aes(x=dia, y=TotalIntensity)) +
-    geom_boxplot() + 
-    scale_fill_gradient(low = "steelblue", high = "mediumseagreen") +
-    
-    labs(x = "Dia de la semana", y = "", title="Intensidad de Actividad promedio por dia de la semana")
+activityday %>%
+  group_by(dia) %>%
+  filter((sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes)/60) > 18, Calories > 1500, Calories < 3500) %>%
+  ggplot(aes(x=dia, y=Calories)) +
+  geom_boxplot(alpha=3/5, fill="blue2")
+
 ```
 
 ```{r}
@@ -337,6 +334,27 @@ active_minutes_vs_calories <- ggplot(data = activityday) +
 
 active_minutes_vs_calories
 
+active_minutes_vs_steps <- ggplot(data = activityday) + 
+  geom_point(aes(x=TotalSteps, y=SedentaryMinutes), color = "mediumseagreen", alpha = 1/4) +
+  geom_smooth(method = loess,formula =y ~ x,aes(x=TotalSteps, y=SedentaryMinutes), color = "mediumseagreen", se = FALSE) + 
+  
+  geom_point(aes(x=TotalSteps, y=LightlyActiveMinutes), color = "orangered3", alpha = 1/4) +
+  geom_smooth(method = loess,formula =y ~ x,aes(x=TotalSteps, y=LightlyActiveMinutes, color=LightlyActiveMinutes), color = "orangered3", se = FALSE) + 
+  
+  geom_point(aes(x=TotalSteps, y=FairlyActiveMinutes), color = "purple3", alpha = 1/4) +
+  geom_smooth(method = loess,formula =y ~ x, aes(x=TotalSteps, y=FairlyActiveMinutes), color = "purple3", se = FALSE) +
+  
+  geom_point(aes(x=TotalSteps, y=VeryActiveMinutes), color = "turquoise1", alpha = 1/4) +
+  geom_smooth(method = loess,formula =y ~ x,aes(x=TotalSteps, y=VeryActiveMinutes), color = "turquoise1", se = FALSE) +
+  
+  labs(x = "Pasos", y = "Minutos de Actividad", title="Calorias vs Minutos de Actividad") +
+  
+  annotate("text", x=35000, y=130, label="Very Active",     color="black", size=3) +
+  annotate("text", x=35000, y=0,   label="Fairly Active",   color="black", size=3) +
+  annotate("text", x=35000, y=1030, label="Sedentary",       color="black", size=3) +
+  annotate("text", x=35000, y=230, label="Lightly  Active", color="black", size=3)
+
+active_minutes_vs_steps
 ```
 Lo siguiente es hacer un análisis del sueño.
 
