@@ -193,13 +193,14 @@ Como sabemos mantenernos activos físicamente es muy importante para mantenernos
 >:bone: densidad osea  
 >:brain: rendimiento y salud mental   
 
-Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida. Entonces nos surge la duda:
+Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida. Entonces nos surge la duda de en que exactamente consiste estar en forma, como lograrlo y como podemos ayudarnos.
 
-> | ¿Como alcanzar o mantenernos en forma? |
+> | ¿Como alcanzar o mantener un estado fisico en forma? |
 > | :--------------- |
-> | Un hombre y una mujer promedio deben consumir al dia unas 2500 y unas 2000 Calorias respectivamente. Junto con esto, es importante que la dieta sea balanceada y evitar el exceso de azucares y grasas malas.   |
-> | Evitar un estilo de vida sedentario, pues afecta el balance energetico y debilita el buen estado fisico del cuerpo.** |
-> | Hacer actividad fisica regularmente. Aun si pasamos largas horas de forma sedentaria, ya sea por trabajo de oficina, transportandonos, etc, estudios recientes han demostrado el gran beneficio de la actividad fisica intensa aun en periodos de tiempo cortos y la capacidad para contrarrestar el efecto de largos periodos de sedentarismo. |
+> | Un hombre y una mujer promedio deben consumir al dia unas 2500 y unas 2000 Calorias respectivamente. Es importante tambien que la dieta de donde las obtenemos sea balanceada y evitar el exceso de azucares y grasas malas.   |
+> | Evitar un estilo de vida completamente sedentario, pues afecta el balance energetico y debilita el buen estado fisico del cuerpo debido a la falta de esfuerzo. |
+> | Hacer actividad fisica ligera regularmente y/o actividad fisica intensa asi sea en periodos de tiempo cortos. Estudios recientes han demostrado que la actividad fisica intensa aun en periodos de tiempo cortos, puede contraarrestar los efectos de las largas horas que pasamos de forma sedentaria, por las obligaciones del dia a dia, en el trabajo de oficina, en el transporte, etc.|
+
 
 Existen 2 cosas principalmente por las que debemos preocuparnos para mantener: 
 Por un lado, es importante controlar las calorías ingeridas y usadas para mantener la forma física 
@@ -276,6 +277,7 @@ Investigaciones han demostrado la importancia de mantenerse activo, desplazarnos
 
 [https://www.bbc.com/mundo/noticias-58823922]
 [https://www.bbc.com/mundo/noticias-62067159]
+[https://www.bbc.com/mundo/noticias-64858320]
 [https://www.gq.com.mx/cuidado-personal/articulo/ejercicio-intenso-como-combate-los-danos-del-sendentarismo]
 
 mirara fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
