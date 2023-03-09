@@ -23,7 +23,7 @@ La empresa comercializa sus productos en su tienda virtual en su sitio web. Desd
 
 ### ¿Cual es la tarea empresarial?
 
-La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitness inteligentes con el fin de entender cómo estos los utilizan. Asi, de esta forma obtener informacion valiosa que muestre tendencias o particularidades que ayuden a desarrollar los productos y orientar las campañas de marketing para potenciar el crecimiento de la empresa.
+La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitness inteligentes de bio-monitoreo, con el fin de entender cómo estos los utilizan. Asi, de esta forma obtener informacion valiosa que muestre tendencias o particularidades que ayuden a desarrollar los productos y orientar las campañas de marketing para potenciar el crecimiento de la empresa.
 
 ### ¿Quienes son los principales interesados en la tarea?
 
@@ -183,8 +183,6 @@ Todas las columnas (o variables) estan en orden, tienen rangos de valores razona
   
 ## :four:. FASE DE ANALISIS: de los datos
 
-En esta fase ya tenemos los datos listos y preparados, empezaremos a hacer visualizaciones para leer la informacion en ellos.
-
 Como sabemos mantenernos activos físicamente es muy importante para mantenernos en forma. Mantenernos en forma implica que conservemos:
 
 >:muscle: la fuerza muscular  
@@ -197,16 +195,13 @@ Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida
 
 > | ¿Como alcanzar o mantener un estado fisico en forma? |
 > | :--------------- |
-> | Un hombre y una mujer promedio deben consumir al dia unas 2500 y unas 2000 Calorias respectivamente. Es importante tambien que la dieta de donde las obtenemos sea balanceada y evitar el exceso de azucares y grasas malas.   |
+> | Un hombre y una mujer promedio deben consumir al dia unas 2500 y unas 2000 Calorias respectivamente. Es importante tambien que estas calorias provengan de una dieta balanceada y que evite el exceso de azucares y grasas malas. |
 > | Evitar un estilo de vida completamente sedentario, pues afecta el balance energetico y debilita el buen estado fisico del cuerpo debido a la falta de esfuerzo. |
-> | Hacer actividad fisica ligera regularmente y/o actividad fisica intensa asi sea en periodos de tiempo cortos. Estudios recientes han demostrado que la actividad fisica intensa aun en periodos de tiempo cortos, puede contraarrestar los efectos de las largas horas que pasamos de forma sedentaria, por las obligaciones del dia a dia, en el trabajo de oficina, en el transporte, etc.|
-
-
-Existen 2 cosas principalmente por las que debemos preocuparnos para mantener: 
-Por un lado, es importante controlar las calorías ingeridas y usadas para mantener la forma física 
-
-y por otro el mantenerse activo y/o el ejercicio vigoroso activa mecanismos que hacen mantenimiento a nuestro cuerpo.
-
+> | Hacer actividad fisica ligera regularmente y/o actividad fisica intensa asi sea en periodos de tiempo cortos. Estudios recientes han demostrado que la actividad fisica intensa aun en periodos de tiempo cortos, puede contraarrestar los efectos de las largas horas que pasamos de forma sedentaria, por las obligaciones modernas, el trabajo de oficina, el transporte, etc. |
+  
+  
+sfdñfjaskldfjl
+En esta fase ya tenemos los datos de los dispositivos FitBit de bio-monitoreo, listos y preparados, empezaremos a hacer visualizaciones para leer la informacion en ellos y despues concluir dispositivos como estos pueden ayudar a los objetivos fspadifjapoisjdofijas
 
 ### Pasos dados, Distancia recorrida y Calorias quemadas
 
