@@ -149,6 +149,11 @@ Empezaremos realizando visualizaciones como:
  - Días de mayor actividad en la semana
 
 
+
+--------------------------------------------------------------------------------
+PROCESAMIENTO Y ANALISIS -------------------------------------------------------
+--------------------------------------------------------------------------------
+
 Ahora empezamos a realizar gráficas que nos permitan dilucidar la información que contiene nuestros datos y que con esto podamos caracterizar a los usuarios de los dispositivos FitBit o de cualquier dispositivo de bio-monitoreo inteligente.
 
 
@@ -163,26 +168,24 @@ ggplot(activityday, aes(x=TotalSteps, y=TotalDistance)) +
 ggplot(data=activityday, aes(x=TotalSteps, y=Calories)) +
         geom_point(mapping=aes(color=TotalDistance)) +
         geom_smooth() +
-        labs(x = "Numero de Pasos", y = "Calorias", color="Distancia Recorrida", title="Numero de Pasos vs Calorias vs Distancia Recorrida")
-
-ggplot(data=activityday, aes(x=TotalDistance, y=Calories)) +
-        geom_point(mapping=aes(color=TotalDistance)) +
-        geom_smooth()
+        labs(x = "Numero de Pasos", y = "Calorias", color="Distancia Recorrida", title="Numero de Pasos vs Calorias")
 ```
 
-Como es de esperarse a cuanto mas pasos mas distancia y mas calorías, van correlacionadas las tres variables, aunque midan cosas distintas, al final pueden indicar el nivel de actividad fisica de una persona.
-(esto podría ir en preparación y revisión...)
+Como es de esperarse a cuanto mas pasos mas distancia y mas calorías, van correlacionadas las tres variables, aunque midan cosas distintas, al final pueden indicar el nivel de actividad física de una persona.
+
+Como es de esperarse a mas distancia, mas pasos dados, la correlación es muy directa.
+Por lo anterior podemos estar seguros de que las distancias registradas son únicamente del desplazamiento hecho por los usuarios con sus propias piernas.
+
+De igual forma vemos que la relación entre el numero de pasos y las calorías quemadas, es una correlación positiva pero con mas variabilidad, esto es porque no contamos con que tipo de actividad o en que actividad esta realizando el usuario. Como sabemos distintos niveles de actividad tienen impactos diferentes en mantener el estado físico y también tienen gastos energéticos distintos concentrados en el tiempo y en un numero de pasos mas reducido.
 
 
-Queremos calcular el porcentaje del dia dedicado a cada nivel de actividad.
 
-Pero extraeremos el tiempo de sueño. Como no contamos con el registro de sueño de todos los días de todos los participantes del estudio, hacemos esto:
-Hallaremos el promedio de tiempo de sueño diario promedio, en base a los minutos totales de registro de actividad, calcularemos cuantos días totales tenemos de registro de actividad.
+Queremos calcular cuanto porcentaje del día es dedicado a cada nivel de actividad, los niveles de actividad física son:
+sedentary, lightly active, fairly active y very active.
 
-Restaremos el tiempo en que los participantes del estudio durmieron, para esto, como no tenemos registro de todos los días de sueño
-de todos los usuarios, determinaremos le tiempo de sueño promedio diario y estimaremos el porcentaje de este en el promedio de dias de los que tenemos
-registro de acuerdo 
+Adicionalmente queremos discriminar el porcentaje de día dedicado al sueño, pero haremos unas comprobaciones porque el sueño proviene de otra tabla y tiene distinto numero de registros que los niveles de actividad.
 
+Miramos cuanto da la sumatoria de los tiempos de nivel de actividad por día y por usuario.
 ```{r}
 n_distinct(sleepday$Id)
 n_distinct(sleepday$date)
@@ -192,14 +195,33 @@ n_distinct(activityday$Id)
 n_distinct(activityday$date)
 #940 registros de activityday (registrso de 940 dias)
 
-#Minutos de sueño promedio por registro
-minutos_sueño_promedio <- sum(sleepday$TotalMinutesAsleep) / 410 #6.98622 horas de sueño en promedio
+activityday %>%
+  group_by(semana, dia, Id) %>%
+  arrange(semana, dia) %>%
+  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
+#940 registros
 
+activityday %>%
+  group_by(semana, dia, Id) %>%
+  arrange(semana, dia) %>%
+  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60) %>%
+  filter( horas_dia == 24)
+#478 registros
+```
+Efectivamente, se cuenta con menos registros del sueño pero son suficientes para hacernos a una idea del sueño promedio de los usuarios. 
+De modo distinto, los niveles de actividad se miden y son excluyentes los unos de los otros, la mayoría de ellos por día e Id son suman 24 horas. Cuando la suma es un poco menor, debe ser porque el dispositivo esa apagado.
+Lo anterior nos da a entender que en el tiempo sedentary esta incluido el tiempo de sueño, por esta razón restaremos el tiempo de sueño promedio, como porcentaje del día,
+si el dispositivo inteligente esta apagado, pero esto nos da a entender que en el tiempo sedentary, se incluye el tiempo de sueño. Por esta razón restaremos el tiempo dormido a la actividad diaria en sedentario.
+
+
+```{r}
+#Minutos de sueño promedio por registro
+horas_sueño_promedio <- sum(sleepday$TotalMinutesAsleep) / 410 / 60 #6.98622 horas de sueño en promedio
 
 minutos_totales <- sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes)
 
 #6.98622 horas de sueño promedio, serian 29.10925
-porcentaje_sedentary_sleep <- 29.10925
+porcentaje_sedentary_sleep <- horas_sueño_promedio / 24 * 100
 
 porcentaje_sedentary <- ((sum(activityday$SedentaryMinutes) / minutos_totales)*100) - porcentaje_sedentary_sleep
 porcentaje_lightly <- (sum(activityday$LightlyActiveMinutes) / minutos_totales) * 100
@@ -207,23 +229,9 @@ porcentaje_fairly <- (sum(activityday$FairlyActiveMinutes) / minutos_totales) * 
 porcentaje_veryactive <- (sum(activityday$VeryActiveMinutes) / minutos_totales) * 100
 
 ```
-Hacemos una comprobación para ver que los registros de minutos de actividad son de todo el dia. Efectivamente, la mayoria de ellos por dia e Id son de 24 horas o un poco menos, si el dispositivo inteligente esta apagado, pero esto nos da a entender que en el tiempo sedentary, se incluye el tiempo de sueño. Por esta razon restaremos el tiempo dormido a la actividad diaria en sedentario.
-```{r}
 
-activityday %>%
-  group_by(semana, dia, Id) %>%
-  arrange(semana, dia) %>%
-  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
 
-activityday %>%
-  group_by(semana, dia, Id) %>%
-  arrange(semana, dia) %>%
-  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60) %>%
-  filter( horas_dia != 24)
-```
-En primer lugar, comprobamos la relación existente entre las calorías, los pasos y la distancia.
-
-Vemos que existe una correlación positiva entre las calorías quemadas y los pasos dados, los que al mismo tiempo se relacionan positivamente con la distancia recorrida con el usuario, como es de esperarse.
+Con estos porcentajes calculados, podemos hacer un gráfico de torta.
 
 ```{r}
 porcentajes_pie <- tibble(
@@ -235,12 +243,17 @@ colors <- c("#398EE3", "#3674E0","#FF9612", "#84D564", "#FC4539")
 plot_ly(porcentajes_pie, labels = ~Group, values = ~Percentages, 
         type = 'pie', sort = FALSE, marker=list(colors=colors), 
         textposition = 'outside',textinfo = 'label+percent') %>% 
-  layout(title = '<b>Porcentaje de dia dedicado a Nivel de Actividad <b>', 
+  layout(title = '<b> Tiempo diario de Nivel de Actividad <b>', 
          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 ```
-Esta gráfica es diciente, muestra el porcentaje de tiempo que se dedica a distintos niveles de actividad.
-Para mejorar el gráfico, podemos restar el tiempo dormido por las personas... debo hacerlo...
+Podemos ver que la mayor parte del tiempo la pasamos sedentariamente, 19 horas y media. Dentro de este tiempo, casi 7 horas son de sueño, tiempo que se debe respetar y es sano.
+3,8 horas de actividad ligera, 15 minutos en buen nivel de actividad y 25 minutos de actividad intensa.
+
+Si bien el tiempo sedentario parece demasiado, los estilos de vida modernos tienen exigencias que nos hacen permanecer mucho tiempo quietos. Pero tal como hemos visto en las recomendaciones actuales dicen que realizar 150 minutos a la semana de actividad moderada o 75 minutos a la semana de actividad vigorosa, son suficientes para mantenernos en forma.
+En cuanto a la actividad vigorosa, este gráfico nos indica que si logran cumplir con la cifra.
+
+
 
 Ahora veremos la actividad a lo largo del día
 
@@ -253,21 +266,31 @@ activityhour %>%
         scale_fill_gradient(low = "steelblue4", high = "darkolivegreen2") +
         labs(x = "Hora del día", y = "Intensidad de Actividad", title="Intensidad de Actividad por hora del día")
 ```
+Vemos que los usuarios realizan mas actividad física entre las 5 y las 7 pm, esta puede ser la hora en que terminan sus jornadas laborales. Podemos pensar que estos patrones se extienden al resto de la poblacion y podrian tambien variar el fin de semana. De lo que nos puede servir es de que podemos impulsar a las personas a aprovechar su tiempo al máximo, recomendando actividades que suplan la demanda de ejercicio en un menor tiempo, lo que implica ejercicio mas vigoroso pero provechoso para la persona.
+
+
 
 Ahora miraremos como varia la actividad de acuerdo al día de la semana
 
 
-[ PODRIA SER BUENO GUIARSE POR LAS CALORIAS, YA QUE AYUDAN A CALCULAR CUANTO SE DEBE COMER ]
-
 ```{r}
-activityhour %>% 
+activityday %>% 
     group_by(semana, dia) %>%
-    summarize(intensity = mean(TotalIntensity)) %>%
-    ggplot(mapping=aes(x=dia, y=semana, fill=intensity)) +
+    summarize(mean_calories = mean(Calories)) %>%
+    ggplot(mapping=aes(x=dia, y=semana, fill=mean_calories)) +
     geom_tile() + 
-    geom_text(aes(label=round(intensity, 1)), color="white") +
+    geom_text(aes(label=round(mean_calories)), color="white") +
     scale_fill_gradient(low = "steelblue", high = "mediumseagreen") +
-    labs(x = "Dia de la semana", y = "Semana", title="Intensidad de Actividad dia a dia")
+    labs(x = "Dia de la semana", y = "Semana del año", title="Quema de Calorias promedio por dia")
+
+activityday %>% 
+    group_by(semana, dia) %>%
+    summarize(mean_steps = mean(TotalSteps)) %>%
+    ggplot(mapping=aes(x=dia, y=semana, fill=mean_steps)) +
+    geom_tile() + 
+    geom_text(aes(label=round(mean_steps, 1)), color="white") +
+    scale_fill_gradient(low = "steelblue", high = "mediumseagreen") +
+    labs(x = "Dia de la semana", y = "Semana del año", title="Numero de pasos promedio por dia")
 
 activityhour %>% 
     group_by(dia) %>%
@@ -276,37 +299,38 @@ activityhour %>%
     geom_tile() + 
     geom_text(aes(label=round(mean_calories, 1)), color="white") +
     scale_fill_gradient(low = "steelblue", high = "mediumseagreen") +
-    
-    labs(x = "Dia de la semana", y = "", title="Intensidad de Actividad promedio por dia de la semana")
+    labs(x = "Dia de la semana", y = "", title="Calorias quemadas promedio diaria")
 
 activityday %>%
   group_by(dia) %>%
   filter((sum(activityday$SedentaryMinutes, activityday$LightlyActiveMinutes, activityday$FairlyActiveMinutes, activityday$VeryActiveMinutes)/60) > 18, Calories > 1500, Calories < 3500) %>%
   ggplot(aes(x=dia, y=Calories)) +
-  geom_boxplot(alpha=3/5, fill="blue2")
+  geom_boxplot(alpha=3/5, fill="mediumseagreen")
+
+mean_calories_day <- activityday %>% group_by(dia) %>% summarize(round(mean(Calories),1))
+
+activityday %>%
+  group_by(dia) %>%
+  ggplot(aes(x=dia, y=Calories)) +
+  geom_boxplot(alpha=3/5, fill="mediumseagreen") +
+  coord_cartesian(ylim=c(1650,2850)) +
+  labs(x = "Dia de la semana", y = "Calorias", title="Calorias promedio por dia de la semana") +
+  annotate("text", x="lunes", y=2230, label=mean_calories_day[1,2],     color="black", size=3) +
+  annotate("text", x="martes", y=2275,   label=mean_calories_day[2,2],   color="black", size=3) +
+  annotate("text", x="miércoles", y=2190, label=mean_calories_day[3,2],       color="black", size=3) +
+  annotate("text", x="jueves", y=2120, label=mean_calories_day[4,2], color="black", size=3) +
+  annotate("text", x="viernes", y=2250, label=mean_calories_day[5,2], color="black", size=3) +
+  annotate("text", x="sábado", y=2180, label=mean_calories_day[6,2], color="black", size=3) +
+  annotate("text", x="domingo", y=2120, label=mean_calories_day[7,2], color="black", size=3)
 
 ```
 
-```{r}
-activityhour %>% 
-    group_by(semana, dia) %>%
-    summarize(mean_calories = mean(Calories)) %>%
-    ggplot(mapping=aes(x=dia, y=semana, fill=mean_calories)) +
-    geom_tile() + 
-    geom_text(aes(label=round(mean_calories, 1)), color="white") +
-    scale_fill_gradient(low = "steelblue", high = "mediumseagreen") +
-    labs(x = "Dia de la semana", y = "Semana", title="Calorias dia a dia")
+Despues de esto, pueedo usar los graficos como el de abajo, uno de calorias y otro de pasos para mostrar que tanto los graficos de tiles de arriba, representan a la totalidad de los usuarios. Y asi saber si hay quienes deben mejorar sus niveles de actividad y si hay quienes son muy activos, con esto damos recomendaciones finales respecto a los niveles de actividad. Solo queda mirar el sueño y si es posible el heartrate y peso...... edfasdghasdfg
+dfgashfgk
+asdguhgkjdf
+ahsdfgh
 
-activityhour %>% 
-    group_by(dia) %>%
-    summarize(mean_calories = mean(Calories)) %>%
-    ggplot(mapping=aes(x=dia, y="", fill=mean_calories)) +
-    geom_tile() + 
-    geom_text(aes(label=round(mean_calories, 1)), color="white") +
-    scale_fill_gradient(low = "steelblue", high = "mediumseagreen") +
-    
-    labs(x = "Dia de la semana", y = "", title="Intensidad de Actividad promedio por dia de la semana")
-```
+USAR COLORES, PARA PASOS Y PARA CALORIAS. QUIZAS INTENSIDAD DE ACTIVIDAD.
 
 Ahora analizaremos la relacion entre 
 
