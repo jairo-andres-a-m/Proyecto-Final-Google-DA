@@ -195,9 +195,9 @@ Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida
 
 > | ¿Como alcanzar o mantener un estado fisico en forma? |
 > | :--------------- |
-> | Un hombre y una mujer promedio deben consumir al dia unas 2500 y unas 2000 Calorias respectivamente. Es importante tambien que estas calorias provengan de una dieta balanceada y que evite el exceso de azucares y grasas malas. |
-> | Evitar un estilo de vida completamente sedentario, pues afecta el balance energetico y debilita el buen estado fisico del cuerpo debido a la falta de esfuerzo. |
-> | Hacer actividad fisica ligera regularmente y/o actividad fisica intensa asi sea en periodos de tiempo cortos. Estudios recientes han demostrado que la actividad fisica intensa aun en periodos de tiempo cortos, puede contraarrestar los efectos de las largas horas que pasamos de forma sedentaria, por las obligaciones modernas, el trabajo de oficina, el transporte, etc. |
+> | Un hombre y una mujer promedio deben **consumir al dia unas 2500 y unas 2000 Calorias** respectivamente. Es importante tambien que estas calorias provengan de una dieta balanceada y evitar el exceso de azucares y grasas malas. |
+> | Evitar un estilo de vida completamente sedentario, hacer actividad fisica ligera regularmente **dando un minimo de 5.000 a 6.000 pasos por día.** Pues el sedentarismo afecta el balance energetico y debilita el buen estado fisico del cuerpo debido a la falta de esfuerzo.  |
+> |  Hacer actividad fisica vigorosa asi sea en periodos de tiempo cortos, estudios recientes han demostrado que **un minimo de 150 minutos de actividad fisica moderada o 75 minutos de actividad fisica vigorosa a la semana**, puede contraarrestar los efectos de las largas horas que pasamos de forma sedentaria por las obligaciones modernas, como el trabajo de oficina, el transporte, etc. |
   
   
 sfdñfjaskldfjl
@@ -217,7 +217,7 @@ En primer lugar echamos un vistazo a la relación entre pasos dados, distancia r
 ### Actividad diaria
 
 Ahora miraremos que porcentaje de un dia se dedica a cada categoria de nivel de actividad fisica:
-Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (buen nivel de actividad) y Very active (muy activo).
+Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (moderadamente activo) y Very active (muy activo o vigoroso).
 
 Hacemos una comprobacion para demostrar que en conjunto estas actividades comprenden la totalidad del dia.
 
