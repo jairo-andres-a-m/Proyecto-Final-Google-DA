@@ -231,7 +231,8 @@ Comprobamos que la suma de estas actividades nos de efectivamente la suma de las
   
 ![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221300359-e564eb64-db6f-4fd5-afc9-3b3d7840333f.png)
   
-* La mayor parte del tiempo la dedican a estar sedentarios, lo que es natural, es importante tener un buen porcentaje dedicado a actividad moderada o actividad intensa, ya que esta ultima ayuda a contrarrestar el exceso de sedentarismo del estilo de vida, obligaciones del trabajo en oficina, transporte motorizado, entre otras (añadir cifras precisas).
+* La mayor parte del tiempo la dedican a estar sedentarios, lo que es natural, buena parte de ese tiempo es de sueño, unas 6,9 horas.,hjdfghfgh
+*  es importante tener un buen porcentaje dedicado a actividad moderada o actividad intensa, ya que esta ultima ayuda a contrarrestar el exceso de sedentarismo del estilo de vida, obligaciones del trabajo en oficina, transporte motorizado, entre otras (añadir cifras precisas).
   
 ### Distribucion de la actividad en el dia
 
