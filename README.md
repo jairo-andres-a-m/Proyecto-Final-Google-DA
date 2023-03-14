@@ -223,15 +223,11 @@ Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (moder
 
 Comprobamos que la suma de estas actividades nos de efectivamente la suma de las 24 horas del dia.
 
-```{r}
-activityday %>%
-  group_by(semana, dia, Id) %>%
-  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
-```
+![horas_dia](https://user-images.githubusercontent.com/124465699/225074949-267086b8-ab43-4cef-bfae-54f1cbefed18.png)
+
+- *Efectivamente la mayoria de los registros por dia de cada usuario son de 24 horas, los que no, debe ser porque el dispositivo no estuvo encendido todo el dia. Los datos son suficientes para indicarnos dedican el tiempo los usuarios en cuanto a nivel de actividad fisica.*
   
-* En este resumen (summarize) generado, encontramos que mas de la mitad de registros suman 24 horas, ningun valor esta por encima y los que estan por debajo puede ser porque el dispositivo de bio-monitoreo no estuvo encendido todo el dia.
-* Por esto tambien deducimos que el sueño esta contabilizado en el tiempo sedentario y por eso lo distinguiremos como Sedentary (Sleep) (Sedentario dormido).
-  
+- *Adicionalmente, deducimos que las horas de sueño estan contabilizadas en el tiempo sedentario, este tiempo no debe verse mal ya que es un tiempo valioso que hemos de respetar.*
   
 ![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221300359-e564eb64-db6f-4fd5-afc9-3b3d7840333f.png)
   
