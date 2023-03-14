@@ -191,7 +191,7 @@ Como sabemos mantenernos activos físicamente es muy importante para mantenernos
 >:bone: densidad osea  
 >:brain: rendimiento y salud mental   
 
-Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida. Entonces nos surge la duda de en que exactamente consiste estar en forma, como lograrlo y como podemos ayudarnos.
+Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida. Entonces nos surge la duda de cómo lograrlo y cómo podemos ayudarnos.
 
 > | ¿Como alcanzar o mantener un estado fisico en forma? |
 > | :--------------- |
@@ -205,21 +205,23 @@ En esta fase ya tenemos los datos de los dispositivos FitBit de bio-monitoreo, l
 
 ### Pasos dados, Distancia recorrida y Calorias quemadas
 
-En primer lugar echamos un vistazo a la relación entre pasos dados, distancia recorrida y calorías. Como es de esperarse, estas tres variables estén estrechamente relacionadas ya que son indicadores directos de la actividad física.
+En primer lugar visualizamos la relacion entre los pasos dados, la distancia recorrida y las calorias quemadas. Como es de esperarse estas tres variables estan estrechamente relacionadas pues las tres son indicadores directos de la actividad fisica.
 
 ![2_pasos_distancia_calorias](https://user-images.githubusercontent.com/124465699/222209587-d652f4c7-d237-4649-81ee-014b542aedc9.png)
 
-* Los pasos dados y la distancia recorrida están muy estrechamente relacionados, por esto podemos tener la certeza de que los registros de distancia son unicamente de desplazamientos hechos a pie por los usuarios.
+- *Los pasos dados y la distancia recorrida tienen una correlacion positiva muy directa y estrecha. Por esto podemos tener la certeza de que los registros de distancia son unicamente de desplazamientos hechos a pie por los usuarios y son fiables indicadores de la actividad.*
 
-* Al comparar los pasos dados con las calorias quemadas, notamos que hay correlacion pero mas variabilidad, ya que no se toma en cuenta la actividad especifica que se esta haciendo a veces a mismos pasos dados, se queman mas o menos calorias.
+- *Vemos que hay quienes realizan menos de los pasos recomendados diarios, 5000, asi como hay quienes realizan muchos mas pues deben realizar actividades deportivas esos dias.*
+
+- *Por otra parte, vemos una correlacion positiva entre las los pasos dados y la quema de calorias, pero esta es mas variable, esto debe ser porque depende de la actividad exacta que realice la persona y es algo de lo que no tenemos registro.*
 
 
 ### Actividad diaria
 
-Ahora miraremos que porcentaje de un dia se dedica a cada categoria de nivel de actividad fisica:
+Miramos una visualizacion que nos muestra cómo distribuimos el tiempo del dia en cada nivel de actividad fisica:
 Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (moderadamente activo) y Very active (muy activo o vigoroso).
 
-Hacemos una comprobacion para demostrar que en conjunto estas actividades comprenden la totalidad del dia.
+Comprobamos que la suma de estas actividades nos de efectivamente la suma de las 24 horas del dia.
 
 ```{r}
 activityday %>%
