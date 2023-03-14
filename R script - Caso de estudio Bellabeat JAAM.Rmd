@@ -200,15 +200,18 @@ n_distinct(activityday$date)
 activityday %>%
   group_by(semana, dia, Id) %>%
   arrange(semana, dia) %>%
-  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60)
-#940 registros
+  mutate(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60) %>%
+  ungroup() %>%
+  summarize(Registros_24h = sum(horas_dia==24), Registros_20_a_24h = sum(horas_dia>20 & horas_dia<24), Registros_18_a_20h = sum(horas_dia>18 & horas_dia<20), Registros_16_18h = sum(horas_dia>16 & horas_dia<18), Registros_menos_16h = sum(horas_dia<16))
+
 
 activityday %>%
   group_by(semana, dia, Id) %>%
   arrange(semana, dia) %>%
-  summarize(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60) %>%
-  filter( horas_dia == 24)
-#478 registros
+  mutate(horas_dia = sum(SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes)/60) %>% 
+  ggplot() +
+  geom_freqpoly(aes(horas_dia))
+#muestra los registros que son mayormente de las 24 horas
 ```
 Efectivamente, se cuenta con menos registros del sueño pero son suficientes para hacernos a una idea del sueño promedio de los usuarios. 
 De modo distinto, los niveles de actividad se miden y son excluyentes los unos de los otros, la mayoría de ellos por día e Id son suman 24 horas. Cuando la suma es un poco menor, debe ser porque el dispositivo esa apagado.
