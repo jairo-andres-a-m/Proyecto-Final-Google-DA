@@ -229,7 +229,7 @@ Comprobamos que la suma de estas actividades nos de efectivamente la suma de las
   
 - *Adicionalmente, deducimos que las horas de sueño estan contabilizadas en el tiempo sedentario, este tiempo no debe verse mal ya que es un tiempo valioso que hemos de respetar.*
   
-  ![image](https://user-images.githubusercontent.com/124465699/225380689-eaf89f44-6653-4f1a-a3ef-263eda10e429.png)
+ ![image](https://user-images.githubusercontent.com/124465699/225439082-bc2c390d-8372-4d81-be89-f7b26e01a3b1.png)
   
 - *La mayor parte del tiempo la dedicamos a estar sedentarios, lo que es normal ademas por las obligaciones modernas. Pero asi como se ha vuelto algo normal, debe contrarrestarse este tiempo de inactividad con actividad.*
 - *El porcentaje de sueño da unas 6,9 horas al dia, un tiempo que esta en los **limites inferiores de sueño recomiendado para adultos**, este es un tiempo importante que hay que respetar para poder estar en buen estado fisico y de salud.
