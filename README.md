@@ -229,11 +229,12 @@ Comprobamos que la suma de estas actividades nos de efectivamente la suma de las
   
 - *Adicionalmente, deducimos que las horas de sueño estan contabilizadas en el tiempo sedentario, este tiempo no debe verse mal ya que es un tiempo valioso que hemos de respetar.*
   
-![Prcentaje_dia_nivel_de_actividad](https://user-images.githubusercontent.com/124465699/221300359-e564eb64-db6f-4fd5-afc9-3b3d7840333f.png)
+  ![image](https://user-images.githubusercontent.com/124465699/225380689-eaf89f44-6653-4f1a-a3ef-263eda10e429.png)
   
-* La mayor parte del tiempo la dedican a estar sedentarios, lo que es natural, buena parte de ese tiempo es de sueño, unas 6,9 horas.,hjdfghfgh
-*  es importante tener un buen porcentaje dedicado a actividad moderada o actividad intensa, ya que esta ultima ayuda a contrarrestar el exceso de sedentarismo del estilo de vida, obligaciones del trabajo en oficina, transporte motorizado, entre otras (añadir cifras precisas).
-  
+- *La mayor parte del tiempo la dedicamos a estar sedentarios, lo que es normal ademas por las obligaciones modernas. Pero asi como se ha vuelto algo normal, debe contrarrestarse este tiempo de inactividad con actividad.*
+- *El porcentaje de sueño da unas 6,9 horas al dia, un tiempo que esta en los **limites inferiores de sueño recomiendado para adultos**, este es un tiempo importante que hay que respetar para poder estar en buen estado fisico y de salud.
+-  *
+
 ### Distribucion de la actividad en el dia
 
 Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, determinando en que momentos la gente es mas activa.
@@ -279,3 +280,5 @@ mirara fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadict
 [https://www.nhs.uk/live-well/exercise/exercise-guidelines/physical-activity-guidelines-for-adults-aged-19-to-64/#:~:text=do%20at%20least%20150%20minutes,not%20moving%20with%20some%20activity]
 
 [https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/understanding-calories/#:~:text=As%20a%20guide%2C%20an%20average,physical%20activity%2C%20among%20other%20factors.]
+
+[https://www.nhs.uk/conditions/insomnia/]
