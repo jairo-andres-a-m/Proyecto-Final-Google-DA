@@ -207,7 +207,7 @@ En esta fase ya tenemos los datos de los dispositivos FitBit de bio-monitoreo, l
 
 En primer lugar visualizamos la relacion entre los pasos dados, la distancia recorrida y las calorias quemadas. Como es de esperarse estas tres variables estan estrechamente relacionadas pues las tres son indicadores directos de la actividad fisica.
 
-![2_pasos_distancia_calorias](https://user-images.githubusercontent.com/124465699/222209587-d652f4c7-d237-4649-81ee-014b542aedc9.png)
+![image](https://user-images.githubusercontent.com/124465699/225439264-3c81b74c-6a39-4d78-bf3c-261131bc2ea1.png)
 
 - *Los pasos dados y la distancia recorrida tienen una correlacion positiva muy directa y estrecha. Por esto podemos tener la certeza de que los registros de distancia son unicamente de desplazamientos hechos a pie por los usuarios y son fiables indicadores de la actividad.*
 
