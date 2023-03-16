@@ -223,13 +223,13 @@ Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (moder
 
 Comprobamos que la suma de estas actividades nos de efectivamente la suma de las 24 horas del dia.
 
-![image](https://user-images.githubusercontent.com/124465699/225637563-0223221e-ae33-4bcb-b932-ddea7e36abe6.png)
+![image](https://user-images.githubusercontent.com/124465699/225753442-b391da71-6579-4ca0-b0ba-0effafdd5917.png)
 
 - *Efectivamente la mayoria de los registros por dia de cada usuario son de 24 horas, los que no, debe ser porque el dispositivo no estuvo encendido todo el dia. Los datos son suficientes para indicarnos dedican el tiempo los usuarios en cuanto a nivel de actividad fisica.*
   
 - *Adicionalmente, deducimos que las horas de sueño estan contabilizadas en el tiempo sedentario, este tiempo no debe verse mal ya que es un tiempo valioso que hemos de respetar.*
   
-![image](https://user-images.githubusercontent.com/124465699/225641083-e672650d-0366-4531-953c-5006a993ad30.png)
+![image](https://user-images.githubusercontent.com/124465699/225753660-f4c46bcd-b184-4d19-9835-f7510bde4922.png)
   
 - *La mayor parte del tiempo despierto la dedicamos a estar sedentarios(12,5 horas), lo que es normal ademas por las obligaciones modernas. Pero asi como se ha vuelto algo normal, debe contrarrestarse este tiempo de inactividad con actividad como parte de la rutina.*
 - *El porcentaje de sueño da unas 6,9 horas al dia, un tiempo que esta en los **limites inferiores de sueño recomiendado para adultos**, este es un tiempo importante que hay que respetar para poder estar en buen estado de salud y fisico.
