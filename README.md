@@ -243,9 +243,11 @@ HAY QUE VER COMO SE DISTRIBUYEN ESTAS PERSONAS EN CUANTO A ACTIVIDAD FISICA, CEN
 
 Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, determinando en que momentos la gente es mas activa.
   
-![intensidad_de_actividad_por_hora_del_dia-](https://user-images.githubusercontent.com/124465699/221300013-a6394d78-54c2-431f-b585-bc42218a15b7.png)
+![image](https://user-images.githubusercontent.com/124465699/225695675-54ef9d05-dd82-49a0-aa0d-3f151fb19070.png)
 
-* Podemos observar que las horas en las que la gente realiza mas actividad son entre las 5 y 8 pm.
+- *Podemos observar que las horas en las que la gente realiza mas actividad entre semana, son entre las 5 y 8 pm, probablemente debido a que a estas horas estan terminando sus jornadas laborales*.
+- *El dia comienza y termina paulatinamente, se aprecia una baja de actividad alrededor de las 3 pm, seguramente despues de que los usuarios almuerzan.*
+- *Por ultimo, la actividad varia los fines de semana, el sabado la gente tiende a realizar actividad por la mañana y el distribuidamente entre la mañana y la tarde.*
  
 ### Distribucion de la actividad en la semana y el mes
 
