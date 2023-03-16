@@ -243,7 +243,7 @@ HAY QUE VER COMO SE DISTRIBUYEN ESTAS PERSONAS EN CUANTO A ACTIVIDAD FISICA, CEN
 
 Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, determinando en que momentos la gente es mas activa.
   
-![image](https://user-images.githubusercontent.com/124465699/225695675-54ef9d05-dd82-49a0-aa0d-3f151fb19070.png)
+![image](https://user-images.githubusercontent.com/124465699/225755109-64209b0c-86b8-4711-958b-3657b14abacc.png)
 
 - *Podemos observar que las horas en las que la gente realiza mas actividad entre semana, son entre las 5 y 8 pm, probablemente debido a que a estas horas estan terminando sus jornadas laborales*.
 - *El dia comienza y termina paulatinamente, se aprecia una baja de actividad alrededor de las 3 pm, seguramente despues de que los usuarios almuerzan.*
@@ -258,9 +258,9 @@ Detallamos la distribucion de la actividad fisica en dias de la semana.
 * Podemos ver que la actividad es variable entre las semanas, al parecer los sabados son los dias de mas actividad y los domngos los de menos. Parece haber una irregularidad en la medicion del ultimo dia.
 
 
-### Relacion actividad - calorias
+### Relacion calorias-actividad, pasos-actividad
 
-![image](https://user-images.githubusercontent.com/124465699/225752932-b772b2f2-98e0-4e47-b4df-9e4f870e7ed2.png)
+![image](https://user-images.githubusercontent.com/124465699/225754398-21a717f5-6910-4572-bd5d-440623ddcc6d.png)
 
 En este grafico podemos ver que quienes gastan mas calorias en u
 -------------------------------------------------------------------------------------------------------------------
