@@ -207,7 +207,7 @@ En esta fase ya tenemos los datos de los dispositivos FitBit de bio-monitoreo, l
 
 En primer lugar visualizamos la relacion entre los pasos dados, la distancia recorrida y las calorias quemadas. Como es de esperarse estas tres variables estan estrechamente relacionadas pues las tres son indicadores directos de la actividad fisica.
 
-![image](https://user-images.githubusercontent.com/124465699/225439264-3c81b74c-6a39-4d78-bf3c-261131bc2ea1.png)
+![image](https://user-images.githubusercontent.com/124465699/225628469-28282e62-817a-45bd-bb8d-c345eaf6ea5e.png)
 
 - *Los pasos dados y la distancia recorrida tienen una correlacion positiva muy directa y estrecha. Por esto podemos tener la certeza de que los registros de distancia son unicamente de desplazamientos hechos a pie por los usuarios y son fiables indicadores de la actividad.*
 
@@ -223,13 +223,13 @@ Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (moder
 
 Comprobamos que la suma de estas actividades nos de efectivamente la suma de las 24 horas del dia.
 
-![horas_dia](https://user-images.githubusercontent.com/124465699/225074949-267086b8-ab43-4cef-bfae-54f1cbefed18.png)
+![image](https://user-images.githubusercontent.com/124465699/225637563-0223221e-ae33-4bcb-b932-ddea7e36abe6.png)
 
 - *Efectivamente la mayoria de los registros por dia de cada usuario son de 24 horas, los que no, debe ser porque el dispositivo no estuvo encendido todo el dia. Los datos son suficientes para indicarnos dedican el tiempo los usuarios en cuanto a nivel de actividad fisica.*
   
 - *Adicionalmente, deducimos que las horas de sueño estan contabilizadas en el tiempo sedentario, este tiempo no debe verse mal ya que es un tiempo valioso que hemos de respetar.*
   
- ![image](https://user-images.githubusercontent.com/124465699/225439082-bc2c390d-8372-4d81-be89-f7b26e01a3b1.png)
+![image](https://user-images.githubusercontent.com/124465699/225641083-e672650d-0366-4531-953c-5006a993ad30.png)
   
 - *La mayor parte del tiempo despierto la dedicamos a estar sedentarios(12,5 horas), lo que es normal ademas por las obligaciones modernas. Pero asi como se ha vuelto algo normal, debe contrarrestarse este tiempo de inactividad con actividad como parte de la rutina.*
 - *El porcentaje de sueño da unas 6,9 horas al dia, un tiempo que esta en los **limites inferiores de sueño recomiendado para adultos**, este es un tiempo importante que hay que respetar para poder estar en buen estado de salud y fisico.
