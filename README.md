@@ -253,14 +253,14 @@ Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, de
 
 Detallamos la distribucion de la actividad fisica en dias de la semana.
 
-![image](https://user-images.githubusercontent.com/124465699/225752932-b772b2f2-98e0-4e47-b4df-9e4f870e7ed2.png)
+![image](https://user-images.githubusercontent.com/124465699/225754127-03b7daa7-25ba-4aa1-9ed2-9cfcfc471aeb.png)
 
 * Podemos ver que la actividad es variable entre las semanas, al parecer los sabados son los dias de mas actividad y los domngos los de menos. Parece haber una irregularidad en la medicion del ultimo dia.
 
 
 ### Relacion actividad - calorias
 
-![calorias_vs_minutos_de_actividad](https://user-images.githubusercontent.com/124465699/221989248-23f23d0f-8603-4181-abdf-7a4b6f90e862.png)
+![image](https://user-images.githubusercontent.com/124465699/225752932-b772b2f2-98e0-4e47-b4df-9e4f870e7ed2.png)
 
 En este grafico podemos ver que quienes gastan mas calorias en u
 -------------------------------------------------------------------------------------------------------------------
