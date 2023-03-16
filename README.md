@@ -207,7 +207,7 @@ En esta fase ya tenemos los datos de los dispositivos FitBit de bio-monitoreo, l
 
 En primer lugar visualizamos la relacion entre los pasos dados, la distancia recorrida y las calorias quemadas. Como es de esperarse estas tres variables estan estrechamente relacionadas pues las tres son indicadores directos de la actividad fisica.
 
-![image](https://user-images.githubusercontent.com/124465699/225628469-28282e62-817a-45bd-bb8d-c345eaf6ea5e.png)
+![image](https://user-images.githubusercontent.com/124465699/225755850-8aa335c7-3f41-4c1c-bf5d-5e9b5cd40eee.png)
 
 - *Los pasos dados y la distancia recorrida tienen una correlacion positiva muy directa y estrecha. Por esto podemos tener la certeza de que los registros de distancia son unicamente de desplazamientos hechos a pie por los usuarios y son fiables indicadores de la actividad.*
 
@@ -243,7 +243,7 @@ HAY QUE VER COMO SE DISTRIBUYEN ESTAS PERSONAS EN CUANTO A ACTIVIDAD FISICA, CEN
 
 Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, determinando en que momentos la gente es mas activa.
   
-![image](https://user-images.githubusercontent.com/124465699/225755109-64209b0c-86b8-4711-958b-3657b14abacc.png)
+![image](https://user-images.githubusercontent.com/124465699/225755592-df7a51f4-f3a2-4e89-8226-973c8c8d5386.png)
 
 - *Podemos observar que las horas en las que la gente realiza mas actividad entre semana, son entre las 5 y 8 pm, probablemente debido a que a estas horas estan terminando sus jornadas laborales*.
 - *El dia comienza y termina paulatinamente, se aprecia una baja de actividad alrededor de las 3 pm, seguramente despues de que los usuarios almuerzan.*
