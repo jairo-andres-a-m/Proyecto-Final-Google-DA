@@ -223,13 +223,13 @@ Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (moder
 
 Comprobamos que la suma de estas actividades nos de efectivamente la suma de las 24 horas del dia.
 
-![image](https://user-images.githubusercontent.com/124465699/225753442-b391da71-6579-4ca0-b0ba-0effafdd5917.png)
+![image](https://user-images.githubusercontent.com/124465699/225758562-5c676913-4e65-48a7-a47c-83f0a76289e8.png)
 
 - *Efectivamente la mayoria de los registros por dia de cada usuario son de 24 horas, los que no, debe ser porque el dispositivo no estuvo encendido todo el dia. Los datos son suficientes para indicarnos dedican el tiempo los usuarios en cuanto a nivel de actividad fisica.*
   
 - *Adicionalmente, deducimos que las horas de sueño estan contabilizadas en el tiempo sedentario, este tiempo no debe verse mal ya que es un tiempo valioso que hemos de respetar.*
   
-![image](https://user-images.githubusercontent.com/124465699/225753660-f4c46bcd-b184-4d19-9835-f7510bde4922.png)
+![image](https://user-images.githubusercontent.com/124465699/225758867-a0171e12-90d4-4eef-babe-8737db3f4d6c.png)
   
 - *La mayor parte del tiempo despierto la dedicamos a estar sedentarios(12,5 horas), lo que es normal ademas por las obligaciones modernas. Pero asi como se ha vuelto algo normal, debe contrarrestarse este tiempo de inactividad con actividad como parte de la rutina.*
 - *El porcentaje de sueño da unas 6,9 horas al dia, un tiempo que esta en los **limites inferiores de sueño recomiendado para adultos**, este es un tiempo importante que hay que respetar para poder estar en buen estado de salud y fisico.
@@ -243,7 +243,7 @@ HAY QUE VER COMO SE DISTRIBUYEN ESTAS PERSONAS EN CUANTO A ACTIVIDAD FISICA, CEN
 
 Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, determinando en que momentos la gente es mas activa.
   
-![image](https://user-images.githubusercontent.com/124465699/225755592-df7a51f4-f3a2-4e89-8226-973c8c8d5386.png)
+![image](https://user-images.githubusercontent.com/124465699/225757317-65e012a1-dea3-458a-8adb-b604e23844a4.png)
 
 - *Podemos observar que las horas en las que la gente realiza mas actividad entre semana, son entre las 5 y 8 pm, probablemente debido a que a estas horas estan terminando sus jornadas laborales*.
 - *El dia comienza y termina paulatinamente, se aprecia una baja de actividad alrededor de las 3 pm, seguramente despues de que los usuarios almuerzan.*
@@ -253,14 +253,14 @@ Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, de
 
 Detallamos la distribucion de la actividad fisica en dias de la semana.
 
-![image](https://user-images.githubusercontent.com/124465699/225754127-03b7daa7-25ba-4aa1-9ed2-9cfcfc471aeb.png)
+![image](https://user-images.githubusercontent.com/124465699/225757805-25fa5b9f-b375-4dde-a195-0f7d54db996e.png)
 
 * Podemos ver que la actividad es variable entre las semanas, al parecer los sabados son los dias de mas actividad y los domngos los de menos. Parece haber una irregularidad en la medicion del ultimo dia.
 
 
 ### Relacion calorias-actividad, pasos-actividad
 
-![image](https://user-images.githubusercontent.com/124465699/225754398-21a717f5-6910-4572-bd5d-440623ddcc6d.png)
+![image](https://user-images.githubusercontent.com/124465699/225757946-0d6f51f0-cff3-4f7f-b4f9-301a72fb929f.png)
 
 En este grafico podemos ver que quienes gastan mas calorias en u
 -------------------------------------------------------------------------------------------------------------------
