@@ -253,14 +253,10 @@ Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, de
 
 Detallamos la distribucion de la actividad fisica en dias de la semana.
 
-![intensidad_de_actividad_dia_a_dia](https://user-images.githubusercontent.com/124465699/221989047-786e3017-a67f-4441-abab-07c2e330d15a.png)
+![image](https://user-images.githubusercontent.com/124465699/225752932-b772b2f2-98e0-4e47-b4df-9e4f870e7ed2.png)
 
 * Podemos ver que la actividad es variable entre las semanas, al parecer los sabados son los dias de mas actividad y los domngos los de menos. Parece haber una irregularidad en la medicion del ultimo dia.
 
-![boxplot por dia](https://user-images.githubusercontent.com/124465699/221989277-8fb9ec11-def7-4e3b-8a28-b95a4911250d.png)
-
-
-![intensidad_de_actividad_dia_de_la_semana](https://user-images.githubusercontent.com/124465699/221989169-511e3176-f07b-4532-9379-a1ab3142fa51.png)
 
 ### Relacion actividad - calorias
 
