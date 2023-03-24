@@ -255,14 +255,19 @@ Detallamos la distribucion de la actividad fisica en dias de la semana.
 
 ![image](https://user-images.githubusercontent.com/124465699/225757805-25fa5b9f-b375-4dde-a195-0f7d54db996e.png)
 
-* Podemos ver que la actividad es variable entre las semanas, al parecer los sabados son los dias de mas actividad y los domngos los de menos. Parece haber una irregularidad en la medicion del ultimo dia.
+- *Indiscutiblemente el domingo es el dia de menos actividad, se queman menos calorias. Tanto en promedio (grafico izquierdo) como al ver la distribucion (grafico derecho).*
+- *El dia de mas actividad, de acuerdo al promedio (grafico izquierdo), es el sabado. Pero viendo la distribucion (grafico derecho), sabemos que el martes tambien es un dia en que una buena proporcion de las personas realizan mas actividad, puede deberse estas diferencia a que quizas el sabado, mas personas hacen bastante o bastante mas actividad, subiendo el promedio de este dia.*
 
 
 ### Relacion calorias-actividad, pasos-actividad
 
+Finalmente visualizamos como se concentran los usuarios de acuerdo a sus niveles de actividad en tiempo en un dia promedio, esto contra los pasos dados y contra las calorias dadas. Tengamos en cuenta que en cada corte vertical, estara el registro de tiempo de cada nivel de actividad que un usuario realizó.
+
 ![image](https://user-images.githubusercontent.com/124465699/225757946-0d6f51f0-cff3-4f7f-b4f9-301a72fb929f.png)
 
-En este grafico podemos ver que quienes gastan mas calorias en u
+- *La mayoria de usuarios estan en niveles de actividad de entre 1250 y 3750 calorias consumidas diarias y entre 0 y 30000 pasos diarios. Por esto sabemos que aunque una persona no realice actividad (0 pasos), tiene un consumo de calorias basal.*
+- **
+
 -------------------------------------------------------------------------------------------------------------------
 Como sabemos mantenernos activos físicamente es muy importante, al hacerlo estamos garantizando el conservar nuestra fuerza muscular, aptitud cardiorrespiratoria, controlados niveles de azúcar, densidad ósea y rendimiento mental, entre otros, haciéndonos sentir mejor, mejorando nuestra calidad y expectativa de vida.
 Por un lado, es importante controlar las calorías ingeridas y usadas para mantener la forma física y por otro el mantenerse activo y/o el ejercicio vigoroso activa mecanismos que hacen mantenimiento a nuestro cuerpo.
