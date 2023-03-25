@@ -73,7 +73,7 @@ Creemos util emplear datos por dia, hora, del sueño, el peso y el ritmo cardiac
 
 Los datos nos ayudan a responder preguntas y son relativos a la tarea empresarial.
 
-## :three:. FASE DE PROCESAMIENTO: de los datos
+## :three:. FASE DE PROCESAMIENTO: los datos
   
 ### ¿Que herramienta elegimos para este tarea de analisis?
 
@@ -181,7 +181,7 @@ Todas las columnas (o variables) estan en orden, tienen rangos de valores razona
 * heartrate: Por minuto (o par de minutos): ritmo cardiaco.
 * weight: Por fecha de autoregistro: peso.
   
-## :four:. FASE DE ANALISIS: de los datos
+## :four:. FASE DE ANALISIS: datos preparados
 
 Como sabemos mantenernos activos físicamente es muy importante para mantenernos en forma. Mantenernos en forma implica que conservemos:
 
