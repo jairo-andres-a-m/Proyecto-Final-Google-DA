@@ -9,7 +9,8 @@ Por **Jairo Andrés Amaya Muñoz**
 
 Bellabeat es una empresa pequeña y exitosa, es manufacturera de productos de tecnologia para la mujer enfocados en el cuidado de su salud. Esta empresa tiene el potencial para ser una gran jugadora en el mercado de dispositivos teconologicos e inteligentes. Desde su fundacion en el año 2013 han desarrollado productos y abierto oficinas en distintas partes del mundo.
 
-Los productos de Bellabeat recolectan datos de bio-monitoreo de la actividad fisica, pasos dados, distancia recorrida, calorias quemadas, ritmo cardiaco, peso, sueño y salud reproductiva, entre otras, para empoderar a sus usuarias con conocimiento de si mismas y poder incidir en sus habitos.
+Los productos de Bellabeat recolectan datos de bio-monitoreo de la actividad fisica, pasos dados, distancia recorrida, calorias quemadas, ritmo cardiaco, peso, sueño y salud reproductiva, entre otras. Con el fin de empoderar a sus usuarias con conocimiento de si mismas y poder incidir en sus habitos.
+  
 Sus productos son:
 
 | Producto | Descripcion |
@@ -33,11 +34,11 @@ La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitnes
 
 ## :two:. FASE DE PREPARACION: Datos de estudio
 
-### ¿Que dataset se utilizará, donde esta almacenados y bajo que licencia?
+### ¿Que dataset se utilizará, donde esta almacenado y bajo que licencia?
 
 Sršen nos recomienda usar un dataset de dominio publico (CC0: Public Domain) llamado FitBit Fitness Tracker Data, este fue subido por el usuario Möbius a la plataforma Kaggle en el siguiente link:  https://www.kaggle.com/datasets/arashnic/fitbit
 
-Descargamos este dataset, segun la descripcion este contiene datos generados por ~30 usuarios de dispositivos FitBit encuestados via Amazon Mechanical Turk que accedieron a dar su inofrmacion personal registrada en sus dispositivos durante dos meses, del 12 de mayo al 12 de abril del 2016.
+Descargamos este dataset. Segun la descripcion este contiene datos generados por ~30 usuarios de dispositivos FitBit encuestados via Amazon Mechanical Turk que accedieron a dar su inofrmacion personal registrada en sus dispositivos durante dos meses, del 12 de mayo al 12 de abril del 2016.
 
 ### ¿Como se organiza y que contiene el dataset?
 
@@ -67,9 +68,9 @@ Creemos util emplear datos por dia, hora, del sueño, el peso y el ritmo cardiac
 
 ✔️ Los datos son de una fuente secundaria pues han sido recolectados por unos investigadores en otro estudio. Los participantes de dicho estudio accedieron a compartir sus datos de un mes completo de sus actividades. Podemos decir que han sido adquiridos y compartidos consentidamente y de una forma etica. 
 
-✔️ Como pudimos ver al revisar el contenido y la organizacion del dataset, contamos con la informacion integra de estas personas en este periodo de tiempo. La informacion es del 2016 pero sigue siendo relevante pues si bien los dispositivos comerciales de bio-monitoreo han mejorado, esencialmente continuan haciendo lo mismo.
+✔️ Como pudimos ver al revisar el contenido y la organizacion del dataset, contamos con la informacion integra de estas personas en este periodo de tiempo. La informacion es del 2016 pero sigue siendo relevante pues si bien los dispositivos comerciales de bio-monitoreo han mejorado, esencialmente a la fecha de hoy continuan haciendo lo mismo.
 
-✖️ Por otra parte, contar con 33 participantes, usuarios de dispositivos de bio-monitoreo, es una muestra pequeña de personas para establecer comportamientos universales de la actividad fisica de las personas. En el caso del sueño, el ritmo cardiaco y el peso, apenas contamos con registros de 24, 14 y 8 participantes respectivamente. No excluimos estos ultimos datos ya que son indicadores importantes, y en general aunque sea una muestra pequeña podemos intentar ver tendencias en ellos.
+✖️ Por otra parte, contar con 33 participantes usuarios de dispositivos de bio-monitoreo, es una muestra pequeña de personas para establecer comportamientos universales de la actividad fisica de las personas. En el caso del sueño, el ritmo cardiaco y el peso, apenas contamos con registros de 24, 14 y 8 participantes respectivamente. No excluimos estos ultimos datos ya que son indicadores importantes, y en general aunque sea una muestra pequeña podemos intentar ver tendencias en ellos.
 
 Los datos nos ayudan a responder preguntas y son relativos a la tarea empresarial.
 
@@ -197,11 +198,10 @@ Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida
 > | :--------------- |
 > | Un hombre y una mujer promedio deben **consumir al dia unas 2500 y unas 2000 Calorias** respectivamente. Es importante tambien que estas calorias provengan de una dieta balanceada y evitar el exceso de azucares y grasas malas. |
 > | Evitar un estilo de vida completamente sedentario, hacer actividad fisica ligera regularmente **dando un minimo de 5.000 a 6.000 pasos por día.** Pues el sedentarismo afecta el balance energetico y debilita el buen estado fisico del cuerpo debido a la falta de esfuerzo.  |
-> |  Hacer actividad fisica vigorosa asi sea en periodos de tiempo cortos, estudios recientes han demostrado que **un minimo de 150 minutos de actividad fisica moderada o 75 minutos de actividad fisica vigorosa a la semana**, puede contraarrestar los efectos de las largas horas que pasamos de forma sedentaria por las obligaciones modernas, como el trabajo de oficina, el transporte, etc. |
+> |  Hacer actividad fisica vigorosa asi sea en periodos de tiempo cortos. Estudios recientes han demostrado que **un minimo de 150 minutos de actividad fisica moderada o 75 minutos de actividad fisica vigorosa a la semana**, puede contraarrestar los efectos de las largas horas que pasamos de forma sedentaria por las obligaciones modernas, como el trabajo de oficina, el transporte, etc. |
   
-  
-sfdñfjaskldfjl
-En esta fase ya tenemos los datos de los dispositivos FitBit de bio-monitoreo, listos y preparados, empezaremos a hacer visualizaciones para leer la informacion en ellos y despues concluir dispositivos como estos pueden ayudar a los objetivos fspadifjapoisjdofijas
+Habiendo hecho estas aclaraciones y teniendo en mente los puntos claves para que una persona se mantenga en forma, procedemos a realizar el analisis. Realizaremos visualizaciones de los datos de bio-monitoreo para leer informacion en ellos desde el anterior punto de vista y puntos claves.
+
 
 ### Pasos dados, Distancia recorrida y Calorias quemadas
 
