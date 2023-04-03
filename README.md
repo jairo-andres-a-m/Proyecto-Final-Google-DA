@@ -211,7 +211,7 @@ En primer lugar visualizamos la relacion entre los pasos dados, la distancia rec
 
 - *Los pasos dados y la distancia recorrida tienen una correlacion positiva muy directa y estrecha. Por esto podemos tener la certeza de que los registros de distancia son unicamente de desplazamientos hechos a pie por los usuarios y son fiables indicadores de la actividad.*
 
-- *Vemos que hay quienes realizan menos de los pasos recomendados diarios, 5000, asi como hay quienes realizan muchos mas pues deben realizar actividades deportivas esos dias.*
+- *Vemos que hay quienes realizan menos de los pasos recomendados diarios, 5000, asi como hay quienes realizan muchos mas pues deben realizar actividades deportivas que elevan su promedio.*
 
 - *Por otra parte, vemos una correlacion positiva entre las los pasos dados y la quema de calorias, pero esta es mas variable, esto debe ser porque depende de la actividad exacta que realice la persona y es algo de lo que no tenemos registro.*
 
@@ -233,7 +233,7 @@ Comprobamos que la suma de estas actividades nos de efectivamente la suma de las
   
 - *La mayor parte del tiempo despierto la dedicamos a estar sedentarios(12,5 horas), lo que es normal ademas por las obligaciones modernas. Pero asi como se ha vuelto algo normal, debe contrarrestarse este tiempo de inactividad con actividad como parte de la rutina.*
 - *El porcentaje de sueño da unas 6,9 horas al dia, un tiempo que esta en los **limites inferiores de sueño recomiendado para adultos**, este es un tiempo importante que hay que respetar para poder estar en buen estado de salud y fisico.
--  *El porcentaje de moderadamente activo da unos 15,9 minutos (a la semana 111,3 minutos) y el porcentaje de muy activo da unos 25 minutos al dia (a la semana 175 minutos). La actividad minima recomendada en moderadamente activo por si sola no es suficiente (minimo de 150 minutos a la semana) y la actividad muy activa a la semana es mas que suficiente (minimo a la semana de 75 minutos), pero como la recomendacion es o lo uno o lo otro, en conjunto se cumplen las recomendaciones de actividad semanasl.*
+-  *El porcentaje de moderadamente activo da unos 15,9 minutos (a la semana 111,3 minutos) y el porcentaje de muy activo da unos 25 minutos al dia (a la semana 175 minutos). La actividad minima recomendada en moderadamente activo por si sola no es suficiente (minimo de 150 minutos a la semana) y la actividad muy activa a la semana es mas que suficiente (minimo a la semana de 75 minutos), pero como la recomendacion es o lo uno o lo otro, en conjunto se cumplen las recomendaciones de actividad semanasles.*
   
   
 HAY QUE VER COMO SE DISTRIBUYEN ESTAS PERSONAS EN CUANTO A ACTIVIDAD FISICA, CENTRADO EN MODERAO Y MUY ACTIVO, ...
@@ -270,9 +270,16 @@ Finalmente visualizamos como se concentran los usuarios de acuerdo a sus niveles
 - *La linea azul claro o aguamarina de muy activo o actividad vigorosa, mantiene un crecimiento constante a medida que aumentan las calorias consumidas y los pasos dados.*
 - *Finalmente la linea verde del sedentarismo, si nos centramos en las medidas intermedias de calorias consumidas y  pasos dados demuestra una disminucion del tiempo sedentario, pues se utiliza en actividad, a excepcion de los valores extremos.*
 
+FALTA MIRAR EL SUEÑO DOFIJASGPOIJpoidjgdofjgojsdfg
+dfñgjdsflgkjsdf
+sdreo --------- buscar recomendaciones de sueño
+
+
 ## :five:. FASE DE COMPARTIR Y ACTUAR: conclusiones
 
+Como se vio, los datos de los dispositivos inteligentes de bio-monitoreo, en este caso el FitBit, son suficientes para empoderar a el usuario con mediciones exactas de su actividad. Desde unas recomendaciones que puede recibir por la app, el usuario puede enfocarse en cumplir con unos minimos para mantenerse en forma.
 
+Debe enfocarse al usuario en estar en el area en que cumple con los minimos.
 
 
 -------------------------------------------------------------------------------------------------------------------
