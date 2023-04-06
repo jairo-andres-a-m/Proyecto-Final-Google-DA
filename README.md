@@ -267,6 +267,7 @@ Finalmente visualizamos como se concentran los usuarios de acuerdo a sus niveles
 
 - *La mayoria de usuarios estan en niveles de actividad de entre 1250 y 3750 calorias consumidas diarias y entre 0 y 30000 pasos diarios. Por esto sabemos que aunque una persona no realice actividad (0 pasos), tiene un consumo de calorias basal.*
 - *Fijandonos en la linea naranja de ligeramente activo, vemos que esta se estabiliza a las 2000 calorias y un poco antes de los 10000 pasos diarios, esto concuerda con las recomendaciones minimas de actividad, al parecer despues de estos niveles de actividad en calorias y pasos diarios, los pasos diarios o calorias adicionales son debido a actividad mas vigorosa como tal, deliberadamente ejercicio fisico.*
+- *La actividad ligera es indispensable, por esto se estabiliza en los valores normales de actividad, en 2000 calorias y 10000 pasos. Adicionalmente la actividad vigorosa es la que marca la diferencia en adelante pues su crecimiento es constante, esto ya se considera deporte como tal.*
 - *La linea azul claro o aguamarina de muy activo o actividad vigorosa, mantiene un crecimiento constante a medida que aumentan las calorias consumidas y los pasos dados.*
 - *Finalmente la linea verde del sedentarismo, si nos centramos en las medidas intermedias de calorias consumidas y  pasos dados demuestra una disminucion del tiempo sedentario, pues se utiliza en actividad, a excepcion de los valores extremos.*
 
@@ -276,6 +277,38 @@ sdreo --------- buscar recomendaciones de sueño
 
 
 ## :five:. FASE DE COMPARTIR Y ACTUAR: conclusiones
+
+Como se vio, los datos de los dispositivos inteligentes de bio-monitoreo proporcionan informacion muy precisa de la actividad fisica de los usuarios. Con lo anterior y teniendo la perspectiva de las recomendaciones para estar en forma que fueron expuestas arriba, los productos de Bellabeat en conjunto con su app, deben ayudar a las personas a concentrar sus esfuerzos de manera precisa para mantenerlas en forma y obtener todos los beneficios de estar asi. 
+
+A forma de conclusion, se vieron estas particularidades de los usuarios:
+
+El dispositivo inteligente de bio-monitoreo junto con la app, debe ayudar a la persona a llevar un horario de ejercicio, aprovechar las horas que se tienen y a indicar cuando se esta lejos, cerca o se ha cumplido la meta.
+
+Debe contar con metas de actividad ligera, actividad vigorosa y sueño. Ya que las tres son vitales para mantenerse en forma y estar saludable. Ademas en que grupo de personas, por actividad, se encuentra el usuario.
+
+Bellabeat debe educar sobre un estilo de vida activo y los minimos para estar en forma, impulsar a las personas a hacer actividad y ayudar a cumplir y forjar un horario propuesto basado en unos objetivos.
+
+
+
+- *Las horas de mayor actividad fisica entre las 5 y 8 pm, cómo. los sabados son aprovechados por mas gente para hacer ejercicio y los domingos son los dias de mas "flojera".*
+
+- *La actividad fisica ligera se estabiliza a las 2000 calorias y 10000 pasos. Es un minimo que todos necesitan*
+- 
+- *Es recomendable ligera es indispensable, pues los valores minimos de actividad se dan cuando esta se estabiliza en 2000 calorias y 10000 pasos. Beneficios de mas alla de estos valores, se obtienen con actividad vigorosa o ejercicio como tal. Pero como minimo, es suficiente una actividad ligera asi.*
+
+- 
+
+
+Las campañas de marketing 
+
+
+y haciendo uso de una app, las personas pueden concentrar sus esfuerzos de forma precisa para mantenerse en forma y obtener todos los beneficios de estar asi. Los productos de Bellabeat ayudaran a esto, empoderando y guiando 
+
+Considero que cualquier campaña de marketing debe enfocarse en como los productos de Bellabeat
+
+que se  para que se esfuercen por estar en el grupo de quienes, de acuerdo a las recomendaciones, hacen suficiente actividad fisica.
+
+
 
 Como se vio, los datos de los dispositivos inteligentes de bio-monitoreo, en este caso el FitBit, son suficientes para empoderar a el usuario con mediciones exactas de su actividad. Desde unas recomendaciones que puede recibir por la app, el usuario puede enfocarse en cumplir con unos minimos para mantenerse en forma.
 
