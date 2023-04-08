@@ -280,7 +280,9 @@ sdreo --------- buscar recomendaciones de sueño
 
 Despues de haber visualizado graficos e interpretado la informacion, se extraen las conclusiones mas generales del comportamiento y la actividad fisica de los usuarios de dispositivos inteligentes de bio-monitoreo:
 
-| :stopwatch: :clipboard: :memo: Habitos de los usuarios de *dispositivo inteligente de bio-monitoreo* |
+HABITOS COMUNES
+
+| Habitos de los usuarios de *dispositivos inteligentes de bio-monitoreo* |
 | :--------------- |
 | :chair: La mayor parte del dia los usuarios se mantienen en estado sedentario, 12,5 horas. |
 | :bed: Las usuarios duermen en promedio 6,9 horas al dia.  |
@@ -288,14 +290,21 @@ Despues de haber visualizado graficos e interpretado la informacion, se extraen 
 | :baby_chick: La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos.* |
 | :rooster: La actividad vigorosa o ejercico como tal, tiene un crecimiento constante a medida que los usuarios queman mas calorias o dan mas pasos mas alla de los minimos recomendados. |
 
-- *La mayor parte del dia los usuarios se mantienen en estado sedentario, 12,5 horas.*
-- *Las personas estan durmiendo en promedio 6,9 horas al dia*
-- *Los dias de mayor actividad fisica son los sabados y los de menor, los domingos.
-- *Las horas de mayor actividad fisica, en general, son entre las 5 y 8 pm. Una variacion son los sabados, cuando los usuarios tambien aprovechan para hacer actividad fisica en la mañana.*
-- *La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos.*
-- *A medida que los usuarios tienen mas calorias quemadas o pasos dados, a partir de los minimos, la diferencia viene dada en crecimiento constante por la actividad vigorosa o ejercicio como tal.* [ SE PODRIAN SEPARAR EN DOS GRUPOS, QUIENES ESTAN POR DEBADO DE LOS MINIMOS (2000 Y 10000) Y QUIENES ESTAN POR ENCIMA PARA DISTINGUIR SUS HABITOS. ]
+ [ SE PODRIAN SEPARAR EN DOS GRUPOS, QUIENES ESTAN POR DEBADO DE LOS MINIMOS (2000 Y 10000) Y QUIENES ESTAN POR ENCIMA PARA DISTINGUIR SUS HABITOS. ]
 
+FUNCION DE LA APP, EL MONITOREO Y QUE DEBE BUSCAR BELLABEAT
 
+Con los dispositivos inteligentes de bio-monitoreo y en conjunto con la app, se puede **informar y educar a las personas de forma precisa**, dandoles poder sobre su salud en lo que respecta al estado fisico y a estar en forma fisica:
+  
+- Conociendo los minimos de actividad, beneficios y recomendaciones
+- Ayudando a alcanzar objetivos de actividad minima o para mejorar el rendimiento fisico
+- Cuadrando horarios y plantenado alternativas para la actividad
+- Ayudando a mantener o cambiar habitos, notificar y recordar
+- 
+
+La app ha de tener en cuenta y recomendar, tanto un minimo de actividad ligera o normal, como una actividad vigorosa o ejercicio como tal que mejora las capacidades de rendimiento fisico. Tambien debe ayudar a llevar un control de la salud reproductiva de la mujer pues este ha sido el fuerte y enfoque de la marca Bellabeat.
+
+se debe educar a las personas en los beneficios de la actividad fisica y orientar y ayudar a medir como alcanzar un estado fisico en forma.
 
 A forma de conclusion, se vieron estas particularidades de los usuarios:
 
@@ -307,14 +316,11 @@ Bellabeat debe educar sobre un estilo de vida activo y los minimos para estar en
 
 
 
-- *Las horas de mayor actividad fisica entre las 5 y 8 pm, cómo. los sabados son aprovechados por mas gente para hacer ejercicio y los domingos son los dias de mas "flojera".*
+1 DESCRIBIR HABITOS ENCONTRADOS
 
-- *La actividad fisica ligera se estabiliza a las 2000 calorias y 10000 pasos. Es un minimo que todos necesitan*
-- 
-- *Es recomendable ligera es indispensable, pues los valores minimos de actividad se dan cuando esta se estabiliza en 2000 calorias y 10000 pasos. Beneficios de mas alla de estos valores, se obtienen con actividad vigorosa o ejercicio como tal. Pero como minimo, es suficiente una actividad ligera asi.*
+2 RECOMENDACIONES Y COMO DEBE SER LA APP (PARA QUE DEBE SERVIR)
 
-
-Como se vio, los datos de los dispositivos inteligentes de bio-monitoreo proporcionan informacion muy precisa de la actividad fisica de los usuarios. Con lo anterior y teniendo la perspectiva de las recomendaciones para estar en forma que fueron expuestas arriba, los productos de Bellabeat en conjunto con su app, deben ayudar a las personas a concentrar sus esfuerzos de manera precisa para mantenerlas en forma y obtener todos los beneficios de estar asi. 
+3 RECOMENDACIONES PARA EL MARKETING
 
 - 
 
