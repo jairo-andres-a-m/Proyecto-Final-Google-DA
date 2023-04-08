@@ -280,13 +280,13 @@ sdreo --------- buscar recomendaciones de sueño
 
 Despues de haber visualizado graficos e interpretado la informacion, se extraen las conclusiones mas generales del comportamiento y la actividad fisica de los usuarios de dispositivos inteligentes de bio-monitoreo:
 
-> | Habitos de los usuarios de dispositivo inteligente de bio-monitoreo |
-> | :--------------- |
-> | La mayor parte del dia los usuarios se mantienen en estado sedentario, 12,5 horas. |
-> | Las personas estan durmiendo en promedio 6,9 horas al dia  |
-> | Las horas de mayor actividad fisica, en general, son entre las 5 y 8 pm. Una variacion son los sabados, cuando los usuarios tambien aprovechan para hacer actividad fisica en la mañana. |
-> | La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos.* |
-> | A medida que los usuarios tienen mas calorias quemadas o pasos dados, a partir de los minimos, la diferencia viene dada en crecimiento constante por la actividad vigorosa o ejercicio como tal. |
+| :stopwatch: :clipboard: :memo: Habitos de los usuarios de *dispositivo inteligente de bio-monitoreo* |
+| :--------------- |
+| :chair: La mayor parte del dia los usuarios se mantienen en estado sedentario, 12,5 horas. |
+| :bed: Las usuarios duermen en promedio 6,9 horas al dia.  |
+| :athletic_shoe: En general,Las horas de mayor actividad fisica son entre las 5 y 8 pm. Una variacion son los sabados, cuando aprovechan mas las horas de la mañana para hacer actividad. |
+| :baby_chick: La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos.* |
+| :rooster: La actividad vigorosa o ejercico como tal, tiene un crecimiento constante a medida que los usuarios queman mas calorias o dan mas pasos mas alla de los minimos recomendados. |
 
 - *La mayor parte del dia los usuarios se mantienen en estado sedentario, 12,5 horas.*
 - *Las personas estan durmiendo en promedio 6,9 horas al dia*
