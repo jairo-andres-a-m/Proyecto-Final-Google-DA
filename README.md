@@ -278,7 +278,24 @@ sdreo --------- buscar recomendaciones de sueño
 
 ## :five:. FASE DE COMPARTIR Y ACTUAR: conclusiones
 
-Como se vio, los datos de los dispositivos inteligentes de bio-monitoreo proporcionan informacion muy precisa de la actividad fisica de los usuarios. Con lo anterior y teniendo la perspectiva de las recomendaciones para estar en forma que fueron expuestas arriba, los productos de Bellabeat en conjunto con su app, deben ayudar a las personas a concentrar sus esfuerzos de manera precisa para mantenerlas en forma y obtener todos los beneficios de estar asi. 
+Despues de haber visualizado graficos e interpretado la informacion, se extraen las conclusiones mas generales del comportamiento y la actividad fisica de los usuarios de dispositivos inteligentes de bio-monitoreo:
+
+> | Habitos de los usuarios de dispositivo inteligente de bio-monitoreo |
+> | :--------------- |
+> | La mayor parte del dia los usuarios se mantienen en estado sedentario, 12,5 horas. |
+> | Las personas estan durmiendo en promedio 6,9 horas al dia  |
+> | Las horas de mayor actividad fisica, en general, son entre las 5 y 8 pm. Una variacion son los sabados, cuando los usuarios tambien aprovechan para hacer actividad fisica en la mañana. |
+> | La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos.* |
+> | A medida que los usuarios tienen mas calorias quemadas o pasos dados, a partir de los minimos, la diferencia viene dada en crecimiento constante por la actividad vigorosa o ejercicio como tal. |
+
+- *La mayor parte del dia los usuarios se mantienen en estado sedentario, 12,5 horas.*
+- *Las personas estan durmiendo en promedio 6,9 horas al dia*
+- *Los dias de mayor actividad fisica son los sabados y los de menor, los domingos.
+- *Las horas de mayor actividad fisica, en general, son entre las 5 y 8 pm. Una variacion son los sabados, cuando los usuarios tambien aprovechan para hacer actividad fisica en la mañana.*
+- *La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos.*
+- *A medida que los usuarios tienen mas calorias quemadas o pasos dados, a partir de los minimos, la diferencia viene dada en crecimiento constante por la actividad vigorosa o ejercicio como tal.* [ SE PODRIAN SEPARAR EN DOS GRUPOS, QUIENES ESTAN POR DEBADO DE LOS MINIMOS (2000 Y 10000) Y QUIENES ESTAN POR ENCIMA PARA DISTINGUIR SUS HABITOS. ]
+
+
 
 A forma de conclusion, se vieron estas particularidades de los usuarios:
 
@@ -295,6 +312,9 @@ Bellabeat debe educar sobre un estilo de vida activo y los minimos para estar en
 - *La actividad fisica ligera se estabiliza a las 2000 calorias y 10000 pasos. Es un minimo que todos necesitan*
 - 
 - *Es recomendable ligera es indispensable, pues los valores minimos de actividad se dan cuando esta se estabiliza en 2000 calorias y 10000 pasos. Beneficios de mas alla de estos valores, se obtienen con actividad vigorosa o ejercicio como tal. Pero como minimo, es suficiente una actividad ligera asi.*
+
+
+Como se vio, los datos de los dispositivos inteligentes de bio-monitoreo proporcionan informacion muy precisa de la actividad fisica de los usuarios. Con lo anterior y teniendo la perspectiva de las recomendaciones para estar en forma que fueron expuestas arriba, los productos de Bellabeat en conjunto con su app, deben ayudar a las personas a concentrar sus esfuerzos de manera precisa para mantenerlas en forma y obtener todos los beneficios de estar asi. 
 
 - 
 
