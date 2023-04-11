@@ -278,11 +278,12 @@ sdreo --------- buscar recomendaciones de sueño
 
 ## :five:. FASE DE COMPARTIR Y ACTUAR: conclusiones
 
-Despues de haber visualizado graficos e interpretado la informacion, se extraen las conclusiones mas generales del comportamiento y la actividad fisica de los usuarios de dispositivos inteligentes de bio-monitoreo:
+### Habitos encontrados
+Despues de haber visualizado graficos e interpretado la informacion, se extraen las conclusiones mas generales del comportamiento y la actividad fisica de los usuarios de dispositivos inteligentes de bio-monitoreo.
 
 HABITOS COMUNES
 
-| Habitos de los usuarios de *dispositivos inteligentes de bio-monitoreo* |
+| Habitos de los usuarios analizados |
 | :--------------- |
 | :chair: La mayor parte del dia los usuarios se mantienen en estado sedentario, 12,5 horas. |
 | :bed: Las usuarios duermen en promedio 6,9 horas al dia.  |
@@ -290,7 +291,10 @@ HABITOS COMUNES
 | :baby_chick: La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos.* |
 | :rooster: La actividad vigorosa o ejercico como tal, tiene un crecimiento constante a medida que los usuarios queman mas calorias o dan mas pasos mas alla de los minimos recomendados. |
 
- [ SE PODRIAN SEPARAR EN DOS GRUPOS, QUIENES ESTAN POR DEBADO DE LOS MINIMOS (2000 Y 10000) Y QUIENES ESTAN POR ENCIMA PARA DISTINGUIR SUS HABITOS. ]
+Recomendacion para posterior analisis
+[ SE PODRIAN SEPARAR EN DOS GRUPOS, QUIENES ESTAN POR DEBADO DE LOS MINIMOS (2000 Y 10000) Y QUIENES ESTAN POR ENCIMA PARA DISTINGUIR SUS HABITOS. ]
+
+### Funcion de la APP Bellabeat, recomendaciones
 
 FUNCION DE LA APP, EL MONITOREO Y QUE DEBE BUSCAR BELLABEAT
 
@@ -306,13 +310,8 @@ La app ha de tener en cuenta y recomendar, tanto un minimo de actividad ligera o
 
 se debe educar a las personas en los beneficios de la actividad fisica y orientar y ayudar a medir como alcanzar un estado fisico en forma.
 
-A forma de conclusion, se vieron estas particularidades de los usuarios:
+### Imagen de la empresa, marketing
 
-El dispositivo inteligente de bio-monitoreo junto con la app, debe ayudar a la persona a llevar un horario de ejercicio, aprovechar las horas que se tienen y a indicar cuando se esta lejos, cerca o se ha cumplido la meta.
-
-Debe contar con metas de actividad ligera, actividad vigorosa y sueño. Ya que las tres son vitales para mantenerse en forma y estar saludable. Ademas en que grupo de personas, por actividad, se encuentra el usuario.
-
-Bellabeat debe educar sobre un estilo de vida activo y los minimos para estar en forma, impulsar a las personas a hacer actividad y ayudar a cumplir y forjar un horario propuesto basado en unos objetivos.
 
 
 
