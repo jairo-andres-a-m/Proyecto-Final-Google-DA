@@ -200,8 +200,8 @@ Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida
 > | Evitar un estilo de vida completamente sedentario, hacer actividad fisica ligera regularmente **dando un minimo de 5.000 a 6.000 pasos por día.** Pues el sedentarismo afecta el balance energetico y debilita el buen estado fisico del cuerpo debido a la falta de esfuerzo.  |
 > |  Hacer actividad fisica vigorosa asi sea en periodos de tiempo cortos. Estudios recientes han demostrado que **un minimo de 150 minutos de actividad fisica moderada o 75 minutos de actividad fisica vigorosa a la semana**, puede contraarrestar los efectos de las largas horas que pasamos de forma sedentaria por las obligaciones modernas, como el trabajo de oficina, el transporte, etc. |
 > 
-> Articulos BBC: [Beneficios de la actividad fisica](https://www.bbc.com/mundo/noticias-58823922) y [Minimos de actividad para mejorar la salud](https://www.bbc.com/mundo/noticias-64858320).
-> Pautas NHS: [Balance energético](https://www.bbc.com/mundo/noticias-58823922), [Cantidad de actividad](https://www.google.com/search?q=guidelines&sourceid=chrome&ie=UTF-8) y [Cantidad de sueño](https://www.nhs.uk/conditions/insomnia/).
+> Articulos BBC: [Beneficios de la actividad fisica](https://www.bbc.com/mundo/noticias-58823922) y [Minimos de actividad para mejorar la salud](https://www.bbc.com/mundo/noticias-64858320).  
+> Pautas NHS: [Balance energético](https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/understanding-calories/#:~:text=As%20a%20guide%2C%20an%20average,physical%20activity%2C%20among%20other%20factors.), [Cantidad de actividad](https://www.nhs.uk/live-well/exercise/exercise-guidelines/physical-activity-guidelines-for-adults-aged-19-to-64/#:~:text=do%20at%20least%20150%20minutes,not%20moving%20with%20some%20activity) y [Cantidad de sueño](https://www.nhs.uk/conditions/insomnia/).
 >
   
 Habiendo hecho estas aclaraciones y teniendo en mente los puntos claves para que una persona se mantenga en forma, procedemos a realizar el analisis. Realizaremos visualizaciones de los datos de bio-monitoreo para leer informacion en ellos desde el anterior punto de vista y puntos claves.
