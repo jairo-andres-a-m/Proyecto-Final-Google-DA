@@ -199,6 +199,10 @@ Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida
 > | Un hombre y una mujer promedio deben **consumir al dia unas 2500 y unas 2000 Calorias** respectivamente. Es importante tambien que estas calorias provengan de una dieta balanceada y evitar el exceso de azucares y grasas malas. |
 > | Evitar un estilo de vida completamente sedentario, hacer actividad fisica ligera regularmente **dando un minimo de 5.000 a 6.000 pasos por día.** Pues el sedentarismo afecta el balance energetico y debilita el buen estado fisico del cuerpo debido a la falta de esfuerzo.  |
 > |  Hacer actividad fisica vigorosa asi sea en periodos de tiempo cortos. Estudios recientes han demostrado que **un minimo de 150 minutos de actividad fisica moderada o 75 minutos de actividad fisica vigorosa a la semana**, puede contraarrestar los efectos de las largas horas que pasamos de forma sedentaria por las obligaciones modernas, como el trabajo de oficina, el transporte, etc. |
+> 
+> Articulos BBC: [Beneficios de la actividad fisica](https://www.bbc.com/mundo/noticias-58823922) y [Minimos de actividad para mejorar la salud](https://www.bbc.com/mundo/noticias-64858320).
+> Pautas NHS: [Balance energético](https://www.bbc.com/mundo/noticias-58823922), [Cantidad de actividad](https://www.google.com/search?q=guidelines&sourceid=chrome&ie=UTF-8) y [Cantidad de sueño](https://www.nhs.uk/conditions/insomnia/).
+>
   
 Habiendo hecho estas aclaraciones y teniendo en mente los puntos claves para que una persona se mantenga en forma, procedemos a realizar el analisis. Realizaremos visualizaciones de los datos de bio-monitoreo para leer informacion en ellos desde el anterior punto de vista y puntos claves.
 
@@ -278,66 +282,48 @@ sdreo --------- buscar recomendaciones de sueño
 
 ## :five:. FASE DE COMPARTIR Y ACTUAR: conclusiones
 
-### Habitos encontrados
-Despues de haber visualizado graficos e interpretado la informacion, se extraen las conclusiones mas generales del comportamiento y la actividad fisica de los usuarios de dispositivos inteligentes de bio-monitoreo.
+Despues de haber tratado los datos y haber creado graficos para interpretar mejor la informacion, se pueden sacar conclusiones de los usuarios FitBit que pueden extrapolarse a otros usuarios de similares dispositivos, como los de la compañia Bellabeat. Queda demostrado que los dispositivos en cuestion, brindan informacion exacta del nivel de actividad fisica y el sueño principalmente. Esta informacion, puede permitir ser de gran apoyo y puede empoderar al usuario para tener control sobre su propia salud fisica y salud reproductiva, si especialmente nos enfocamos en las mujeres como lo hace Bellabeat.
 
-HABITOS COMUNES
+Partiendo de la funcion que tiene este caso de estudio para la compañia Bellabeat y sus productos, y desde la perspectiva de los beneficios que implica estar en buen estado fisico y de como alcanzar o mantener un buen estado fisico. Primero hago un resumen de los principales habitos hallados en los datos analizados. En segundo lugar se trata de dar unas recomendaciones para brindar a los usuarios a traves de la app y por ultimo, en tercer lugar se dan algunas recomendacines para el marketing de la empresa y los productos, dirigido al publico objetivo.
+
+
+
+### Habitos encontrados
+
+Los principales habitos que se pueden distinguir en los usuariso de los dispositivos FitBit, fueron:
 
 | Habitos de los usuarios analizados |
 | :--------------- |
-| :chair: La mayor parte del dia los usuarios se mantienen en estado sedentario, 12,5 horas. |
-| :bed: Las usuarios duermen en promedio 6,9 horas al dia.  |
-| :athletic_shoe: En general,Las horas de mayor actividad fisica son entre las 5 y 8 pm. Una variacion son los sabados, cuando aprovechan mas las horas de la mañana para hacer actividad. |
-| :baby_chick: La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos.* |
+| :chair: Los usuarios se mantienen en estado sedentario la la mayor parte del dia, 12,5 horas.  |
+| :bed: Las usuarios duermen en promedio 6,9 horas al dia, ligeramente debajo de lo recomendado.  |
+| :athletic_shoe: En general, Las horas de mayor actividad fisica son entre las 5 y 8 pm. Una variacion son los sabados, cuando aprovechan mas las horas de la mañana para hacer actividad. |
+| :baby_chick: La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos. |
 | :rooster: La actividad vigorosa o ejercico como tal, tiene un crecimiento constante a medida que los usuarios queman mas calorias o dan mas pasos mas alla de los minimos recomendados. |
 
 Recomendacion para posterior analisis
 [ SE PODRIAN SEPARAR EN DOS GRUPOS, QUIENES ESTAN POR DEBADO DE LOS MINIMOS (2000 Y 10000) Y QUIENES ESTAN POR ENCIMA PARA DISTINGUIR SUS HABITOS. ]
 
-### Funcion de la APP Bellabeat, recomendaciones
+### Recomendaciones para la App de los productos Bellabeat
 
-FUNCION DE LA APP, EL MONITOREO Y QUE DEBE BUSCAR BELLABEAT
+Como se dijo, estos dispositios inteligentes de bio-monitoreo, pueden **empoderar a sus usuarios, informandolos y educandolos de forma precisa sobre el como mantener o alcanzar un estado fisico en forma**. Algunas recomendaciones para no olvidar, que la app debe brindar al usuario:
 
-Con los dispositivos inteligentes de bio-monitoreo y en conjunto con la app, se puede **informar y educar a las personas de forma precisa**, dandoles poder sobre su salud en lo que respecta al estado fisico y a estar en forma fisica:
-  
-- Conociendo los minimos de actividad, beneficios y recomendaciones
-- Ayudando a alcanzar objetivos de actividad minima o para mejorar el rendimiento fisico
-- Cuadrando horarios y plantenado alternativas para la actividad
-- Ayudando a mantener o cambiar habitos, notificar y recordar
-- 
 
-La app ha de tener en cuenta y recomendar, tanto un minimo de actividad ligera o normal, como una actividad vigorosa o ejercicio como tal que mejora las capacidades de rendimiento fisico. Tambien debe ayudar a llevar un control de la salud reproductiva de la mujer pues este ha sido el fuerte y enfoque de la marca Bellabeat.
-
-se debe educar a las personas en los beneficios de la actividad fisica y orientar y ayudar a medir como alcanzar un estado fisico en forma.
-
-### Imagen de la empresa, marketing
+- La app debe educar o brindar informacion de los minimos de actividad y los beneficios de estar fisicamente en forma. 
+- Mostrar los minimos requeridos tanto de actividad ligera como vigorosa y como una puede sustituir a la otra o se pueden complementar.
+- Ayudar a programar y acomodar la actividad fisica de acuerdo a la rutina y otras obligaciones, para alcanzar los objetivos. Tambien plantear alternativas.
+- Recordar y notificar del avance y alcance de los objetivos.
+- Estimular arrojando logros alcanzados y conjugar con logors especiales, pueden ser de peso, de sueño, de avance deportivo, etc.
+- Permitir visualizar los habitos y el comportamiento, para analizar habitos, entre otros.
+- Permitir compartir a traves de redes los logros y actividades deportivas hechas.
+- No olvidemos que Bellabeat tambien ayuda a seguir la salud reproductiva y sexual de las mujeres por lo que esto es otra funcionalidad importante.
 
 
 
+### Recomendaciones para Bellabeat como marca
 
-1 DESCRIBIR HABITOS ENCONTRADOS
+Habiendo nombrado todo lo anterior, facilmente podemos imaginar todo lo que brindan y prestan los dispositivos Bellabeat. Asi como lo que representan. Hacemos enfasis en que estos empoderan a las mujeres, y a los hombres tambien. Bellabeat debe ser un aliado que ayuda a tomar control de una parte importante de la vida, para apoderarnos del tiempo que muchas cosas de la vida moderna tratan de robarnos. El aspecto de salud, bienestar y belleza va unido con dedicar tiempo a la actividad fisica y a mantener el cuerpo en condiciones optimas pudiendo rendir mejor y vivir mejor.
 
-2 RECOMENDACIONES Y COMO DEBE SER LA APP (PARA QUE DEBE SERVIR)
-
-3 RECOMENDACIONES PARA EL MARKETING
-
-- 
-
-
-Las campañas de marketing 
-
-
-y haciendo uso de una app, las personas pueden concentrar sus esfuerzos de forma precisa para mantenerse en forma y obtener todos los beneficios de estar asi. Los productos de Bellabeat ayudaran a esto, empoderando y guiando 
-
-Considero que cualquier campaña de marketing debe enfocarse en como los productos de Bellabeat
-
-que se  para que se esfuercen por estar en el grupo de quienes, de acuerdo a las recomendaciones, hacen suficiente actividad fisica.
-
-
-
-Como se vio, los datos de los dispositivos inteligentes de bio-monitoreo, en este caso el FitBit, son suficientes para empoderar a el usuario con mediciones exactas de su actividad. Desde unas recomendaciones que puede recibir por la app, el usuario puede enfocarse en cumplir con unos minimos para mantenerse en forma.
-
-Debe enfocarse al usuario en estar en el area en que cumple con los minimos.
+La imagen que debe promover Bellabeat es la de una vida sana, sus productos seran siempre un aliado que recuerda y acompaña en sacar tiempo para si mismo, para tener habitos saludables y por medio de la informacion adentrarse en el grupo de cualidades y mediciones que nos aseguran y dan tranquilidad de que estmos haciendo lo necesario.
 
 
 -------------------------------------------------------------------------------------------------------------------
