@@ -283,13 +283,12 @@ sdreo --------- buscar recomendaciones de sueño
 
 ## :five:. FASE DE COMPARTIR Y ACTUAR: conclusiones
 
-Despues de haber tratado los datos y haber creado graficos para interpretar mejor la informacion, se pueden sacar conclusiones de los usuarios FitBit que pueden extrapolarse a otros usuarios de similares dispositivos, como los de la compañia Bellabeat. Queda demostrado que los dispositivos en cuestion, brindan informacion exacta del nivel de actividad fisica y el sueño principalmente. Esta informacion, puede permitir ser de gran apoyo y puede empoderar al usuario para tener control sobre su propia salud fisica y salud reproductiva, si especialmente nos enfocamos en las mujeres como lo hace Bellabeat.
+Despues de haber tratado los datos y haber creado graficos para interpretar mejor la informacion, se pueden sacar conclusiones de los usuarios FitBit que pueden extrapolarse a otros usuarios de similares dispositivos. Queda demostrado que los dispositivos en cuestion, brindan informacion exacta del nivel de actividad fisica y el sueño principalmente. Esta informacion, es degran utilidad para Bellabeat ya que permite conocer su publico objetivo y anticipar sus necesidades, para empoderar y brindar control sobre la salud fisica y salud reproductiva tambien.
 
 Partiendo de la funcion que tiene este caso de estudio para la compañia Bellabeat y sus productos, y desde la perspectiva de los beneficios que implica estar en buen estado fisico y de como alcanzar o mantener un buen estado fisico. Primero hago un resumen de los principales habitos hallados en los datos analizados. En segundo lugar se trata de dar unas recomendaciones para brindar a los usuarios a traves de la app y por ultimo, en tercer lugar se dan algunas recomendacines para el marketing de la empresa y los productos, dirigido al publico objetivo.
 
 
-
-### Habitos encontrados
+### Habitos usuarios
 
 Los principales habitos que se pueden distinguir en los usuariso de los dispositivos FitBit, fueron:
 
@@ -304,7 +303,7 @@ Los principales habitos que se pueden distinguir en los usuariso de los disposit
 Recomendacion para posterior analisis
 [ SE PODRIAN SEPARAR EN DOS GRUPOS, QUIENES ESTAN POR DEBADO DE LOS MINIMOS (2000 Y 10000) Y QUIENES ESTAN POR ENCIMA PARA DISTINGUIR SUS HABITOS. ]
 
-### Recomendaciones para la App de los productos Bellabeat
+### Recomendaciones, App Bellabeat
 
 Como se dijo, estos dispositios inteligentes de bio-monitoreo, pueden **empoderar a sus usuarios, informandolos y educandolos de forma precisa sobre el como mantener o alcanzar un estado fisico en forma**. Algunas recomendaciones para no olvidar, que la app debe brindar al usuario:
 
@@ -320,7 +319,7 @@ Como se dijo, estos dispositios inteligentes de bio-monitoreo, pueden **empodera
 
 
 
-### Recomendaciones para Bellabeat como marca
+### Recomendaciones, imagen Bellabeat
 
 Habiendo nombrado todo lo anterior, facilmente podemos imaginar todo lo que brindan y prestan los dispositivos Bellabeat. Asi como lo que representan. Hacemos enfasis en que estos empoderan a las mujeres, y a los hombres tambien. Bellabeat debe ser un aliado que ayuda a tomar control de una parte importante de la vida, para apoderarnos del tiempo que muchas cosas de la vida moderna tratan de robarnos. El aspecto de salud, bienestar y belleza va unido con dedicar tiempo a la actividad fisica y a mantener el cuerpo en condiciones optimas pudiendo rendir mejor y vivir mejor.
 
@@ -328,23 +327,6 @@ La imagen que debe promover Bellabeat es la de una vida sana, sus productos sera
 
 
 -------------------------------------------------------------------------------------------------------------------
-Como sabemos mantenernos activos físicamente es muy importante, al hacerlo estamos garantizando el conservar nuestra fuerza muscular, aptitud cardiorrespiratoria, controlados niveles de azúcar, densidad ósea y rendimiento mental, entre otros, haciéndonos sentir mejor, mejorando nuestra calidad y expectativa de vida.
-Por un lado, es importante controlar las calorías ingeridas y usadas para mantener la forma física y por otro el mantenerse activo y/o el ejercicio vigoroso activa mecanismos que hacen mantenimiento a nuestro cuerpo.
 
+mirar fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
 
-Como todos sabemos, la actividad fisica es muy importante para mantener un buen estado de salud. Llevar un estilo de vida fisicamente activo esta vinculado tener buena fuerza muscular, buena aptitud cardiorespiratoria, niveles de azucar controlados, buena densidad osea, mejor rendimiento mental y en general una mejor expectativa de vida.
-
-Investigaciones han demostrado la importancia de mantenerse activo, desplazarnos usando nuestras piernas es una buena forma de mantenernos activos pero mas alla de esto, se ha probado que la actividad fisica intensa, aun en periodos de tiempo cortos, puede contrarestar el efecto de un estilo de vida sedentario.
-
-[https://www.bbc.com/mundo/noticias-58823922]
-[https://www.bbc.com/mundo/noticias-62067159]
-[https://www.bbc.com/mundo/noticias-64858320]
-[https://www.gq.com.mx/cuidado-personal/articulo/ejercicio-intenso-como-combate-los-danos-del-sendentarismo]
-
-mirara fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
-
-[https://www.nhs.uk/live-well/exercise/exercise-guidelines/physical-activity-guidelines-for-adults-aged-19-to-64/#:~:text=do%20at%20least%20150%20minutes,not%20moving%20with%20some%20activity]
-
-[https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/understanding-calories/#:~:text=As%20a%20guide%2C%20an%20average,physical%20activity%2C%20among%20other%20factors.]
-
-[https://www.nhs.uk/conditions/insomnia/]
