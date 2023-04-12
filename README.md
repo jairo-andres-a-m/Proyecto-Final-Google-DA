@@ -7,9 +7,9 @@ Por **Jairo Andrés Amaya Muñoz**
 
 ### Contexto empresa, productos y estrategia:
 
-Bellabeat es una empresa pequeña y exitosa, es manufacturera de productos de tecnología para la mujer enfocados en el cuidado de su salud. Esta empresa tiene el potencial para ser una gran jugadora en el mercado de dispositivos tecnológicos e inteligentes. Desde su fundación en el año 2013, han desarrollado productos y crecido abriendo oficinas en distintas partes del mundo.
+Bellabeat es una empresa pequeña y exitosa, es manufacturera de productos de tecnología para la mujer enfocados en el cuidado de su salud. Esta empresa tiene el potencial para ser una gran jugadora en el mercado de dispositivos tecnológicos e inteligentes. Desde su fundación en el año 2013, han estado desarrollando productos y han crecido abriendo oficinas en distintas partes del mundo.
 
-Los productos de Bellabeat recolectan datos de bio-monitoreo de la actividad física, el sueño, el estrés, los ciclos menstruales, el consumo de líquido y además hacen recomendaciones de meditación y otros hábitos saludables. Todo esto con el fin de empoderar a sus usuarias con conocimiento de sí mismas y poder incidir en su bienestar.
+Los productos de Bellabeat recolectan datos de bio-monitoreo de la actividad física, el sueño, el estrés, los ciclos menstruales, el consumo de líquido, entre otros, y hacen recomendaciones de meditación y otros hábitos saludables. Todo esto con el fin de empoderar a sus usuarias con conocimiento de sí mismas y poder incidir en su bienestar.
   
 Sus productos son:
 
@@ -19,13 +19,14 @@ Sus productos son:
 | Time | Un reloj inteligente |
 | Spring | Una botella inteligente |
 | Bellabeat app | Todos los anteriores se conectan a esta app para el monitoreo |
-
-Desde el inicio Bellabeat ha optado por la venta de sus productos por el canal virtual en su sitio web, y parte de esta estrategia ha sido invertir considerablemente en marketing, por ello siguiendo esta línea, ellos encomiendan este estudio basado en los datos.
+  
+  
+Desde el inicio Bellabeat ha optado por la venta de sus productos por el canal virtual en su sitio web y acompañando esta estrategia han invertido considerablemente en marketing. Por ello, para seguir esta línea, ellos encomiendan realizar este estudio para tomar sus decisiones apoyados en datos.
 
 
 ### ¿Cuál es la tarea empresarial?
 
-La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitness inteligentes de bio-monitoreo y que obtenga información valiosa que revele tendencias y particularidades de usuarios como los suyos. El fin último es brindar perspectiva e ideas para ayudar a desarrollar sus productos y a orientar las campañas de marketing que seguirán potenciando el crecimiento de la empresa.
+La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitness inteligentes de bio-monitoreo y que obtenga información valiosa que revele tendencias y particularidades de usuarios como los suyos. El fin último es brindar perspectivas e ideas para ayudar a desarrollar sus productos y a orientar las campañas de marketing que seguirán potenciando el crecimiento de la empresa.
 
 ### ¿Quiénes son los principales interesados en la tarea?
 
