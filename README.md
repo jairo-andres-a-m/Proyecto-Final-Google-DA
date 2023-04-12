@@ -280,9 +280,12 @@ Finalmente visualizo cómo se concentran los usuarios de acuerdo a sus niveles d
   
 ## :five:. FASE DE COMPARTIR Y ACTUAR: conclusiones
 
-Despues de haber tratado los datos y haber creado graficos para interpretar mejor la informacion, se pueden sacar conclusiones de los usuarios FitBit que son extrapolables a otros usuarios. Queda demostrado que dispositivos como estos brindan informacion exacta del nivel de actividad fisica y el sueño, principalmente, que nos dicen muchos de los habitos. Esta informacion, es de gran utilidad para marcas como Bellabeat ya que permite conocer su publico objetivo, anticipar sus necesidades, para empoderar y brindar control sobre la salud fisica y salud reproductiva tambien. 
+Tras haber preparado los datos y haber generado graficos, se hicieron interpretaciones y observaciones que revelan con un alto nivel de precision los habitos de actividad fisica de los usuarios. Si bien son de otro grupo de usuarios esta informacion se puede extrapolar para la empresa que encomendo este estudio. Para Bellabeat es una gran oportunidad pues esta una ventana para conocer mas a su publico objetivo, a las personas a las que busca empoderar y ayudarles a reclamar el tiempo y el bienestar que muchas veces nos roban las obligaciones de una vida moderna sedentaria. 
 
-Partiendo de la funcion que tiene este caso de estudio para la compañia Bellabeat y sus productos, y desde la perspectiva de los beneficios que implica estar en buen estado fisico y de como alcanzar o mantener un buen estado fisico. Primero hago un resumen de los principales habitos hallados en los datos analizados. En segundo lugar se trata de dar unas recomendaciones para brindar a los usuarios a traves de la app y por ultimo, en tercer lugar se dan algunas recomendacines para el marketing de la empresa y los productos, dirigido al publico objetivo.
+Debemos tener en cuenta la perspectiva arriba expuesta de un estado fisico en forma, las recomendaciones y los beneficios en particular. E igualmente debemos recordar que el proposito de Bellabeat no es solo monitorear la actividad fisica, sino tambien el estres, la salud reproductiva, los ciclos menstruales y recomendar la meditacion y otros habitos saludables. Otros puntos a monitorear serian el peso y el sueño y quizas la salud del corazon pues son capacidades con las que cuentan estos dispositivos.
+
+
+Con todo esto, se exponen en primer lugar, los principales habitos de actividad hallados en los usuarios, luego se intentan dar unas recomendaciones de las capacidades que podria tener la App para brindar a los usuarios, teniendo en mete lo que intenta abarcar la marca Bellabeat y finalmente, un enfoque sobre lo que se debe vender la marca y proyectar ante sus clientes y el mundo con el fin de orientar el marketing de la marca.
 
 
 ### Habitos usuarios
@@ -293,9 +296,9 @@ Los principales habitos que se pueden distinguir en los usuariso de los disposit
 | :--------------- |
 | :chair: Los usuarios se mantienen en estado sedentario la la mayor parte del dia, 12,5 horas.  |
 | :bed: Las usuarios duermen en promedio 6,9 horas al dia, ligeramente debajo de lo recomendado.  |
-| :athletic_shoe: En general, Las horas de mayor actividad fisica son entre las 5 y 8 pm. Una variacion son los sabados, cuando aprovechan mas las horas de la mañana para hacer actividad. |
-| :baby_chick: La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos. |
-| :rooster: La actividad vigorosa o ejercico como tal, tiene un crecimiento constante a medida que los usuarios queman mas calorias o dan mas pasos mas alla de los minimos recomendados. |
+| :athletic_shoe: En general, Las horas de mayor actividad fisica son entre las 5 y 8 pm. Una variacion son los sabados, el dia de mas actividad y cuando aprovechan mas las horas de la mañana para hacer actividad y los domingos cuando se hace menos actividad pero esta se distribuye mas equitativamente entre la mañana y la tarde. |
+| :baby_chick: La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos. Con esto se mantiene la capacidad fisica y un minimo saludable. |
+| :rooster: La actividad vigorosa o ejercico como tal, tiene un crecimiento constante a medida que los usuarios queman mas calorias o dan mas pasos mas alla de los minimos recomendados. Con esto se lleva mas alla y se mejora la capacidad fisica. |
 
 Recomendacion para posterior analisis
 [ SE PODRIAN SEPARAR EN DOS GRUPOS, QUIENES ESTAN POR DEBADO DE LOS MINIMOS (2000 Y 10000) Y QUIENES ESTAN POR ENCIMA PARA DISTINGUIR SUS HABITOS. ]
