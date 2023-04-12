@@ -81,11 +81,11 @@ Los datos nos ayudan a responder preguntas y son relativos a la tarea empresaria
   
 ### ¿Qué herramienta elegimos para esta tarea de análisis?
 
-La herramienta definitiva que elegí para este caso, es el lenguaje R, dado que esta es una herramienta poderosa que nos permite realizar todos los pasos del análisis de datos. Complementariamente, uso RStudio y un repositorio de GitHub para poder avanzar en el trabajo, organizarlo, comentarlo y mantenerlo al día. En el lenguaje R hago las tareas claves como ver dimensiones, buscar duplicados, buscar valores nulos, adecuar formatos, unir tablas, filtrar, ordenar, calcular, resumir, graficar y documentar, algunas de estas se muestran.
+La herramienta definitiva que elegí para este caso, es el lenguaje R, dado que esta es una herramienta poderosa que permite realizar todos los pasos del análisis de datos. Complementariamente, uso RStudio y un repositorio de GitHub para poder avanzar en el trabajo, organizarlo, comentarlo y mantenerlo al día. En el lenguaje R hago las tareas claves como ver dimensiones, buscar duplicados, buscar valores nulos, adecuar formatos, unir tablas, filtrar, ordenar, calcular, resumir, graficar y documentar, algunas de estas se muestran.
 
 ### Revisión de registros: Ids, valores nulos y filas duplicadas
 
-Hecho un nuevo vistazo en más detalle de las tablas (o dataframes)  y su limpieza aunque parezcan ordenadas a simple vista.
+Empiezo hechando un nuevo vistazo en más detalle de las tablas (o dataframes)  y su limpieza aunque parezcan ordenadas a simple vista.
 
 ```{r}
 #valores distintos
@@ -104,7 +104,7 @@ sum(duplicated(calorieshour)) ; sum(duplicated(stepshour)) ; sum(duplicated(inte
 sum(duplicated(weight)) ; sum(duplicated(heartrate))
 ```
 
-En las tablas en que trabajo, encontré que contamos con 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmo cardiaco. Ya había decidido preservar todos estos.
+En las tablas que elegí, encontré que contamos con 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmo cardiaco. Ya había decidido preservar todos estos.
 
 Mas allá de lo anterior, encontré que sleepday tiene 3 filas duplicadas y weight 44 valores nulos. En una sucesiva revisión encontré que estos valores nulos son de la columna Fat en la tabla weight, una columna de poca importancia que dejo tal como está. En cambio, sí elimino los 3 duplicados de sleepday.
 
