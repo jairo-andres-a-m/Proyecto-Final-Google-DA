@@ -36,17 +36,17 @@ La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitnes
 
 ## :two:. FASE DE PREPARACION: Datos de estudio
 
-### ¿Que dataset se utilizará, donde esta almacenado y bajo que licencia?
+### ¿Qué dataset se utilizará, dónde esta almacenado y bajo qué licencia?
 
 Sršen recomienda usar un dataset de dominio público (CC0: Public Domain) llamado FitBit Fitness Tracker Data, este fue subido por el usuario Möbius a la plataforma Kaggle en el siguiente link:  https://www.kaggle.com/datasets/arashnic/fitbit
 
 Descargo este dataset y lo exploro preliminarmente. Según la descripción, este contiene datos generados por ~30 usuarios de dispositivos FitBit encuestados vía Amazon Mechanical Turk que accedieron a dar su información personal registrada en sus dispositivos durante un mes, del 12 de mayo al 12 de abril del 2016.
 
-### ¿Cómo se organiza y que contiene el dataset?
+### ¿Cómo se organiza y qué contiene el dataset?
 
 Con el dataset “en las manos” observo que este contiene datos de 33 usuarios registrados entre el 12 de mayo y el 12 de abril del 2016, los datos están organizados en 18 archivos CSV, de los cuales excluyo de una vez 3 de ellos en formato “wide” ya que son repetidos en formato “long”. Entonces los 15 archivos que tengo son:
 
-| Dataframe | Descripción de registros|
+| Tabla / Dataframe | Descripción de registros|
 | :--------------- | :--------------- |
 | dailyActivity_merged.csv | Por usuario (Id) cada día: nivel de actividad física en 4 categorías por distancia y minutos dedicados, los pasos totales, la distancia recorrida total y las calorías quemadas.   |
 | dailyCalories_merged.csv | Por usuario (Id) cada día: las calorías utilizadas. |
@@ -79,13 +79,13 @@ Los datos nos ayudan a responder preguntas y son relativos a la tarea empresaria
 
 ## :three:. FASE DE PROCESAMIENTO: los datos
   
-### ¿Que herramienta elegimos para este tarea de analisis?
+### ¿Qué herramienta elegimos para esta tarea de análisis?
 
-La herramienta definitiva elegida para este caso, es el lenguaje R, dado que este es una herramienta poderosa que nos permite realizar todos los pasos del analisis de datos. Complementariamente, usamos RStudio y un repositorio de GitHub para poder avanzar nuestro trabajo, organizarlo, comentarlo y mantenerlo al dia. En el lenguaje R hacemos tareas claves como ver dimensiones, buscar duplicados, buscar valores nulos, adecuar formatos, unir tablas, filtrar, ordenar, calcular, resumir, graficar y documentar como se muestra.
+La herramienta definitiva que elegí para este caso, es el lenguaje R, dado que esta es una herramienta poderosa que nos permite realizar todos los pasos del análisis de datos. Complementariamente, uso RStudio y un repositorio de GitHub para poder avanzar en el trabajo, organizarlo, comentarlo y mantenerlo al día. En el lenguaje R hago las tareas claves como ver dimensiones, buscar duplicados, buscar valores nulos, adecuar formatos, unir tablas, filtrar, ordenar, calcular, resumir, graficar y documentar, algunas de estas se muestran.
 
-### Revision de registros: Ids, valores nulos y filas duplicadas
+### Revisión de registros: Ids, valores nulos y filas duplicadas
 
-Hacemos un nuevo vistazo en mas detalle de las tablas y su limpieza aunque parezcan ordenadas a simple vista.
+Hecho un nuevo vistazo en más detalle de las tablas (o dataframes)  y su limpieza aunque parezcan ordenadas a simple vista.
 
 ```{r}
 #valores distintos
@@ -104,9 +104,9 @@ sum(duplicated(calorieshour)) ; sum(duplicated(stepshour)) ; sum(duplicated(inte
 sum(duplicated(weight)) ; sum(duplicated(heartrate))
 ```
 
-En las tablas (o dataframes) en que elegimos trabajar, encontramos que contamos con 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmo cardiaco. Ya hemos decidido preservar todos estos.
+En las tablas en que trabajo, encontré que contamos con 33 usuarios de activityday, 24 del sueño, 33 de las actividades por hora, 8 del peso y 14 del ritmo cardiaco. Ya había decidido preservar todos estos.
 
-Mas alla de lo anterior, encontramos que sleepday tiene 3 filas duplicadas y weight 44 valores nulos. En una sucesiva revision encontramos que estos valores nulos son de la columna Fat en la tabla weight, una columna de poca importancia que dejaremos como está. En cambio sí eliminamos los 3 duplicados de sleepday.
+Mas allá de lo anterior, encontré que sleepday tiene 3 filas duplicadas y weight 44 valores nulos. En una sucesiva revisión encontré que estos valores nulos son de la columna Fat en la tabla weight, una columna de poca importancia que dejo tal como está. En cambio, sí elimino los 3 duplicados de sleepday.
 
 ```{r}
 glimpse(weight)
@@ -116,9 +116,9 @@ sleepday <- distinct(sleepday)
 sum(duplicated(sleepday))
 ```
 
-### Adecuacion de estampillas de tiempo
+### Adecuación de estampillas de tiempo
 
-Adecuaremos el formato de las estampillas de tiempo que tienen los registros en cada una de las tablas ya que se encuentran en formato de texto y no en date o datetime.
+Adecuo el formato de las estampillas de tiempo que tienen los registros en cada una de las tablas ya que se encuentran en formato de texto y no en date o datetime.
 
 ```{r}
 #dates
@@ -132,11 +132,11 @@ stepshour <- stepshour %>%  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%  re
 intensitieshour <- intensitieshour %>%  mutate(ActivityHour = mdy_hms(ActivityHour)) %>%  rename(datetime = ActivityHour)
 heartrate <- heartrate %>%  mutate(Time = mdy_hms(Time)) %>%  rename(datetime = Time)
 ```
-De esta manera ya tenemos a todos los archivos a utilizar en date si tienen informacion diaria, o datetime si tienen a nivel de horas y/o minutos. 
+De esta manera ya tengo todos los archivos a utilizar en date, si tienen información diaria, o datetime, si tienen a nivel de horas y/o minutos.
 
-### Union de tablas y variables adicionales de tiempo
+### Unión de tablas y variables adicionales de tiempo
 
-Con la columna date o datetime en buen estado y en conjunto con la columna de Id de los usuarios, podemos utilizarlos tranquilamente como identificacion unica de cada registro para unir tablas buscando el orden y facilitar la manipulacion.
+Con la columna date o datetime en buen estado y en conjunto con la columna de Id de los usuarios, se pueden utilizar tranquilamente como identificación única de cada registro para unir tablas buscando el orden y facilitar la manipulación.
 
 ```{r}
 activityday <- activityday %>%
@@ -147,7 +147,7 @@ activityhour <- calorieshour %>%
   inner_join(intensitieshour, by=c("Id", "datetime"))
 ```
 
-Para facilitar mas la manipulacion, y ya contando con las dos tablas principales producto de las anteriores uniones, añadiremos columnas adicionales, semana y dia del registro para activityday y semana, dia y hora para activityhour.
+Para facilitar más la manipulación, y ya contando con las dos tablas principales producto de las anteriores uniones, añado columnas (o variables) adicionales, semana y día del registro para activityday y semana, día y hora para activityhour.
 
 ```{r}
 activityday <- activityday %>%
@@ -161,7 +161,7 @@ activityhour <- activityhour %>%
 
 ### Un vistazo/revisión general
 
-Estando adecuadas las tablas, ahora visualizamos de nuevo para asegurarnos que se hayan unido bien, que el numero de filas sea el que debe haberse preservado tras la union, que esten las columnas que son y como debe ser, y que los valores se encuentren en un rango razonable.
+Estando adecuadas las tablas, ahora visualizo de nuevo para asegurar que se han unido bien, que el número de filas es el que debe haberse preservado tras la unión, que están las columnas que son y como debe ser, y que los valores se encuentren en un rango razonable.
 
 ```{r}
 glimpse(activityday)
@@ -176,15 +176,16 @@ summary(weight)
 glimpse(heartrate)
 summary(heartrate)
 ```
-Todas las columnas (o variables) estan en orden, tienen rangos de valores razonables, posibles y no irreales, por lo que las tablas estan limpias, organizadas y limpias. 
+Todas las columnas están en orden, tienen rangos de valores razonables, posibles y no irreales, por lo que las tablas están limpias, organizadas y limpias. 
 
 ### Tablas definitivas: organizadas y limpias
 
-* activityday: Por dia: niveles de actividad medidos en minutos y en distancia, pasos, calorias y sueño.
-* activityhour: Por hora: medida de nivel de actividad, pasos y calorias.
+* activityday: Por día: niveles de actividad medidos en minutos y en distancia, pasos, calorías y sueño.
+* activityhour: Por hora: medida de nivel de actividad, pasos y calorías.
 * heartrate: Por minuto (o par de minutos): ritmo cardiaco.
 * weight: Por fecha de autoregistro: peso.
   
+
 ## :four:. FASE DE ANALISIS: datos preparados
 
 Como sabemos mantenernos activos físicamente es muy importante para mantenernos en forma. Mantenernos en forma implica que conservemos:
