@@ -1,5 +1,5 @@
 **Este es un caso de estudio para el proyecto final del Google Data Analytics Professional Certificate.**  
-Basado en el analisis de **Fitbit Fitness Tracker Data**  
+Basado en el análisis de **Fitbit Fitness Tracker Data**  
 Para un caso con la empresa **Bellabeat**  
 Por **Jairo Andrés Amaya Muñoz**  
 
