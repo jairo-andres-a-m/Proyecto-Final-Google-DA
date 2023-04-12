@@ -196,95 +196,88 @@ Como sabemos mantenernos activos físicamente es muy importante para mantenernos
 >:bone: densidad osea  
 >:brain: rendimiento y salud mental   
 
-Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida. Entonces nos surge la duda de cómo lograrlo y cómo podemos ayudarnos.
+Todo esto nos hace sentir mejor y extiende nuestra calidad y expectativa de vida. Entonces surge la duda de cómo lograrlo y cómo podemos ayudarnos.
 
-> | ¿Como alcanzar o mantener un estado fisico en forma? |
+> | ¿Como alcanzar o mantener un estado físico en forma? |
 > | :--------------- |
-> | Un hombre y una mujer promedio deben **consumir al dia unas 2500 y unas 2000 Calorias** respectivamente. Es importante tambien que estas calorias provengan de una dieta balanceada y evitar el exceso de azucares y grasas malas. |
-> | Evitar un estilo de vida completamente sedentario, hacer actividad fisica ligera regularmente **dando un minimo de 5.000 a 6.000 pasos por día.** Pues el sedentarismo afecta el balance energetico y debilita el buen estado fisico del cuerpo debido a la falta de esfuerzo.  |
-> |  Hacer actividad fisica vigorosa asi sea en periodos de tiempo cortos. Estudios recientes han demostrado que **un minimo de 150 minutos de actividad fisica moderada o 75 minutos de actividad fisica vigorosa a la semana**, puede contraarrestar los efectos de las largas horas que pasamos de forma sedentaria por las obligaciones modernas, como el trabajo de oficina, el transporte, etc. |
-> |  **Dormir entre 7 y 9 horas** por dia para que **el cuerpo y la mente soporten y se recuperen** de los esfuerzos del dia.  |
+> | Un hombre y una mujer promedio deben **consumir al día unas 2500 y unas 2000 Calorías** respectivamente. Es importante también que estas calorías provengan de una dieta balanceada y evitar el exceso de azucares y grasas malas. |
+> | Evitar un estilo de vida completamente sedentario, hacer actividad física ligera regularmente **dando un mínimo de 5.000 a 6.000 pasos por día**. Pues el sedentarismo afecta el balance energético y debilita el buen estado físico del cuerpo debido a la falta de esfuerzo.  |
+> |  Hacer actividad física vigorosa así sea en periodos de tiempo cortos. Estudios recientes han demostrado que **un mínimo de 150 minutos de actividad física moderada o 75 minutos de actividad física vigorosa a la semana**, puede contrarrestar los efectos de las largas horas que pasamos de forma sedentaria por las obligaciones modernas, como el trabajo de oficina, el transporte, etc. |
+> |  **Dormir entre 7 y 9 horas** por día para que **el cuerpo y la mente soporten y se recuperen** de los esfuerzos del día.  |
 > 
-> Articulos BBC: [Beneficios de la actividad fisica](https://www.bbc.com/mundo/noticias-58823922) y [Minimos de actividad para mejorar la salud](https://www.bbc.com/mundo/noticias-64858320).  
+> Artículos BBC: [Beneficios de la actividad física](https://www.bbc.com/mundo/noticias-58823922) y [Mínimos de actividad para mejorar la salud](https://www.bbc.com/mundo/noticias-64858320).  
 > Pautas NHS: [Balance energético](https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/understanding-calories/#:~:text=As%20a%20guide%2C%20an%20average,physical%20activity%2C%20among%20other%20factors.), [Cantidad de actividad](https://www.nhs.uk/live-well/exercise/exercise-guidelines/physical-activity-guidelines-for-adults-aged-19-to-64/#:~:text=do%20at%20least%20150%20minutes,not%20moving%20with%20some%20activity) y [Cantidad de sueño](https://www.nhs.uk/conditions/insomnia/).
 >
   
-Habiendo hecho estas aclaraciones y teniendo en mente los puntos claves para que una persona se mantenga en forma, procedemos a realizar el analisis. Realizaremos visualizaciones de los datos de bio-monitoreo para leer informacion en ellos desde el anterior punto de vista y puntos claves.
+Habiendo hecho estas aclaraciones y teniendo en mente los puntos claves para que una persona se mantenga en forma, procedo a realizar el análisis. Realizaré visualizaciones de los datos de bio-monitoreo para leer información en ellos teniendo presente el anterior punto de vista y puntos de referencia. 
 
 
-### Pasos dados, Distancia recorrida y Calorias quemadas
+### Pasos dados, Distancia recorrida y Calorías quemadas
 
-En primer lugar visualizamos la relacion entre los pasos dados, la distancia recorrida y las calorias quemadas. Como es de esperarse estas tres variables estan estrechamente relacionadas pues las tres son indicadores directos de la actividad fisica.
+En primer lugar, visualizo la relación entre los pasos dados, la distancia recorrida y las calorías quemadas. Como es de esperarse estas tres variables están estrechamente relacionadas pues las tres son indicadores directos de la actividad física.
 
 ![image](https://user-images.githubusercontent.com/124465699/225755850-8aa335c7-3f41-4c1c-bf5d-5e9b5cd40eee.png)
 
-- *Los pasos dados y la distancia recorrida tienen una correlacion positiva muy directa y estrecha. Por esto podemos tener la certeza de que los registros de distancia son unicamente de desplazamientos hechos a pie por los usuarios y son fiables indicadores de la actividad.*
+- *Los pasos dados y la distancia recorrida tienen una correlación positiva muy directa y estrecha. Por esto se tiene la certeza de que los registros de distancia son únicamente de desplazamientos hechos a pie por los usuarios y son fiables indicadores de la actividad.*
 
-- *Vemos que hay quienes realizan menos de los pasos recomendados diarios, 5000, asi como hay quienes realizan muchos mas pues deben realizar actividades deportivas que elevan su promedio.*
+- *Se ve que hay quienes realizan menos de los pasos recomendados diarios, 5000, así como hay quienes realizan muchos más, estos deben realizar actividades deportivas regulares que elevan su promedio.*
 
-- *Por otra parte, vemos una correlacion positiva entre las los pasos dados y la quema de calorias, pero esta es mas variable, esto debe ser porque depende de la actividad exacta que realice la persona y es algo de lo que no tenemos registro.*
+- *Por otra parte, se ve una correlación positiva entre las los pasos dados y la quema de calorías, pero esta es más variable, esto debe ser porque depende de la actividad exacta que realice la persona de distinta intensidad a pesar de los pasos y la actividad precisa no se captura.*
 
 
-### Actividad diaria
+ ### Actividad diaria
 
-Miramos una visualizacion que nos muestra cómo distribuimos el tiempo del dia en cada nivel de actividad fisica:
+Miro una visualización que muestra cómo distribuimos el tiempo del día en cada nivel de actividad física:
 Sedentary(sedentario), Lightly active (ligeramente activo), Fairly active (moderadamente activo) y Very active (muy activo o vigoroso).
 
-Comprobamos que la suma de estas actividades nos de efectivamente la suma de las 24 horas del dia.
+Compruebo que la suma de estas actividades la suma de las 24 horas del día.
 
 ![image](https://user-images.githubusercontent.com/124465699/225758562-5c676913-4e65-48a7-a47c-83f0a76289e8.png)
 
-- *Efectivamente la mayoria de los registros por dia de cada usuario son de 24 horas, los que no, debe ser porque el dispositivo no estuvo encendido todo el dia. Los datos son suficientes para indicarnos dedican el tiempo los usuarios en cuanto a nivel de actividad fisica.*
+- *Efectivamente la mayoría de los registros por día de cada usuario son de 24 horas, los que no, debe ser porque el dispositivo no estuvo encendido todo el día. Los datos son suficientes para indicar cómo dedican el tiempo los usuarios según el nivel de actividad fisica.*
   
-- *Adicionalmente, deducimos que las horas de sueño estan contabilizadas en el tiempo sedentario, este tiempo no debe verse mal ya que es un tiempo valioso que hemos de respetar.*
+- *Adicionalmente, se deduce que las horas de sueño están contabilizadas en el tiempo sedentario, este tiempo no debe verse mal ya que es un tiempo valioso que hemos de respetar.*
   
 ![image](https://user-images.githubusercontent.com/124465699/225758867-a0171e12-90d4-4eef-babe-8737db3f4d6c.png)
   
-- *La mayor parte del tiempo despierto la dedicamos a estar sedentarios(12,5 horas), lo que es normal ademas por las obligaciones modernas. Pero asi como se ha vuelto algo normal, debe contrarrestarse este tiempo de inactividad con actividad como parte de la rutina.*
-- *El porcentaje de sueño da unas 6,9 horas al dia, un tiempo que esta en los **limites inferiores de sueño recomiendado para adultos**, este es un tiempo importante que hay que respetar para poder estar en buen estado de salud y fisico.
--  *El porcentaje de moderadamente activo da unos 15,9 minutos (a la semana 111,3 minutos) y el porcentaje de muy activo da unos 25 minutos al dia (a la semana 175 minutos). La actividad minima recomendada en moderadamente activo por si sola no es suficiente (minimo de 150 minutos a la semana) y la actividad muy activa a la semana es mas que suficiente (minimo a la semana de 75 minutos), pero como la recomendacion es o lo uno o lo otro, en conjunto se cumplen las recomendaciones de actividad semanasles.*
+- *La mayor parte del tiempo despierto la dedican a estar sedentarios (12,5 horas), lo que es “normal” dadas las obligaciones de la vida moderna. Pero así como se ha vuelto algo normal, debe contrarrestarse este tiempo de inactividad con actividad como parte de la rutina.*
+- *El porcentaje de sueño da unas 6,9 horas al día, un tiempo que está en los **limites inferiores de sueño recomendado para adultos**, este es un tiempo importante que hay que respetar para poder estar en buen estado de salud física y mental.
+-  *El porcentaje de moderadamente activo da unos 15,9 minutos (a la semana 111,3 minutos) y el porcentaje de muy activo da unos 25 minutos al día (a la semana 175 minutos). La actividad mínima recomendada en moderadamente activo por sí sola no es suficiente (mínimo de 150 minutos a la semana) y la actividad muy activa a la semana es más que suficiente (mínimo a la semana de 75 minutos). En conjunto, como la recomendación es o lo uno o lo otro, se cumplen las recomendaciones de actividad semanales.*
   
   
-HAY QUE VER COMO SE DISTRIBUYEN ESTAS PERSONAS EN CUANTO A ACTIVIDAD FISICA, CENTRADO EN MODERAO Y MUY ACTIVO, ...
-  
-  
-### Distribucion de la actividad en el dia
+### Distribución de la actividad en el día
 
-Ahora detallaremos la distribucion de la actividad fisica a lo largo del dia, determinando en que momentos la gente es mas activa.
+Ahora detallo la distribución de la actividad física a lo largo del día, determinando en que momentos la gente es más activa.
   
 ![image](https://user-images.githubusercontent.com/124465699/225757317-65e012a1-dea3-458a-8adb-b604e23844a4.png)
 
-- *Podemos observar que las horas en las que la gente realiza mas actividad entre semana, son entre las 5 y 8 pm, probablemente debido a que a estas horas estan terminando sus jornadas laborales*.
-- *El dia comienza y termina paulatinamente, se aprecia una baja de actividad alrededor de las 3 pm, seguramente despues de que los usuarios almuerzan.*
-- *Por ultimo, la actividad varia los fines de semana, el sabado la gente tiende a realizar actividad por la mañana y el distribuidamente entre la mañana y la tarde.*
- 
-### Distribucion de la actividad en la semana y el mes
+- *Podemos observar que las horas en las que la gente realiza más actividad entre semana, son entre las 5 y 8 pm, probablemente debido a que a estas horas están terminando sus jornadas laborales*.
+- *El día comienza y termina paulatinamente, se aprecia una baja de actividad alrededor de las 3 pm, seguramente después de que los usuarios almuerzan.*
+- *Por último, la actividad varia los fines de semana, el sábado la gente tiende a realizar actividad por la mañana y el domingo más distribuido entre la mañana y la tarde.*
+  
+  
+### Distribución de la actividad en la semana y el mes
 
-Detallamos la distribucion de la actividad fisica en dias de la semana.
+Detallo la distribución de la actividad física en días de la semana.
 
 ![image](https://user-images.githubusercontent.com/124465699/225757805-25fa5b9f-b375-4dde-a195-0f7d54db996e.png)
 
-- *Indiscutiblemente el domingo es el dia de menos actividad, se queman menos calorias. Tanto en promedio (grafico izquierdo) como al ver la distribucion (grafico derecho).*
-- *El dia de mas actividad, de acuerdo al promedio (grafico izquierdo), es el sabado. Pero viendo la distribucion (grafico derecho), sabemos que el martes tambien es un dia en que una buena proporcion de las personas realizan mas actividad, puede deberse estas diferencia a que quizas el sabado, mas personas hacen bastante o bastante mas actividad, subiendo el promedio de este dia.*
+- *Indiscutiblemente el domingo es el día de menos actividad porque se queman menos calorías. Tanto en promedio (grafico izquierdo) como al ver la distribución (grafico derecho).*
+- *El día de más actividad, de acuerdo al promedio (grafico izquierdo), es el sábado. Pero viendo la distribución (grafico derecho), sabemos que el martes también es un día en que una buena proporción de las personas realizan más actividad. La diferencia entre martes y sábado puede ser porque algunas personas realizan bastante o bastante mas actividad el sábado, subiendo el promedio de este dia.*
 
 
-### Relacion calorias-actividad, pasos-actividad
+### Relación calorías-actividad, pasos-actividad
 
-Finalmente visualizamos como se concentran los usuarios de acuerdo a sus niveles de actividad en tiempo en un dia promedio, esto contra los pasos dados y contra las calorias dadas. Tengamos en cuenta que en cada corte vertical, estara el registro de tiempo de cada nivel de actividad que un usuario realizó.
+Finalmente visualizo cómo se concentran los usuarios de acuerdo a sus niveles de actividad en tiempo en un día promedio, esto contra los pasos dados y contra las calorías dadas. Hay que tener en mente que, en cada corte vertical, estará el registro de tiempo de cada nivel de actividad para un mismo usuario.
 
 ![image](https://user-images.githubusercontent.com/124465699/225757946-0d6f51f0-cff3-4f7f-b4f9-301a72fb929f.png)
 
-- *La mayoria de usuarios estan en niveles de actividad de entre 1250 y 3750 calorias consumidas diarias y entre 0 y 30000 pasos diarios. Por esto sabemos que aunque una persona no realice actividad (0 pasos), tiene un consumo de calorias basal.*
-- *Fijandonos en la linea naranja de ligeramente activo, vemos que esta se estabiliza a las 2000 calorias y un poco antes de los 10000 pasos diarios, esto concuerda con las recomendaciones minimas de actividad, al parecer despues de estos niveles de actividad en calorias y pasos diarios, los pasos diarios o calorias adicionales son debido a actividad mas vigorosa como tal, deliberadamente ejercicio fisico.*
-- *La actividad ligera es indispensable, por esto se estabiliza en los valores normales de actividad, en 2000 calorias y 10000 pasos. Adicionalmente la actividad vigorosa es la que marca la diferencia en adelante pues su crecimiento es constante, esto ya se considera deporte como tal.*
-- *La linea azul claro o aguamarina de muy activo o actividad vigorosa, mantiene un crecimiento constante a medida que aumentan las calorias consumidas y los pasos dados.*
-- *Finalmente la linea verde del sedentarismo, si nos centramos en las medidas intermedias de calorias consumidas y  pasos dados demuestra una disminucion del tiempo sedentario, pues se utiliza en actividad, a excepcion de los valores extremos.*
-
-FALTA MIRAR EL SUEÑO DOFIJASGPOIJpoidjgdofjgojsdfg
-dfñgjdsflgkjsdf
-sdreo --------- buscar recomendaciones de sueño
-
-
+- *La mayoría de usuarios están en niveles de actividad de entre 1250 y 3750 calorías consumidas diarias y entre 0 y 30000 pasos diarios. Por esto sabemos que aunque una persona no realice actividad (0 pasos), tiene un consumo de calorías basal.*
+- *Fijándose en la línea naranja de ligeramente activo, se ve que esta se estabiliza a las 2000 calorías y un poco antes de los 10000 pasos diarios. Esto coincide con las recomendaciones mínimas de actividad, al parecer, después de estos niveles de actividad en calorías y pasos diarios, los pasos diarios o calorias adicionales vienen dados por actividad vigorosa, como tal deliberadamente ejercicio fisico.*
+- *Fijándose en la línea azul claro o aguamarina de actividad vigorosa, esta mantiene un crecimiento constante a medida que se llegan a los mínimos de calorías y pasos diarios a partir de los cuales esta aporta toda la actividad adicional hecha. Las personas deben evitar caer por debajo de los minimos porque tendrán dificultades incluso para hacer deporte como tal.*
+- *Finalmente la línea verde del sedentarismo, si nos centramos en las medidas intermedias de calorías consumidas y pasos dados demuestra una disminución del tiempo sedentario, pues se utiliza en actividad, esto no aplica a los valores extremos.*
+  
+  
 ## :five:. FASE DE COMPARTIR Y ACTUAR: conclusiones
 
 Despues de haber tratado los datos y haber creado graficos para interpretar mejor la informacion, se pueden sacar conclusiones de los usuarios FitBit que son extrapolables a otros usuarios. Queda demostrado que dispositivos como estos brindan informacion exacta del nivel de actividad fisica y el sueño, principalmente, que nos dicen muchos de los habitos. Esta informacion, es de gran utilidad para marcas como Bellabeat ya que permite conocer su publico objetivo, anticipar sus necesidades, para empoderar y brindar control sobre la salud fisica y salud reproductiva tambien. 
