@@ -7,28 +7,29 @@ Por **Jairo Andrés Amaya Muñoz**
 
 ### Contexto empresa, productos y estrategia:
 
-Bellabeat es una empresa pequeña y exitosa, es manufacturera de productos de tecnologia para la mujer enfocados en el cuidado de su salud. Esta empresa tiene el potencial para ser una gran jugadora en el mercado de dispositivos teconologicos e inteligentes. Desde su fundacion en el año 2013 han desarrollado productos y abierto oficinas en distintas partes del mundo.
+Bellabeat es una empresa pequeña y exitosa, es manufacturera de productos de tecnología para la mujer enfocados en el cuidado de su salud. Esta empresa tiene el potencial para ser una gran jugadora en el mercado de dispositivos tecnológicos e inteligentes. Desde su fundación en el año 2013, han desarrollado productos y crecido abriendo oficinas en distintas partes del mundo.
 
-Los productos de Bellabeat recolectan datos de bio-monitoreo de la actividad fisica, pasos dados, distancia recorrida, calorias quemadas, ritmo cardiaco, peso, sueño y salud reproductiva, entre otras. Con el fin de empoderar a sus usuarias con conocimiento de si mismas y poder incidir en sus habitos.
+Los productos de Bellabeat recolectan datos de bio-monitoreo de la actividad física, el sueño, el estrés, los ciclos menstruales, el consumo de líquido y además hacen recomendaciones de meditación y otros hábitos saludables. Todo esto con el fin de empoderar a sus usuarias con conocimiento de sí mismas y poder incidir en su bienestar.
   
 Sus productos son:
 
-| Producto | Descripcion |
+| Producto | Descripción |
 | :--------------- | :--------------- |
 | Leaf | Un brazalete, collar o clip inteligente |
 | Time | Un reloj inteligente |
 | Spring | Una botella inteligente |
-| Bellabeat app | Todos los anteriores se conectan a esta app que permite hacer seguimiento |
+| Bellabeat app | Todos los anteriores se conectan a esta app para el monitoreo |
 
-La empresa comercializa sus productos en su tienda virtual en su sitio web. Desde el inicio han optado por el canal virtual y se han apoyado considerablemente en el marketing. Siendo esto algo que quieren seguir haciendo basando sus decisiones en datos, para ello encomiendan realizar este estudio para que les proporcione nuevas perspectivas e ideas.
+Desde el inicio Bellabeat ha optado por la venta de sus productos por el canal virtual en su sitio web, y parte de esta estrategia ha sido invertir considerablemente en marketing, por ello siguiendo esta línea, ellos encomiendan este estudio basado en los datos.
 
-### ¿Cual es la tarea empresarial?
 
-La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitness inteligentes de bio-monitoreo, con el fin de entender cómo estos los utilizan. Asi, de esta forma obtener informacion valiosa que muestre tendencias o particularidades que ayuden a desarrollar los productos y orientar las campañas de marketing para potenciar el crecimiento de la empresa.
+### ¿Cuál es la tarea empresarial?
 
-### ¿Quienes son los principales interesados en la tarea?
+La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitness inteligentes de bio-monitoreo y que obtenga información valiosa que revele tendencias y particularidades de usuarios como los suyos. El fin último es brindar perspectiva e ideas para ayudar a desarrollar sus productos y a orientar las campañas de marketing que seguirán potenciando el crecimiento de la empresa.
 
-* Urška Sršen: Cofundadora y Directora Creativa, ademas es la artista que ha diseñado los productos.
+### ¿Quiénes son los principales interesados en la tarea?
+
+* Urška Sršen: Cofundadora y Directora Creativa, además es la artista que ha diseñado los productos.
 * Sando Mur: Cofundador y parte del Equipo Ejecutivo, además es matemático.
 * Demas miembros del Equipo Ejecutivo.
 
@@ -283,7 +284,7 @@ sdreo --------- buscar recomendaciones de sueño
 
 ## :five:. FASE DE COMPARTIR Y ACTUAR: conclusiones
 
-Despues de haber tratado los datos y haber creado graficos para interpretar mejor la informacion, se pueden sacar conclusiones de los usuarios FitBit que pueden extrapolarse a otros usuarios de similares dispositivos. Queda demostrado que los dispositivos en cuestion, brindan informacion exacta del nivel de actividad fisica y el sueño principalmente. Esta informacion, es degran utilidad para Bellabeat ya que permite conocer su publico objetivo y anticipar sus necesidades, para empoderar y brindar control sobre la salud fisica y salud reproductiva tambien.
+Despues de haber tratado los datos y haber creado graficos para interpretar mejor la informacion, se pueden sacar conclusiones de los usuarios FitBit que son extrapolables a otros usuarios. Queda demostrado que dispositivos como estos brindan informacion exacta del nivel de actividad fisica y el sueño, principalmente, que nos dicen muchos de los habitos. Esta informacion, es de gran utilidad para marcas como Bellabeat ya que permite conocer su publico objetivo, anticipar sus necesidades, para empoderar y brindar control sobre la salud fisica y salud reproductiva tambien. 
 
 Partiendo de la funcion que tiene este caso de estudio para la compañia Bellabeat y sus productos, y desde la perspectiva de los beneficios que implica estar en buen estado fisico y de como alcanzar o mantener un buen estado fisico. Primero hago un resumen de los principales habitos hallados en los datos analizados. En segundo lugar se trata de dar unas recomendaciones para brindar a los usuarios a traves de la app y por ultimo, en tercer lugar se dan algunas recomendacines para el marketing de la empresa y los productos, dirigido al publico objetivo.
 
@@ -325,6 +326,8 @@ Habiendo nombrado todo lo anterior, facilmente podemos imaginar todo lo que brin
 
 La imagen que debe promover Bellabeat es la de una vida sana, sus productos seran siempre un aliado que recuerda y acompaña en sacar tiempo para si mismo, para tener habitos saludables y por medio de la informacion adentrarse en el grupo de cualidades y mediciones que nos aseguran y dan tranquilidad de que estmos haciendo lo necesario.
 
+
+Bellabeat debe vender todo un estilo de vida. Puede impulsar a sus usuarios a llevar control de comidas y calorias ingeridas, recomendar platos, seguir la hidratacion, hacer seguimiento del peso con recordatorios y demas, todo esto incorporarlo al seguimiento de la app. El tema del peso es importante y recurrente, en esto se trata del balance energetico.
 
 -------------------------------------------------------------------------------------------------------------------
 
