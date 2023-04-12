@@ -38,41 +38,42 @@ La empresa Bellabeat quiere que analice datos de usuarios de dispositivos fitnes
 
 ### ¿Que dataset se utilizará, donde esta almacenado y bajo que licencia?
 
-Sršen nos recomienda usar un dataset de dominio publico (CC0: Public Domain) llamado FitBit Fitness Tracker Data, este fue subido por el usuario Möbius a la plataforma Kaggle en el siguiente link:  https://www.kaggle.com/datasets/arashnic/fitbit
+Sršen recomienda usar un dataset de dominio público (CC0: Public Domain) llamado FitBit Fitness Tracker Data, este fue subido por el usuario Möbius a la plataforma Kaggle en el siguiente link:  https://www.kaggle.com/datasets/arashnic/fitbit
 
-Descargamos este dataset. Segun la descripcion este contiene datos generados por ~30 usuarios de dispositivos FitBit encuestados via Amazon Mechanical Turk que accedieron a dar su inofrmacion personal registrada en sus dispositivos durante dos meses, del 12 de mayo al 12 de abril del 2016.
+Descargo este dataset y lo exploro preliminarmente. Según la descripción, este contiene datos generados por ~30 usuarios de dispositivos FitBit encuestados vía Amazon Mechanical Turk que accedieron a dar su información personal registrada en sus dispositivos durante un mes, del 12 de mayo al 12 de abril del 2016.
 
-### ¿Como se organiza y que contiene el dataset?
+### ¿Cómo se organiza y que contiene el dataset?
 
-Con el dataset en "nuestras manos", vemos que este contiene datos de 33 usuarios registrados entre el 12 de mayo y el 12 de abril del 2016, este está organizado en 18 archivos CSV, de los cuales excluiremos de una vez 3 de ellos ya que son repetidos pero en formato wide. Entonces los 15 archivos que tenemos son:
+Con el dataset “en las manos” observo que este contiene datos de 33 usuarios registrados entre el 12 de mayo y el 12 de abril del 2016, los datos están organizados en 18 archivos CSV, de los cuales excluyo de una vez 3 de ellos en formato “wide” ya que son repetidos en formato “long”. Entonces los 15 archivos que tengo son:
 
-| Dataframe | Descripcion de registros|
+| Dataframe | Descripción de registros|
 | :--------------- | :--------------- |
-| dailyActivity_merged.csv | Por usuario(Id) cada dia: nivel de actividad fisica en 4 categorias por distancia y minutos dedicados, los pasos totales, la distancia recorrida total y las calorias quemadas.   |
-| dailyCalories_merged.csv | Por usuario(Id) cada dia: las calorias utlizadas. |
-| dailyIntensities_merged.csv | Por usuario(Id) cada dia: el nivel de actividad fisica diario en 4 categorias por distancia y minutos dedicados. |
-| dailySteps_merged.csv | Por usuario(Id) cada dia:: los pasos totales. |
-| hourlyCalories_merged.csv | Por usuario(Id) cada hora: las calorias quemadas.  |
-| hourlyIntensities_merged.csv| Por usuario(Id) cada hora: el nivel de actividad fisica en 4 categorias por distancia y minutos totales. |
-| hourlySteps_merged.csv| Por usuario(Id) cada hora: los pasos totales. |
-| minuteCaloriesNarrow_merged.csv | Por usuario(Id) cada minuto: las calorias quemadas. |
-| minuteIntensitiesNarrow_merged.csv | Por usuario(Id) cada minuto: el nivel de actividad fisica en 4 categorias por distancia y minutos dedicados.  |
-| minuteStepsNarrow_merged.csv | Por usuario(Id) cada minuto: los pasos totales. |
-| minuteSleep_merged.csv | Por usuario(Id) cada minuto: el estado de sueño. |
-| minuteMETsNarrow_merged.csv | Por usuario(Id) cada minuto: el "metabolic equivalent of task". |
-| heartrate_seconds_merged.csv | Por usuario(Id) por cada tantos segundos: el ritmo cardiaco |
-| sleepDay_merged.csv | Por usuario(Id) por dia: la cantidad de sueño y el numero de sesiones.  |
-| weightLogInfo_merged.csv | Por usuario(Id): el peso autoreportado.  |
+| dailyActivity_merged.csv | Por usuario (Id) cada día: nivel de actividad física en 4 categorías por distancia y minutos dedicados, los pasos totales, la distancia recorrida total y las calorías quemadas.   |
+| dailyCalories_merged.csv | Por usuario (Id) cada día: las calorías utilizadas. |
+| dailyIntensities_merged.csv | Por usuario (Id) cada día: el nivel de actividad física diario en 4 categorías por distancia y minutos dedicados. |
+| dailySteps_merged.csv | Por usuario (Id) cada día: los pasos totales. |
+| hourlyCalories_merged.csv | Por usuario (Id) cada hora: las calorías quemadas.  |
+| hourlyIntensities_merged.csv| Por usuario (Id) cada hora: el nivel de actividad física en 4 categorías por distancia y minutos totales. |
+| hourlySteps_merged.csv| Por usuario (Id) cada hora: los pasos totales. |
+| minuteCaloriesNarrow_merged.csv | Por usuario (Id) cada minuto: las calorías quemadas. |
+| minuteIntensitiesNarrow_merged.csv | Por usuario (Id) cada minuto: el nivel de actividad física en 4 categorías por distancia y minutos dedicados.  |
+| minuteStepsNarrow_merged.csv | Por usuario (Id) cada minuto: los pasos totales. |
+| minuteSleep_merged.csv | Por usuario (Id) cada minuto: el estado de sueño. |
+| minuteMETsNarrow_merged.csv | Por usuario (Id) cada minuto: el "metabolic equivalent of task". |
+| heartrate_seconds_merged.csv | Por usuario (Id) por cada tanto segundo: el ritmo cardiaco |
+| sleepDay_merged.csv | Por usuario (Id) por día: la cantidad de sueño y el número de sesiones.  |
+| weightLogInfo_merged.csv | Por usuario (Id): el peso autoreportado.  |
 
-Creemos util emplear datos por dia, hora, del sueño, el peso y el ritmo cardiaco ya que son indicadores importantes acerca de la salud. Prescindiremos de los datos a nivel de detalle de minutos.
+Creo útil emplear datos por día y por hora, del sueño, el peso y el ritmo cardiaco ya que son indicadores importantes acerca de la salud. Prescindiremos de los datos a nivel de detalle de minutos.
+
 
 ### Fiabilidad de los datos
 
-✔️ Los datos son de una fuente secundaria pues han sido recolectados por unos investigadores en otro estudio. Los participantes de dicho estudio accedieron a compartir sus datos de un mes completo de sus actividades. Podemos decir que han sido adquiridos y compartidos consentidamente y de una forma etica. 
+✔️ Los datos son de una fuente secundaria pues han sido recolectados por investigadores en otro estudio. Los participantes de dicho estudio accedieron a compartir sus datos de un mes completo de sus actividades. Podemos decir que han sido adquiridos y compartidos consentidamente y de forma ética. 
 
-✔️ Como pudimos ver al revisar el contenido y la organizacion del dataset, contamos con la informacion integra de estas personas en este periodo de tiempo. La informacion es del 2016 pero sigue siendo relevante pues si bien los dispositivos comerciales de bio-monitoreo han mejorado, esencialmente a la fecha de hoy continuan haciendo lo mismo.
+✔️ Como pude ver al revisar el contenido y la organización del dataset, cuento con la información integra de estas personas en este periodo de tiempo. La información es del 2016 pero sigue siendo relevante pues si bien los dispositivos comerciales de bio-monitoreo han mejorado, esencialmente a la fecha de hoy continúan haciendo iguales funciones.
 
-✖️ Por otra parte, contar con 33 participantes usuarios de dispositivos de bio-monitoreo, es una muestra pequeña de personas para establecer comportamientos universales de la actividad fisica de las personas. En el caso del sueño, el ritmo cardiaco y el peso, apenas contamos con registros de 24, 14 y 8 participantes respectivamente. No excluimos estos ultimos datos ya que son indicadores importantes, y en general aunque sea una muestra pequeña podemos intentar ver tendencias en ellos.
+✖️ Por otra parte, contar con 33 participantes usuarios de dispositivos de bio-monitoreo, es una muestra pequeña de personas para establecer comportamientos universales de la actividad física. En el caso del sueño, el ritmo cardiaco y el peso, apenas contamos con registros de 24, 14 y 8 participantes respectivamente. No excluimos estos últimos datos ya que son indicadores importantes, y en general, aunque sea una muestra pequeña se puede intentar ver tendencias en ellos.
 
 Los datos nos ayudan a responder preguntas y son relativos a la tarea empresarial.
 
