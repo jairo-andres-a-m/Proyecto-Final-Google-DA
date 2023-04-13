@@ -282,18 +282,9 @@ Finalmente visualizo cómo se concentran los usuarios de acuerdo a sus niveles d
 
 Tras haber preparado los datos y generado graficos, se interpretó y se hicieron observaciones de los habitos de actividad fisica de los usuarios. Quedó comprobado que dipositivos inteligentes de bio-monitoreo revelan con un alto nivel de precision los habitos de actividad fisica de los usuarios. Si bien estos eran usuarios FitBit, la informacion puede extrapolarse a los usuarios de Bellabeat. Para Bellabeat es una gran oportunidad tener una ventana para conocer mas a su publico objetivo, las personas a las que busca empoderar y ayudales a reclamar devuelta el tiempo y bienestar que muchas veces nos roba la vida moderna sedentaria. 
 
-Se tuvo muy presente la perspectiva de un estado fisico en forma, qué implica estarlo, beneficios y cuáles son las recomendaciones minimas. En conjunto con los resultados se debe orientar la estrategia de Bellabeat tanto para desarrollar sus productos como para venderse a su publico objetivo.
+Se tuvo muy presente la perspectiva de un estado fisico en forma, qué implica estarlo, beneficios y cuáles son las recomendaciones minimas. En conjunto con los resultados se debe orientar la estrategia de Bellabeat tanto para desarrollar sus productos como para venderse a su publico objetivo. El proposito de Bellabeat no va solo por monitorear la actividad fisica, sino tambien el estres, la salud reproductiva, los ciclos menstruales y recomendar la meditacion y otros habitos saludables.
 
-
-
-monitorear la actividad fisica otras capacidades podrian ser monitorear la hidratacion, las calorias consumidas y el peso, 
-Tambien recordemos que su proposito no va solo por monitorear la actividad fisica, sino tambien el estres, los ciclos menstruales y recomendar la meditacion y otros habitos saludables. 
-
-En esta parte tendremos tambien en cuenta la perspectiva de un estado fisico en forma, las recomendaciones
-
-Debemos tener en cuenta la perspectiva arriba expuesta de un estado fisico en forma, las recomendaciones y los beneficios en particular. E igualmente debemos recordar que el proposito de Bellabeat no es solo monitorear la actividad fisica, sino tambien el estres, la salud reproductiva, los ciclos menstruales y recomendar la meditacion y otros habitos saludables. Otros puntos a monitorear serian el peso y el sueño y quizas la salud del corazon pues son capacidades con las que cuentan estos dispositivos.
-
-
+Otros puntos que se pueden monitorear pueden ser el peso y el sueño y quizas la salud del corazon pues son capacidades con las que cuentan estos dispositivos.el peso y el sueño y quizas la salud del corazon pues son capacidades con las que cuentan estos dispositivos.
 
 Con todo esto, se exponen en primer lugar, los principales habitos de actividad hallados en los usuarios, luego se intentan dar unas recomendaciones de las capacidades que podria tener la App para brindar a los usuarios, teniendo en mete lo que intenta abarcar la marca Bellabeat y finalmente, un enfoque sobre lo que se debe vender la marca y proyectar ante sus clientes y el mundo con el fin de orientar el marketing de la marca.
 
