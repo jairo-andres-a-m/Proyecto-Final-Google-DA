@@ -282,21 +282,21 @@ Finalmente visualizo cómo se concentran los usuarios de acuerdo a sus niveles d
 
 Tras haber preparado datos y generado graficos, se interpretó y se hicieron observaciones de los habitos de actividad fisica de los usuarios. Quedó comprobado que dipositivos inteligentes de bio-monitoreo revelan con un alto nivel de precision los habitos de actividad fisica de los usuarios. Si bien estos eran usuarios FitBit, la informacion puede extrapolarse a los usuarios de Bellabeat. Para Bellabeat es una gran oportunidad tener una ventana para conocer mas a su publico objetivo, las personas a las que busca empoderar y ayudales a reclamar devuelta el tiempo y bienestar que muchas veces nos roba la vida moderna sedentaria. 
 
-Teniendo muy presente la perspectiva de un estado fisico en forma, beneficios y recomendaciones minimas, a continuacion se concluye en primer lugar con un resumen de los habitos encontrados en los usuarios FitBit, en segundo lugar con recomendaciones u orientaciones para los productos de Bellabeat y las capacidades de su app y por ultimo en tercer lugar con recomendaciones o enfoque sobre lo que la marca debe proyectar de acuerdo a lo que representa ante el publico para su estrategia de marketing.
+Teniendo muy presente la perspectiva de un estado fisico en forma, beneficios y recomendaciones minimas, a continuacion se concluye en tres partes. En primer lugar con un resumen de los habitos encontrados en los usuarios FitBit, en segundo lugar con recomendaciones u orientaciones para los productos de Bellabeat y las capacidades que podria tener su app y por ultimo en tercer lugar con recomendaciones o enfoque sobre lo que la marca debe proyectar de acuerdo a lo que representa ante el publico para su estrategia de marketing.
 
 ---------- El proposito de Bellabeat no va solo por monitorear la actividad fisica, sino tambien el estres, la salud reproductiva, los ciclos menstruales y recomendar la meditacion y otros habitos saludables. Otros monitoreos que pueden incorporarse son el peso, la salud cardiaca, el sueño, el consumo de calorias, la dieta, entre otras. ------------
 
 
 ### Habitos usuarios
 
-Los principales habitos que se pueden distinguir en los usuariso de los dispositivos FitBit, fueron:
+Los principales habitos identificados en los usuariso de los dispositivos FitBit, fueron:
 
 | Habitos de los usuarios analizados |
 | :--------------- |
-| :chair: Los usuarios se mantienen en estado sedentario la la mayor parte del dia, 12,5 horas.  |
-| :bed: Las usuarios duermen en promedio 6,9 horas al dia, ligeramente debajo de lo recomendado.  |
-| :athletic_shoe: En general, Las horas de mayor actividad fisica son entre las 5 y 8 pm. Una variacion son los sabados, el dia de mas actividad y cuando aprovechan mas las horas de la mañana para hacer actividad y los domingos cuando se hace menos actividad pero esta se distribuye mas equitativamente entre la mañana y la tarde. |
-| :baby_chick: La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de los minimos recomendados de 2000 calorias y/o 10000 pasos. Con esto se mantiene la capacidad fisica y un minimo saludable. |
+| :chair: Los usuarios se mantienen en estado sedentario la la mayor parte del dia, 12,5 horas. |
+| :bed: Las usuarios duermen en promedio 6,9 horas al dia, ligeramente debajo de lo recomendado. |
+| :athletic_shoe: En general, Las horas de mayor actividad fisica son entre las 5 y 8 pm. Varia los fines de semana, el sabado siendo el dia de mayor actividad especialmente concentrada en la mañana y el domingo el dia de menor actividad pero distribuida mas equitativamente entre la mañana y la tarde. |
+| :baby_chick: La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de las 2000 calorias y/o 10000 pasos, los minimos recomendados. Con esto se mantiene la capacidad fisica y un minimo saludable. |
 | :rooster: La actividad vigorosa o ejercico como tal, tiene un crecimiento constante a medida que los usuarios queman mas calorias o dan mas pasos mas alla de los minimos recomendados. Con esto se lleva mas alla y se mejora la capacidad fisica. |
 
 Recomendacion para posterior analisis
@@ -304,7 +304,8 @@ Recomendacion para posterior analisis
 
 ### Recomendaciones, App Bellabeat
 
-Como se dijo, estos dispositios inteligentes de bio-monitoreo, pueden **empoderar a sus usuarios, informandolos y educandolos de forma precisa sobre el como mantener o alcanzar un estado fisico en forma**. Algunas recomendaciones para no olvidar, que la app debe brindar al usuario:
+Como se dijo, estos dispositios inteligentes de bio-monitoreo, pueden **empoderar a sus usuarios**, lo ideal es que Bellabeat a traves de su app, 
+**informe y eduque de forma precisa sobre el como mantener o alcanzar un estado fisico en forma y de recomendaciones**. Algunas recomendaciones para no olvidar, que la app debe brindar al usuario:
 
 
 - La app debe educar o brindar informacion de los minimos de actividad y los beneficios de estar fisicamente en forma. 
