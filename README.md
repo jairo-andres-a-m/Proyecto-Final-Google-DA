@@ -282,9 +282,7 @@ Finalmente visualizo cómo se concentran los usuarios de acuerdo a sus niveles d
 
 Tras haber preparado datos y generado graficos, se interpretó y se hicieron observaciones de los habitos de actividad fisica de los usuarios. Quedó comprobado que dipositivos inteligentes de bio-monitoreo revelan con un alto nivel de precision los habitos de actividad fisica de los usuarios. Si bien estos eran usuarios FitBit, la informacion puede extrapolarse a los usuarios de Bellabeat. Para Bellabeat es una gran oportunidad tener una ventana para conocer mas a su publico objetivo, las personas a las que busca empoderar y ayudales a reclamar devuelta el tiempo y bienestar que muchas veces nos roba la vida moderna sedentaria. 
 
-Teniendo muy presente la perspectiva de un estado fisico en forma, beneficios y recomendaciones minimas, a continuacion se concluye en tres partes. En primer lugar con un resumen de los habitos encontrados en los usuarios FitBit, en segundo lugar con recomendaciones u orientaciones para los productos de Bellabeat y las capacidades que podria tener su app y por ultimo en tercer lugar con recomendaciones o enfoque sobre lo que la marca debe proyectar de acuerdo a lo que representa ante el publico para su estrategia de marketing.
-
----------- El proposito de Bellabeat no va solo por monitorear la actividad fisica, sino tambien el estres, la salud reproductiva, los ciclos menstruales y recomendar la meditacion y otros habitos saludables. Otros monitoreos que pueden incorporarse son el peso, la salud cardiaca, el sueño, el consumo de calorias, la dieta, entre otras. ------------
+Teniendo muy presente la perspectiva de un estado fisico en forma, beneficios y recomendaciones minimas, a continuacion se concluye en tres partes. En primer lugar con un resumen de los habitos encontrados en los usuarios FitBit, en segundo lugar con recomendaciones u orientaciones para los productos de Bellabeat y por ultimo, en tercer lugar, con recomendaciones o enfoque sobre lo que la marca debe proyectar de acuerdo a lo que representa ante el publico para su estrategia de marketing.
 
 
 ### Habitos usuarios
@@ -304,31 +302,32 @@ Recomendacion para posterior analisis
 
 ### Recomendaciones, App Bellabeat
 
-Como se dijo, estos dispositios inteligentes de bio-monitoreo, pueden **empoderar a sus usuarios**, lo ideal es que Bellabeat a traves de su app, 
-**informe y eduque de forma precisa sobre el como mantener o alcanzar un estado fisico en forma y de recomendaciones**. Algunas recomendaciones para no olvidar, que la app debe brindar al usuario:
+Como se mostró, los dispositivos inteligentes de bio-monitoreo nos dan muy buena informacion de los habitos de actividad fisica. Idealmente, Bellabeat a traves de su app, debe **educar e informar sobre como mantener o alcanzar un estado fisico en forma** y puede **dar otras recomendaciones**. En resumidas cuentas Bellabeat pretende **empoderar a los usuarios sobre su bienestar**, por esto se recomienda no dejar por fuera ninguna de las siguientes capacidades:
 
+- La app debe educar y brindar informacion acerca de un estado fisico en forma.
+- Mostrar la cantidad de actividad fisica ligera y vigorosa y como una complementa a la otra.
+- Ayudar a programar o acomodar la actividad fisica en las rutinas, plantear alternativas para alcanzar objetivos.
+- Notificar y recordar el avance hacia los objetivos. Mostrar logros alcanzados.
+- Permitir monitorear no solo la actividad sino el balance energetico (consumo de comidas), el peso, el sueño, el estres.
+- Permitir introducir en la rutina y recordar sobre otros habitos, como meditar, consumo de liquidos, entre otros.
+- Permitir compartir logros y actividades en redes sociales.
+- No olvidr que Bellabeat tambien se enfoca en la salud reporductiva y sexual de las mujeres.
 
-- La app debe educar o brindar informacion de los minimos de actividad y los beneficios de estar fisicamente en forma. 
-- Mostrar los minimos requeridos tanto de actividad ligera como vigorosa y como una puede sustituir a la otra o se pueden complementar.
-- Ayudar a programar y acomodar la actividad fisica de acuerdo a la rutina y otras obligaciones, para alcanzar los objetivos. Tambien plantear alternativas.
-- Recordar y notificar del avance y alcance de los objetivos.
-- Estimular arrojando logros alcanzados y conjugar con logors especiales, pueden ser de peso, de sueño, de avance deportivo, etc.
-- Permitir visualizar los habitos y el comportamiento, para analizar habitos, entre otros.
-- Permitir compartir a traves de redes los logros y actividades deportivas hechas.
-- No olvidemos que Bellabeat tambien ayuda a seguir la salud reproductiva y sexual de las mujeres por lo que esto es otra funcionalidad importante.
-
+Es importante que la app tenga una buena interfaz para visualizar toda la actividad y poder analizar las rutinar y como se acerca el usuario a sus objetivos. Tambien es importante educar a traves de la app para impulsar a las personas de manera precisa a estar en el estado fisico deseado y que puedan controlar su tiempo y maximizar su bienestar. La app cumple una funcion importante de estar notificando, recordando y dando alternativas para asistir a los usurios en alcanzar sus objetivos que pueden ser distintos, pueden estar enfocados en el peso (balance energetico) o en comer sanamente, en hidratarse, meditar o introducir otros habitos a su rutina, tambien llevar control de los ciclos menstruales, la vida sexual y reproductiva. Esta capacidad debe tener la app.
 
 
 ### Recomendaciones, imagen Bellabeat
 
-Habiendo nombrado todo lo anterior, facilmente podemos imaginar todo lo que brindan y prestan los dispositivos Bellabeat. Asi como lo que representan. Hacemos enfasis en que estos empoderan a las mujeres, y a los hombres tambien. Bellabeat debe ser un aliado que ayuda a tomar control de una parte importante de la vida, para apoderarnos del tiempo que muchas cosas de la vida moderna tratan de robarnos. El aspecto de salud, bienestar y belleza va unido con dedicar tiempo a la actividad fisica y a mantener el cuerpo en condiciones optimas pudiendo rendir mejor y vivir mejor.
+Habiendo nombrado todo lo anteriror, ya tenemos una imagen de lo que es, puede ser y como pueden servir los dispositivos Bellabeat. Estas capacidades y valores deben venderse y proyectarse al publico. Bellabeat es un aliado que busca ayudar a tomar control de un aspecto importante de nuestras vidas, para esto nos empodera y nos permite reclamar el tiempo y el bienestar que nos quita a veces la vida moderna con su ritmo y todas sus obligaciones.
 
-La imagen que debe promover Bellabeat es la de una vida sana, sus productos seran siempre un aliado que recuerda y acompaña en sacar tiempo para si mismo, para tener habitos saludables y por medio de la informacion adentrarse en el grupo de cualidades y mediciones que nos aseguran y dan tranquilidad de que estmos haciendo lo necesario.
+Entonces esto es lo que representa la marca, salud, bienestar, buen estado fisico, buenos habitos, control de su tiempo y empoderamiento de las mujeres y de los hombres tambien. Lo anterior se refleja en bienestar, buen semblante y belleza. Un usuario Bellabeat se sentira bien consigo mismo porque toma el control de ciertos aspectos claves de su vida y vive mejor.
+
+Bellabeat marca esta distincion, por lo que al ver a alguien vistiendo sus productos, sabremos que es alguien con mayores niveles de satisfaccion y capacidad.
 
 
-Bellabeat debe vender todo un estilo de vida. Puede impulsar a sus usuarios a llevar control de comidas y calorias ingeridas, recomendar platos, seguir la hidratacion, hacer seguimiento del peso con recordatorios y demas, todo esto incorporarlo al seguimiento de la app. El tema del peso es importante y recurrente, en esto se trata del balance energetico.
+
 
 -------------------------------------------------------------------------------------------------------------------
 
-mirar fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
+fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
 
