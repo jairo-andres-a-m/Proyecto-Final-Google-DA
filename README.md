@@ -280,54 +280,56 @@ Finalmente visualizo cómo se concentran los usuarios de acuerdo a sus niveles d
   
 ## :five:. FASE DE COMPARTIR Y ACTUAR: conclusiones
 
-Tras haber preparado datos y generado graficos, se interpretó y se hicieron observaciones de los habitos de actividad fisica de los usuarios. Quedó comprobado que dipositivos inteligentes de bio-monitoreo revelan con un alto nivel de precision los habitos de actividad fisica de los usuarios. Si bien estos eran usuarios FitBit, la informacion puede extrapolarse a los usuarios de Bellabeat. Para Bellabeat es una gran oportunidad tener una ventana para conocer mas a su publico objetivo, las personas a las que busca empoderar y ayudales a reclamar devuelta el tiempo y bienestar que muchas veces nos roba la vida moderna sedentaria. 
+Tras haber preparado datos y generado gráficos, se interpretó y se hicieron observaciones de los hábitos de actividad física de los usuarios. Quedó comprobado que dispositivos inteligentes de bio-monitoreo revelan con un alto nivel de precisión los hábitos de actividad física de los usuarios. Si bien estos eran usuarios FitBit, la información puede extrapolarse a los usuarios de Bellabeat. Para Bellabeat es una gran oportunidad tener una ventana para conocer más a su público objetivo, las personas a las que busca empoderar y ayudarles a reclamar devuelta el tiempo y bienestar que muchas veces nos roba la vida moderna sedentaria. 
 
-Teniendo muy presente la perspectiva de un estado fisico en forma, beneficios y recomendaciones minimas, a continuacion se concluye en tres partes. En primer lugar con un resumen de los habitos encontrados en los usuarios FitBit, en segundo lugar con recomendaciones u orientaciones para los productos de Bellabeat y por ultimo, en tercer lugar, con recomendaciones o enfoque sobre lo que la marca debe proyectar de acuerdo a lo que representa ante el publico para su estrategia de marketing.
+Teniendo muy presente la perspectiva de un estado físico en forma, beneficios y recomendaciones mínimas, a continuación se concluye en tres partes. En primer lugar con un resumen de los hábitos encontrados en los usuarios FitBit, en segundo lugar con recomendaciones u orientaciones para los productos de Bellabeat y por último, en tercer lugar, con recomendaciones o enfoque sobre lo que la marca debe proyectar de acuerdo a lo que representa ante el público para su estrategia de marketing.
 
 
-### Habitos usuarios
+### Hábitos usuarios
 
-Los principales habitos identificados en los usuariso de los dispositivos FitBit, fueron:
+Los principales hábitos identificados en los usuarios de los dispositivos FitBit, fueron:
 
-| Habitos de los usuarios analizados |
+| Hábitos de los usuarios analizados |
 | :--------------- |
-| :chair: Los usuarios se mantienen en estado sedentario la la mayor parte del dia, 12,5 horas. |
-| :bed: Las usuarios duermen en promedio 6,9 horas al dia, ligeramente debajo de lo recomendado. |
-| :athletic_shoe: En general, Las horas de mayor actividad fisica son entre las 5 y 8 pm. Varia los fines de semana, el sabado siendo el dia de mayor actividad especialmente concentrada en la mañana y el domingo el dia de menor actividad pero distribuida mas equitativamente entre la mañana y la tarde. |
-| :baby_chick: La actividad fisica ligera parece tener un minimo que se mantiene estable a partir de las 2000 calorias y/o 10000 pasos, los minimos recomendados. Con esto se mantiene la capacidad fisica y un minimo saludable. |
-| :rooster: La actividad vigorosa o ejercico como tal, tiene un crecimiento constante a medida que los usuarios queman mas calorias o dan mas pasos mas alla de los minimos recomendados. Con esto se lleva mas alla y se mejora la capacidad fisica. |
+| :chair: Los usuarios se mantienen en estado sedentario la mayor parte del día, 12,5 horas. |
+| :bed: Las usuarios duermen en promedio 6,9 horas al día, ligeramente debajo de lo recomendado. |
+| :athletic_shoe: En general, Las horas de mayor actividad física son entre las 5 y 8 pm. Varia los fines de semana, el sábado siendo el día de mayor actividad especialmente concentrada en la mañana y el domingo el día de menor actividad pero distribuida más equitativamente entre la mañana y la tarde. |
+| :baby_chick: La actividad física ligera parece tener un mínimo que se mantiene estable a partir de las 2000 calorías y/o 10000 pasos, los mínimos recomendados. Con esto se mantiene la capacidad física y un mínimo saludable. |
+| :rooster: La actividad vigorosa o ejercicio como tal, tiene un crecimiento constante a medida que los usuarios queman más calorías o dan más pasos más allá de los mínimos recomendados. Con esto se lleva más allá y se mejora la capacidad física. |
 
-Recomendacion para posterior analisis
-[ SE PODRIAN SEPARAR EN DOS GRUPOS, QUIENES ESTAN POR DEBADO DE LOS MINIMOS (2000 Y 10000) Y QUIENES ESTAN POR ENCIMA PARA DISTINGUIR SUS HABITOS. ]
+
 
 ### Recomendaciones, App Bellabeat
 
-Como se mostró, los dispositivos inteligentes de bio-monitoreo nos dan muy buena informacion de los habitos de actividad fisica. Idealmente, Bellabeat a traves de su app, debe **educar e informar sobre como mantener o alcanzar un estado fisico en forma** y puede **dar otras recomendaciones**. En resumidas cuentas Bellabeat pretende **empoderar a los usuarios sobre su bienestar**, por esto se recomienda no dejar por fuera ninguna de las siguientes capacidades:
+Como se mostró, los dispositivos inteligentes de bio-monitoreo nos dan muy buena información de los hábitos de actividad física. Idealmente, Bellabeat a través de su app, debe **educar e informar sobre cómo mantener o alcanzar un estado físico en forma** y puede **dar otras recomendaciones**. En resumidas cuentas, Bellabeat pretende **empoderar a los usuarios sobre su bienestar**, por esto se recomienda no dejar por fuera ninguna de las siguientes capacidades:
 
-- La app debe educar y brindar informacion acerca de un estado fisico en forma.
-- Mostrar la cantidad de actividad fisica ligera y vigorosa y como una complementa a la otra.
-- Ayudar a programar o acomodar la actividad fisica en las rutinas, plantear alternativas para alcanzar objetivos.
+- La app debe educar y brindar información acerca de un estado físico en forma.
+- Mostrar la cantidad de actividad física ligera y vigorosa y como una complementa a la otra.
+- Ayudar a programar o acomodar la actividad física en las rutinas, plantear alternativas para alcanzar objetivos.
 - Notificar y recordar el avance hacia los objetivos. Mostrar logros alcanzados.
-- Permitir monitorear no solo la actividad sino el balance energetico (consumo de comidas), el peso, el sueño, el estres.
-- Permitir introducir en la rutina y recordar sobre otros habitos, como meditar, consumo de liquidos, entre otros.
+- Permitir monitorear no solo la actividad sino el balance energético (consumo de comidas), el peso, el sueño, el estrés, entre otras.
+- Permitir introducir en la rutina y recordar sobre otros hábitos, como meditar, consumo de líquidos, entre otros.
 - Permitir compartir logros y actividades en redes sociales.
-- No olvidr que Bellabeat tambien se enfoca en la salud reporductiva y sexual de las mujeres.
+- No olvidar que Bellabeat también se enfoca en la salud reproductiva y sexual de las mujeres.
 
-Es importante que la app tenga una buena interfaz para visualizar toda la actividad y poder analizar las rutinar y como se acerca el usuario a sus objetivos. Tambien es importante educar a traves de la app para impulsar a las personas de manera precisa a estar en el estado fisico deseado y que puedan controlar su tiempo y maximizar su bienestar. La app cumple una funcion importante de estar notificando, recordando y dando alternativas para asistir a los usurios en alcanzar sus objetivos que pueden ser distintos, pueden estar enfocados en el peso (balance energetico) o en comer sanamente, en hidratarse, meditar o introducir otros habitos a su rutina, tambien llevar control de los ciclos menstruales, la vida sexual y reproductiva. Esta capacidad debe tener la app.
+Es importante que la app tenga una buena interfaz para visualizar toda la actividad y poder analizar las rutinas y como se acerca el usuario a sus objetivos. También es importante educar a través de la app para impulsar a las personas de manera precisa a estar en el estado físico deseado y que puedan controlar su tiempo y maximizar su bienestar. La app cumple una función importante de estar notificando, recordando y dando alternativas para asistir a los usuarios en alcanzar sus objetivos que pueden ser distintos, pueden estar enfocados en el peso (balance energético) o en comer sanamente, en hidratarse, meditar o introducir otros hábitos a su rutina, también llevar control de los ciclos menstruales, la vida sexual y reproductiva. Esta capacidad debe tener la app.
+
 
 
 ### Recomendaciones, imagen Bellabeat
 
-Habiendo nombrado todo lo anteriror, ya tenemos una imagen de lo que es, puede ser y como pueden servir los dispositivos Bellabeat. Estas capacidades y valores deben venderse y proyectarse al publico. Bellabeat es un aliado que busca ayudar a tomar control de un aspecto importante de nuestras vidas, para esto nos empodera y nos permite reclamar el tiempo y el bienestar que nos quita a veces la vida moderna con su ritmo y todas sus obligaciones.
+Habiendo nombrado todo lo anterior, ya tenemos una imagen de lo que es, puede ser y como pueden servir los dispositivos Bellabeat. Estas capacidades y valores deben venderse y proyectarse al público. Bellabeat es un aliado que busca ayudar a tomar control de un aspecto importante de nuestras vidas, para esto nos empodera y nos permite reclamar el tiempo y el bienestar que nos quita a veces la vida moderna con su ritmo y todas sus obligaciones.
 
-Entonces esto es lo que representa la marca, salud, bienestar, buen estado fisico, buenos habitos, control de su tiempo y empoderamiento de las mujeres y de los hombres tambien. Lo anterior se refleja en bienestar, buen semblante y belleza. Un usuario Bellabeat se sentira bien consigo mismo porque toma el control de ciertos aspectos claves de su vida y vive mejor.
+Entonces esto es lo que representa la marca, salud, bienestar, buen estado físico, buenos hábitos, control de su tiempo y empoderamiento de las mujeres y de los hombres también. Lo anterior se refleja en bienestar, buen semblante y belleza. Un usuario Bellabeat se sentirá bien consigo mismo porque toma el control de ciertos aspectos claves de su vida y vive mejor.
 
-Bellabeat marca esta distincion, por lo que al ver a alguien vistiendo sus productos, sabremos que es alguien con mayores niveles de satisfaccion y capacidad.
+Bellabeat marca esta distinción, por lo que al ver a alguien vistiendo sus productos, sabremos que es alguien con mayores niveles de satisfacción y capacidad.
+  
+  
+  
+  
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+**Recomendación para posteriores análisis:**  
+-Se pueden separar en dos grupos, quienes están por debajo de los mínimos (2000 calorías y 10000 pasos) y quienes están por encima para distinguir sus hábitos. Enfocarse en cómo podría conseguir un usuario pasar del primer grupo al segundo.  
+INFO ADICIONAL: fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
 
-
-
-
--------------------------------------------------------------------------------------------------------------------
-
-fitbase dictionary: [https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf]
 
