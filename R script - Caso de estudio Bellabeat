@@ -385,10 +385,8 @@ active_minutes_vs_steps <- ggplot(data = activityday) +
 
 active_minutes_vs_steps
 ```
-Lo siguiente es hacer un análisis del sueño.
 
-
-avanza...
+... ... ... .. .
 
 ```{r}
 
