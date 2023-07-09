@@ -3,6 +3,8 @@ Basado en el análisis de **Fitbit Fitness Tracker Data**
 Para un caso con la empresa **Bellabeat**  
 Por **Jairo Andrés Amaya Muñoz**  
 
+![image](https://github.com/jairo-andres-a-m/Proyecto-Final-Google-DA/assets/124465699/049a9076-72d5-4d1e-beb4-406351b8069f)
+
 ## :one:. FASE DE PREGUNTAS: Caso de estudio Bellabeat FITNESS TRACKER
 
 ### Contexto empresa, productos y estrategia:
